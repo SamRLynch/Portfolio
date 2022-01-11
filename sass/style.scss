@@ -1,0 +1,318 @@
+/* ----------------------------------------- */
+/* ---------------- Imports  --------------- */
+/* ----------------------------------------- */
+@import 'css_reset';
+
+
+/* ----------------------------------------- */
+/* ---------------- Variables  ------------- */
+/* ----------------------------------------- */
+$header_font: 'Lato',
+sans-serif;
+$body_font: 'Aleo',
+serif;
+
+
+$white: #F5FBFF;
+$black: #000000;
+$blue: #4085D0;
+$green: #61936F;
+$purple: #92608C;
+$orange: #D07440;
+$main_gradient: linear-gradient(105.44deg, #4085D0 0%, #7E4477 100%);
+$blue_gradient: linear-gradient(105.44deg, #4085D0 0%, #2A73C3 100%);
+$green_gradient: linear-gradient(105.44deg, #61936F 0%, #478258 100%);
+$purple_gradient: linear-gradient(112.03deg, #92608C 0%, #7E4477 100%);
+$orange_gradient: linear-gradient(105.44deg, #D07440 0%, #C2622C 100%);
+
+
+/* ----------------------------------------- */
+/* ---------------- Mixins ----------------- */
+/* ----------------------------------------- */
+
+
+/* ----------------------------------------- */
+/* ---------------- GLOBAL ----------------- */
+/* ----------------------------------------- */
+
+body {
+    background-color: $white;
+}
+
+/* ----------------------------------------- */
+/* ---------------- Navigation  ------------ */
+/* ----------------------------------------- */
+.top_nav_container {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.logo {
+    margin: 0;
+
+    img {
+        height: 150px;
+    }
+}
+
+ul.navigation {
+    height: 64px;
+    list-style: none;
+    justify-items: center;
+    text-transform: uppercase;
+    background: $white;
+    display: grid;
+    grid-template-columns: 10% auto auto auto auto auto auto 40px 40px 10%;
+
+
+    @media only screen and (max-width: 1020px) {
+        grid-template-columns: 5% auto auto auto auto auto auto auto auto 5%;
+    }
+
+    @media only screen and (max-width: 880px) {
+        grid-template-columns: 1% auto auto auto auto auto auto auto auto 1%;
+    }
+
+    grid-gap: 1px;
+    box-shadow: 0px 2px 10px rgba(3, 47, 97, 0.5);
+
+    li {
+        grid-row: 1
+    }
+
+    li.n_logo {
+        grid-column: 2 / 2;
+    }
+
+    li.n_projects {
+        grid-column: 4 / 4;
+    }
+
+    li.n_about {
+        grid-column: 5 / 5;
+    }
+
+    li.n_contact {
+        grid-column: 6 / 6;
+    }
+
+    li.n_email {
+        grid-column: 8 / 8;
+    }
+
+    li.n_linkedin {
+        grid-column: 9 / 9;
+    }
+
+}
+
+.mobilenav {
+    display: none;
+}
+
+ul.navigation {
+    position: sticky;
+    top: 0;
+}
+
+ul.navigation,
+ul.mobilenav {
+    a {
+        font-family: $header_font;
+        background-image: linear-gradient($white, $white);
+        background-position: 0 94%;
+        background-repeat: no-repeat;
+        background-size: 0;
+    }
+
+    a,
+    i {
+        font-size: 14px;
+        text-decoration: none;
+        letter-spacing: .125rem;
+        display: block;
+        padding: 1em 0.5em 0 0.5em;
+        color: $black;
+        line-height: 40px;
+
+        li:first-of-type a {
+            border-bottom: none;
+        }
+    }
+
+    li.n_logo {
+        align-self: center;
+
+        a {
+            padding-top: 0;
+            font-weight: bold;
+            font-size: 24px;
+            color: $blue;
+            transition: all 0.3s ease 0s;
+            /*
+            background: $blue;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;*/
+
+            &:hover {
+                background: $blue;
+                border-radius: 5px;
+                color: $white;
+
+            }
+        }
+    }
+
+    li.n_projects,
+    li.n_about {
+        align-self: center;
+
+        a {
+            padding: 8px;
+            line-height: 24px;
+            transition: all 0.3s ease 0s;
+            opacity: 1;
+
+            &:hover {
+                background: $blue;
+                border-radius: 5px;
+                color: $white;
+                opacity: 0.75;
+            }
+        }
+    }
+
+    li.n_contact {
+        align-self: center;
+
+        a {
+            padding: 8px;
+            background: $main_gradient;
+            border-radius: 5px;
+            color: $white;
+            line-height: 24px;
+            transition: all 0.3s ease 0s;
+            border: 1px solid transparent;
+
+            &:hover {
+                background: $white;
+                color: black;
+                border: 1px solid $black;
+            }
+        }
+    }
+
+    li.n_email,
+    li.n_linkedin {
+
+        a,
+        i {
+            font-size: inherit;
+            padding: 0;
+            line-height: 64px;
+            font-size: 24px;
+        }
+
+        a:hover i {
+            color: $blue;
+        }
+    }
+
+    li.n_icons {
+        line-height: 64px;
+
+        a,
+        i {
+            padding: 0;
+            font-size: 25px;
+        }
+
+        a {
+            padding-right: 0.5em;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 701px) {
+
+    .mobilenav {
+        flex-direction: column;
+        display: flex;
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+        top: 0;
+        background-color: $white;
+        text-align: center;
+
+        a,
+        i {
+            text-align: left;
+            padding: 10px;
+            color: $black;
+            text-decoration: none;
+        }
+
+        &.responsive {
+            padding-top: 75pt;
+            height: 101vh;
+        }
+
+        &.responsive li {
+            display: block;
+
+            &:nth-child(n+1):nth-child(-n+6) {
+                margin-top: 0.5em;
+                width: auto;
+                margin-left: 20px;
+                margin-right: 20px;
+
+
+                a {
+                    display: block;
+                    border-radius: 5px;
+                    background-color: $blue;
+                    font-size: 18pt;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+
+                i {
+                    float: left;
+                    font-size: 18pt;
+                    display: block;
+                    line-height: 3pt;
+                    margin-right: 1em;
+                }
+            }
+        }
+
+        &.nav_close li {
+            display: none;
+        }
+
+        li.mobilemenu {
+            display: block;
+            width: 100%;
+            background-color: $white;
+            box-shadow: 0px 2px 10px rgba(3, 47, 97, 0.5);
+
+            position: fixed;
+            z-index: 100;
+            top: 0pt;
+
+            i,
+            a {
+                font-size: 20pt;
+            }
+
+        }
+
+
+    }
+
+}

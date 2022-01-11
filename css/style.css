@@ -1,0 +1,491 @@
+/* ----------------------------------------- */
+/* ---------------- Imports  --------------- */
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+/* ------------ START CSS RESET  ----------- */
+/* ----------------------------------------- */
+/* line 5, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/_css_reset.scss */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 95, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/_css_reset.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav {
+  display: block;
+}
+
+/* line 108, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/_css_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 112, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/_css_reset.scss */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* line 117, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/_css_reset.scss */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* line 125, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/_css_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 130, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/_css_reset.scss */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* ----------------------------------------- */
+/* ------------- END CSS RESET  ------------ */
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+/* ---------------- Variables  ------------- */
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+/* ---------------- Mixins ----------------- */
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+/* ---------------- GLOBAL ----------------- */
+/* ----------------------------------------- */
+/* line 38, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+body {
+  background-color: #F5FBFF;
+}
+
+/* ----------------------------------------- */
+/* ---------------- Navigation  ------------ */
+/* ----------------------------------------- */
+/* line 45, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+.top_nav_container {
+  grid-area: header;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* line 52, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+.logo {
+  margin: 0;
+}
+
+/* line 55, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+.logo img {
+  height: 150px;
+}
+
+/* line 60, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation {
+  height: 64px;
+  list-style: none;
+  justify-items: center;
+  text-transform: uppercase;
+  background: #F5FBFF;
+  display: grid;
+  grid-template-columns: 10% auto auto auto auto auto auto 40px 40px 10%;
+  grid-gap: 1px;
+  box-shadow: 0px 2px 10px rgba(3, 47, 97, 0.5);
+}
+
+@media only screen and (max-width: 1020px) {
+  /* line 60, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+  ul.navigation {
+    grid-template-columns: 5% auto auto auto auto auto auto auto auto 5%;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  /* line 60, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+  ul.navigation {
+    grid-template-columns: 1% auto auto auto auto auto auto auto auto 1%;
+  }
+}
+
+/* line 81, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation li {
+  grid-row: 1;
+}
+
+/* line 85, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation li.n_logo {
+  grid-column: 2 / 2;
+}
+
+/* line 89, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation li.n_projects {
+  grid-column: 4 / 4;
+}
+
+/* line 93, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation li.n_about {
+  grid-column: 5 / 5;
+}
+
+/* line 97, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation li.n_contact {
+  grid-column: 6 / 6;
+}
+
+/* line 101, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation li.n_email {
+  grid-column: 8 / 8;
+}
+
+/* line 105, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation li.n_linkedin {
+  grid-column: 9 / 9;
+}
+
+/* line 111, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+.mobilenav {
+  display: none;
+}
+
+/* line 115, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation {
+  position: sticky;
+  top: 0;
+}
+
+/* line 122, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation a,
+ul.mobilenav a {
+  font-family: "Lato", sans-serif;
+  background-image: linear-gradient(#F5FBFF, #F5FBFF);
+  background-position: 0 94%;
+  background-repeat: no-repeat;
+  background-size: 0;
+}
+
+/* line 130, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation a,
+ul.navigation i,
+ul.mobilenav a,
+ul.mobilenav i {
+  font-size: 14px;
+  text-decoration: none;
+  letter-spacing: .125rem;
+  display: block;
+  padding: 1em 0.5em 0 0.5em;
+  color: #000000;
+  line-height: 40px;
+}
+
+/* line 140, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation a li:first-of-type a,
+ul.navigation i li:first-of-type a,
+ul.mobilenav a li:first-of-type a,
+ul.mobilenav i li:first-of-type a {
+  border-bottom: none;
+}
+
+/* line 145, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation li.n_logo,
+ul.mobilenav li.n_logo {
+  align-self: center;
+}
+
+/* line 148, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation li.n_logo a,
+ul.mobilenav li.n_logo a {
+  padding-top: 0;
+  font-weight: bold;
+  font-size: 24px;
+  color: #4085D0;
+  transition: all 0.3s ease 0s;
+  /*
+            background: $blue;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;*/
+}
+
+/* line 159, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation li.n_logo a:hover,
+ul.mobilenav li.n_logo a:hover {
+  background: #4085D0;
+  border-radius: 5px;
+  color: #F5FBFF;
+}
+
+/* line 168, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation li.n_projects,
+ul.navigation li.n_about,
+ul.mobilenav li.n_projects,
+ul.mobilenav li.n_about {
+  align-self: center;
+}
+
+/* line 172, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation li.n_projects a,
+ul.navigation li.n_about a,
+ul.mobilenav li.n_projects a,
+ul.mobilenav li.n_about a {
+  padding: 8px;
+  line-height: 24px;
+  transition: all 0.3s ease 0s;
+  opacity: 1;
+}
+
+/* line 178, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation li.n_projects a:hover,
+ul.navigation li.n_about a:hover,
+ul.mobilenav li.n_projects a:hover,
+ul.mobilenav li.n_about a:hover {
+  background: #4085D0;
+  border-radius: 5px;
+  color: #F5FBFF;
+  opacity: 0.75;
+}
+
+/* line 187, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation li.n_contact,
+ul.mobilenav li.n_contact {
+  align-self: center;
+}
+
+/* line 190, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation li.n_contact a,
+ul.mobilenav li.n_contact a {
+  padding: 8px;
+  background: linear-gradient(105.44deg, #4085D0 0%, #7E4477 100%);
+  border-radius: 5px;
+  color: #F5FBFF;
+  line-height: 24px;
+  transition: all 0.3s ease 0s;
+  border: 1px solid transparent;
+}
+
+/* line 199, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation li.n_contact a:hover,
+ul.mobilenav li.n_contact a:hover {
+  background: #F5FBFF;
+  color: black;
+  border: 1px solid #000000;
+}
+
+/* line 210, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation li.n_email a,
+ul.navigation li.n_email i,
+ul.navigation li.n_linkedin a,
+ul.navigation li.n_linkedin i,
+ul.mobilenav li.n_email a,
+ul.mobilenav li.n_email i,
+ul.mobilenav li.n_linkedin a,
+ul.mobilenav li.n_linkedin i {
+  font-size: inherit;
+  padding: 0;
+  line-height: 64px;
+  font-size: 24px;
+}
+
+/* line 218, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation li.n_email a:hover i,
+ul.navigation li.n_linkedin a:hover i,
+ul.mobilenav li.n_email a:hover i,
+ul.mobilenav li.n_linkedin a:hover i {
+  color: #4085D0;
+}
+
+/* line 223, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation li.n_icons,
+ul.mobilenav li.n_icons {
+  line-height: 64px;
+}
+
+/* line 226, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation li.n_icons a,
+ul.navigation li.n_icons i,
+ul.mobilenav li.n_icons a,
+ul.mobilenav li.n_icons i {
+  padding: 0;
+  font-size: 25px;
+}
+
+/* line 232, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation li.n_icons a,
+ul.mobilenav li.n_icons a {
+  padding-right: 0.5em;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 701px) {
+  /* line 242, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+  .mobilenav {
+    flex-direction: column;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    background-color: #F5FBFF;
+    text-align: center;
+  }
+  /* line 252, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+  .mobilenav a,
+  .mobilenav i {
+    text-align: left;
+    padding: 10px;
+    color: #000000;
+    text-decoration: none;
+  }
+  /* line 260, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+  .mobilenav.responsive {
+    padding-top: 75pt;
+    height: 101vh;
+  }
+  /* line 265, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+  .mobilenav.responsive li {
+    display: block;
+  }
+  /* line 268, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+  .mobilenav.responsive li:nth-child(n+1):nth-child(-n+6) {
+    margin-top: 0.5em;
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  /* line 275, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+  .mobilenav.responsive li:nth-child(n+1):nth-child(-n+6) a {
+    display: block;
+    border-radius: 5px;
+    background-color: #4085D0;
+    font-size: 18pt;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  /* line 284, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+  .mobilenav.responsive li:nth-child(n+1):nth-child(-n+6) i {
+    float: left;
+    font-size: 18pt;
+    display: block;
+    line-height: 3pt;
+    margin-right: 1em;
+  }
+  /* line 294, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+  .mobilenav.nav_close li {
+    display: none;
+  }
+  /* line 298, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+  .mobilenav li.mobilemenu {
+    display: block;
+    width: 100%;
+    background-color: #F5FBFF;
+    box-shadow: 0px 2px 10px rgba(3, 47, 97, 0.5);
+    position: fixed;
+    z-index: 100;
+    top: 0pt;
+  }
+  /* line 308, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+  .mobilenav li.mobilemenu i,
+  .mobilenav li.mobilemenu a {
+    font-size: 20pt;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
