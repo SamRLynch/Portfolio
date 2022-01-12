@@ -4,7 +4,6 @@
 /* ----------------------------------------- */
 /* ------------ START CSS RESET  ----------- */
 /* ----------------------------------------- */
-/* line 5, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/_css_reset.scss */
 html,
 body,
 div,
@@ -95,7 +94,6 @@ video {
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 95, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/_css_reset.scss */
 article,
 aside,
 details,
@@ -109,18 +107,15 @@ nav {
   display: block;
 }
 
-/* line 108, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/_css_reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 112, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/_css_reset.scss */
 blockquote,
 q {
   quotes: none;
 }
 
-/* line 117, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/_css_reset.scss */
 blockquote:before,
 blockquote:after,
 q:before,
@@ -129,13 +124,11 @@ q:after {
   content: none;
 }
 
-/* line 125, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/_css_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 130, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/_css_reset.scss */
 * {
   padding: 0;
   margin: 0;
@@ -153,15 +146,82 @@ table {
 /* ----------------------------------------- */
 /* ---------------- GLOBAL ----------------- */
 /* ----------------------------------------- */
-/* line 38, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 body {
   background-color: #F5FBFF;
+}
+
+p {
+  font-family: "Aleo", serif;
+  font-weight: normal;
+  font-size: 16pt;
+  line-height: 20pt;
+}
+
+h1 {
+  font-family: "Lato", sans-serif;
+  background: linear-gradient(105.44deg, #4085D0 0%, #2A73C3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 48pt;
+  font-weight: bold;
+  margin-top: 5pt;
+  margin-bottom: 10pt;
+}
+
+h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+/* ----------------------------------------- */
+/* ---------------- Buttons ----------------- */
+/* ----------------------------------------- */
+.button {
+  margin-top: 2em;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-image: linear-gradient(105.44deg, #4085D0 0%, #2A73C3 100%);
+  transition: all 0.3s ease 0s;
+}
+
+.button:hover {
+  background-image: linear-gradient(105.44deg, #4085D0 0%, #7E4477 100%);
+}
+
+.button_02 {
+  margin-top: 2em;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #64A5EE;
+  transition: all ease-in 0.3s;
+  border: 1px solid #F5FBFF;
+}
+
+.button_02:hover {
+  background-color: #F5FBFF;
+  border: 1px solid #64A5EE;
+  color: #64A5EE;
 }
 
 /* ----------------------------------------- */
 /* ---------------- Navigation  ------------ */
 /* ----------------------------------------- */
-/* line 45, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 .top_nav_container {
   grid-area: header;
   position: sticky;
@@ -169,17 +229,14 @@ body {
   z-index: 50;
 }
 
-/* line 52, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 .logo {
   margin: 0;
 }
 
-/* line 55, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 .logo img {
   height: 150px;
 }
 
-/* line 60, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation {
   height: 64px;
   list-style: none;
@@ -193,66 +250,54 @@ ul.navigation {
 }
 
 @media only screen and (max-width: 1020px) {
-  /* line 60, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
   ul.navigation {
     grid-template-columns: 5% auto auto auto auto auto auto auto auto 5%;
   }
 }
 
 @media only screen and (max-width: 880px) {
-  /* line 60, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
   ul.navigation {
     grid-template-columns: 1% auto auto auto auto auto auto auto auto 1%;
   }
 }
 
-/* line 81, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation li {
   grid-row: 1;
 }
 
-/* line 85, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation li.n_logo {
   grid-column: 2 / 2;
 }
 
-/* line 89, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation li.n_projects {
   grid-column: 4 / 4;
 }
 
-/* line 93, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation li.n_about {
   grid-column: 5 / 5;
 }
 
-/* line 97, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation li.n_contact {
   grid-column: 6 / 6;
 }
 
-/* line 101, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation li.n_email {
   grid-column: 8 / 8;
 }
 
-/* line 105, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation li.n_linkedin {
   grid-column: 9 / 9;
 }
 
-/* line 111, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 .mobilenav {
   display: none;
 }
 
-/* line 115, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation {
   position: sticky;
   top: 0;
 }
 
-/* line 122, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation a,
 ul.mobilenav a {
   font-family: "Lato", sans-serif;
@@ -262,7 +307,6 @@ ul.mobilenav a {
   background-size: 0;
 }
 
-/* line 130, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation a,
 ul.navigation i,
 ul.mobilenav a,
@@ -276,7 +320,6 @@ ul.mobilenav i {
   line-height: 40px;
 }
 
-/* line 140, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation a li:first-of-type a,
 ul.navigation i li:first-of-type a,
 ul.mobilenav a li:first-of-type a,
@@ -284,13 +327,11 @@ ul.mobilenav i li:first-of-type a {
   border-bottom: none;
 }
 
-/* line 145, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation li.n_logo,
 ul.mobilenav li.n_logo {
   align-self: center;
 }
 
-/* line 148, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation li.n_logo a,
 ul.mobilenav li.n_logo a {
   padding-top: 0;
@@ -304,15 +345,13 @@ ul.mobilenav li.n_logo a {
             -webkit-text-fill-color: transparent;*/
 }
 
-/* line 159, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation li.n_logo a:hover,
 ul.mobilenav li.n_logo a:hover {
-  background: #4085D0;
+  background: linear-gradient(105.44deg, #4085D0 0%, #2A73C3 100%);
   border-radius: 5px;
   color: #F5FBFF;
 }
 
-/* line 168, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation li.n_projects,
 ul.navigation li.n_about,
 ul.mobilenav li.n_projects,
@@ -320,55 +359,47 @@ ul.mobilenav li.n_about {
   align-self: center;
 }
 
-/* line 172, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation li.n_projects a,
 ul.navigation li.n_about a,
 ul.mobilenav li.n_projects a,
 ul.mobilenav li.n_about a {
   padding: 8px;
   line-height: 24px;
-  transition: all 0.3s ease 0s;
+  transition: all 0.3s;
   opacity: 1;
 }
 
-/* line 178, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation li.n_projects a:hover,
 ul.navigation li.n_about a:hover,
 ul.mobilenav li.n_projects a:hover,
 ul.mobilenav li.n_about a:hover {
-  background: #4085D0;
+  background: linear-gradient(105.44deg, #4085D0 0%, #2A73C3 100%);
   border-radius: 5px;
   color: #F5FBFF;
   opacity: 0.75;
 }
 
-/* line 187, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation li.n_contact,
 ul.mobilenav li.n_contact {
   align-self: center;
 }
 
-/* line 190, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation li.n_contact a,
 ul.mobilenav li.n_contact a {
   padding: 8px;
-  background: linear-gradient(105.44deg, #4085D0 0%, #7E4477 100%);
   border-radius: 5px;
-  color: #F5FBFF;
   line-height: 24px;
-  transition: all 0.3s ease 0s;
-  border: 1px solid transparent;
-}
-
-/* line 199, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
-ul.navigation li.n_contact a:hover,
-ul.mobilenav li.n_contact a:hover {
-  background: #F5FBFF;
-  color: black;
+  transition: all 0.3s;
   border: 1px solid #000000;
 }
 
-/* line 210, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
+ul.navigation li.n_contact a:hover,
+ul.mobilenav li.n_contact a:hover {
+  background: linear-gradient(105.44deg, #4085D0 0%, #2A73C3 100%);
+  color: #F5FBFF;
+  border: 1px solid transparent;
+}
+
 ul.navigation li.n_email a,
 ul.navigation li.n_email i,
 ul.navigation li.n_linkedin a,
@@ -383,7 +414,6 @@ ul.mobilenav li.n_linkedin i {
   font-size: 24px;
 }
 
-/* line 218, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation li.n_email a:hover i,
 ul.navigation li.n_linkedin a:hover i,
 ul.mobilenav li.n_email a:hover i,
@@ -391,13 +421,11 @@ ul.mobilenav li.n_linkedin a:hover i {
   color: #4085D0;
 }
 
-/* line 223, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation li.n_icons,
 ul.mobilenav li.n_icons {
   line-height: 64px;
 }
 
-/* line 226, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation li.n_icons a,
 ul.navigation li.n_icons i,
 ul.mobilenav li.n_icons a,
@@ -406,7 +434,6 @@ ul.mobilenav li.n_icons i {
   font-size: 25px;
 }
 
-/* line 232, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
 ul.navigation li.n_icons a,
 ul.mobilenav li.n_icons a {
   padding-right: 0.5em;
@@ -415,7 +442,6 @@ ul.mobilenav li.n_icons a {
 }
 
 @media only screen and (max-width: 701px) {
-  /* line 242, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
   .mobilenav {
     flex-direction: column;
     display: flex;
@@ -426,7 +452,6 @@ ul.mobilenav li.n_icons a {
     background-color: #F5FBFF;
     text-align: center;
   }
-  /* line 252, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
   .mobilenav a,
   .mobilenav i {
     text-align: left;
@@ -434,23 +459,19 @@ ul.mobilenav li.n_icons a {
     color: #000000;
     text-decoration: none;
   }
-  /* line 260, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
   .mobilenav.responsive {
     padding-top: 75pt;
     height: 101vh;
   }
-  /* line 265, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
   .mobilenav.responsive li {
     display: block;
   }
-  /* line 268, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
   .mobilenav.responsive li:nth-child(n+1):nth-child(-n+6) {
     margin-top: 0.5em;
     width: auto;
     margin-left: 20px;
     margin-right: 20px;
   }
-  /* line 275, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
   .mobilenav.responsive li:nth-child(n+1):nth-child(-n+6) a {
     display: block;
     border-radius: 5px;
@@ -459,7 +480,6 @@ ul.mobilenav li.n_icons a {
     padding-top: 10px;
     padding-bottom: 10px;
   }
-  /* line 284, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
   .mobilenav.responsive li:nth-child(n+1):nth-child(-n+6) i {
     float: left;
     font-size: 18pt;
@@ -467,11 +487,9 @@ ul.mobilenav li.n_icons a {
     line-height: 3pt;
     margin-right: 1em;
   }
-  /* line 294, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
   .mobilenav.nav_close li {
     display: none;
   }
-  /* line 298, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
   .mobilenav li.mobilemenu {
     display: block;
     width: 100%;
@@ -481,11 +499,125 @@ ul.mobilenav li.n_icons a {
     z-index: 100;
     top: 0pt;
   }
-  /* line 308, ../../../../../Users/ulyncs1/Desktop/UX_UI/portfolio_site/sass/style.scss */
   .mobilenav li.mobilemenu i,
   .mobilenav li.mobilemenu a {
     font-size: 20pt;
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/* ----------------------------------------- */
+/* ------------------- HERO ---------------- */
+/* ----------------------------------------- */
+div.hero {
+  text-align: center;
+  margin: 4em auto 2em auto;
+}
+
+/* ----------------------------------------- */
+/* ----------------- PROJECTS -------------- */
+/* ----------------------------------------- */
+div.project {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 10% 75% 15%;
+  grid-column-gap: 20px;
+  width: 90%;
+  height: 500px;
+  transition: all ease-in 0.3s;
+  /*&:hover {
+        div.card {
+            background: $dark_blue_gradient;
+        }
+
+        div.phone_02 {
+            margin-left: 5px
+        }
+
+        div.phone_01 {
+            margin-right: 5px
+        }
+    }*/
+}
+
+div.project div.card {
+  border-radius: 20px;
+  background: linear-gradient(105.44deg, #4085D0 0%, #2A73C3 100%);
+  grid-area: 2 / 1 / 2 / span 12;
+  transition: all ease-in 0.3s;
+}
+
+div.project div.card:hover {
+  background: linear-gradient(96.82deg, #2D74C1 1.2%, #1762B3 100.89%);
+}
+
+div.project div.project_text {
+  grid-area: 2 / 2 / 2 / span 5;
+  color: #F5FBFF;
+  margin-top: 6vw;
+}
+
+div.project div.phone_01 {
+  grid-area: 2 / 9 / span 2 / span 3;
+  justify-items: end;
+}
+
+div.project div.phone_01 img {
+  object-fit: cover;
+  width: 100%;
+}
+
+div.project div.phone_02 {
+  grid-area: 1 / 7 / span 2 / span 3;
+}
+
+div.project div.phone_02 img {
+  object-fit: cover;
+  width: 100%;
+}
+
+div.project.case_study_01 {
+  margin-top: 15vw;
+}
+
+div.project.case_study_02 {
+  margin-top: 0;
+}
+
+div.project.case_study_02 div.card {
+  background: linear-gradient(112.03deg, #92608C 0%, #7E4477 100%);
+}
+
+div.project.case_study_02 div.card:hover {
+  background: linear-gradient(96.82deg, #794273 1.2%, #65295E 100.89%);
+}
+
+div.project.case_study_02 .button_02 {
+  background-color: #AF7EA9;
+}
+
+div.project.case_study_02 .button_02:hover {
+  border: 1px solid #AF7EA9;
+  color: #AF7EA9;
+}
+
+div.project.case_study_03 {
+  margin-top: 0;
+}
+
+div.project.case_study_03 div.card {
+  background: linear-gradient(105.44deg, #61936F 0%, #478258 100%);
+}
+
+div.project.case_study_03 div.card:hover {
+  background: linear-gradient(96.82deg, #447B54 1.2%, #2B683C 100.89%);
+}
+
+div.project.case_study_03 .button_02 {
+  background-color: #7FAE8C;
+}
+
+div.project.case_study_03 .button_02:hover {
+  border: 1px solid #7FAE8C;
+  color: #7FAE8C;
+}

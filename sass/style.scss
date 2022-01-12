@@ -16,13 +16,21 @@ serif;
 $white: #F5FBFF;
 $black: #000000;
 $blue: #4085D0;
+$light_blue: #64A5EE;
 $green: #61936F;
+$light_green: #7FAE8C;
 $purple: #92608C;
+$light_purple: #AF7EA9;
 $orange: #D07440;
+$light_orange: #EC8A53;
 $main_gradient: linear-gradient(105.44deg, #4085D0 0%, #7E4477 100%);
 $blue_gradient: linear-gradient(105.44deg, #4085D0 0%, #2A73C3 100%);
+$dark_blue_gradient: linear-gradient(96.82deg, #2D74C1 1.2%, #1762B3 100.89%);
 $green_gradient: linear-gradient(105.44deg, #61936F 0%, #478258 100%);
+$dark_green_gradient: linear-gradient(96.82deg, #447B54 1.2%, #2B683C 100.89%);
 $purple_gradient: linear-gradient(112.03deg, #92608C 0%, #7E4477 100%);
+$dark_purple_gradient: linear-gradient(96.82deg, #794273 1.2%, #65295E 100.89%);
+
 $orange_gradient: linear-gradient(105.44deg, #D07440 0%, #C2622C 100%);
 
 
@@ -34,9 +42,78 @@ $orange_gradient: linear-gradient(105.44deg, #D07440 0%, #C2622C 100%);
 /* ----------------------------------------- */
 /* ---------------- GLOBAL ----------------- */
 /* ----------------------------------------- */
-
 body {
     background-color: $white;
+}
+
+p {
+    font-family: $body_font;
+    font-weight: normal;
+    font-size: 16pt;
+    line-height: 20pt;
+}
+
+h1 {
+    font-family: $header_font;
+    background: $blue_gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 48pt;
+    font-weight: bold;
+    margin-top: 5pt;
+    margin-bottom: 10pt;
+}
+
+h2 {
+    font-family: $header_font;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+/* ----------------------------------------- */
+/* ---------------- Buttons ----------------- */
+/* ----------------------------------------- */
+
+.button {
+    margin-top: 2em;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-image: $blue_gradient;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+        background-image: $main_gradient;
+    }
+}
+
+.button_02 {
+    margin-top: 2em;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: $light_blue;
+    transition: all ease-in 0.3s;
+    border: 1px solid $white;
+
+    &:hover {
+        background-color: $white;
+        border: 1px solid $light_blue;
+        color: $light_blue;
+    }
 }
 
 /* ----------------------------------------- */
@@ -157,7 +234,7 @@ ul.mobilenav {
             -webkit-text-fill-color: transparent;*/
 
             &:hover {
-                background: $blue;
+                background: $blue_gradient;
                 border-radius: 5px;
                 color: $white;
 
@@ -172,11 +249,11 @@ ul.mobilenav {
         a {
             padding: 8px;
             line-height: 24px;
-            transition: all 0.3s ease 0s;
+            transition: all 0.3s;
             opacity: 1;
 
             &:hover {
-                background: $blue;
+                background: $blue_gradient;
                 border-radius: 5px;
                 color: $white;
                 opacity: 0.75;
@@ -189,17 +266,15 @@ ul.mobilenav {
 
         a {
             padding: 8px;
-            background: $main_gradient;
             border-radius: 5px;
-            color: $white;
             line-height: 24px;
-            transition: all 0.3s ease 0s;
-            border: 1px solid transparent;
+            transition: all 0.3s;
+            border: 1px solid $black;
 
             &:hover {
-                background: $white;
-                color: black;
-                border: 1px solid $black;
+                background: $blue_gradient;
+                color: $white;
+                border: 1px solid transparent;
             }
         }
     }
@@ -315,4 +390,122 @@ ul.mobilenav {
 
     }
 
+}
+
+/* ----------------------------------------- */
+/* ------------------- HERO ---------------- */
+/* ----------------------------------------- */
+
+div.hero {
+    text-align: center;
+    margin: 4em auto 2em auto;
+}
+
+/* ----------------------------------------- */
+/* ----------------- PROJECTS -------------- */
+/* ----------------------------------------- */
+div.project {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 10% 75% 15%;
+    grid-column-gap: 20px;
+    width: 90%;
+    height: 500px;
+    transition: all ease-in 0.3s;
+
+    div.card {
+        border-radius: 20px;
+        background: $blue_gradient;
+        grid-area: 2 / 1 / 2 / span 12;
+        transition: all ease-in 0.3s;
+
+        &:hover {
+            background: $dark_blue_gradient;
+        }
+    }
+
+    div.project_text {
+        grid-area: 2 / 2 / 2 / span 5;
+        color: $white;
+        margin-top: 6vw;
+    }
+
+    div.phone_01 {
+        grid-area: 2 / 9 / span 2 / span 3;
+        justify-items: end;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    div.phone_02 {
+        grid-area: 1 / 7 / span 2 / span 3;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    /*&:hover {
+        div.card {
+            background: $dark_blue_gradient;
+        }
+
+        div.phone_02 {
+            margin-left: 5px
+        }
+
+        div.phone_01 {
+            margin-right: 5px
+        }
+    }*/
+    &.case_study_01 {
+        margin-top: 15vw;
+    }
+
+    &.case_study_02 {
+        margin-top: 0;
+
+        div.card {
+            background: $purple_gradient;
+
+            &:hover {
+                background: $dark_purple_gradient;
+            }
+        }
+
+        .button_02 {
+            background-color: $light_purple;
+
+            &:hover {
+                border: 1px solid $light_purple;
+                color: $light_purple;
+            }
+        }
+    }
+
+    &.case_study_03 {
+        margin-top: 0;
+
+        div.card {
+            background: $green_gradient;
+
+            &:hover {
+                background: $dark_green_gradient;
+            }
+        }
+
+        .button_02 {
+            background-color: $light_green;
+
+            &:hover {
+                border: 1px solid $light_green;
+                color: $light_green;
+            }
+        }
+    }
 }
