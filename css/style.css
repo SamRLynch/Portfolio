@@ -4,6 +4,7 @@
 /* ----------------------------------------- */
 /* ------------ START CSS RESET  ----------- */
 /* ----------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Aleo:wght@300;400;700&family=Lato:wght@400;700&display=swap");
 html,
 body,
 div,
@@ -152,16 +153,13 @@ body {
 
 p {
   font-family: "Aleo", serif;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 16pt;
   line-height: 20pt;
 }
 
 h1 {
   font-family: "Lato", sans-serif;
-  background: linear-gradient(105.44deg, #4085D0 0%, #2A73C3 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-size: 48pt;
   font-weight: bold;
   margin-top: 5pt;
@@ -171,6 +169,13 @@ h1 {
 h2 {
   font-family: "Lato", sans-serif;
   font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-family: "Lato", sans-serif;
+  font-size: 26px;
   font-weight: bold;
   margin-bottom: 0.5em;
 }
@@ -223,7 +228,6 @@ h2 {
 /* ---------------- Navigation  ------------ */
 /* ----------------------------------------- */
 .top_nav_container {
-  grid-area: header;
   position: sticky;
   top: 0;
   z-index: 50;
@@ -238,64 +242,40 @@ h2 {
 }
 
 ul.navigation {
+  position: sticky;
+  top: 0;
   height: 64px;
   list-style: none;
   justify-items: center;
   text-transform: uppercase;
   background: #F5FBFF;
-  display: grid;
-  grid-template-columns: 10% auto auto auto auto auto auto 40px 40px 10%;
-  grid-gap: 1px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 5%;
+  justify-content: flex-end;
   box-shadow: 0px 2px 10px rgba(3, 47, 97, 0.5);
 }
 
-@media only screen and (max-width: 1020px) {
-  ul.navigation {
-    grid-template-columns: 5% auto auto auto auto auto auto auto auto 5%;
-  }
-}
-
-@media only screen and (max-width: 880px) {
-  ul.navigation {
-    grid-template-columns: 1% auto auto auto auto auto auto auto auto 1%;
-  }
-}
-
-ul.navigation li {
-  grid-row: 1;
-}
-
 ul.navigation li.n_logo {
-  grid-column: 2 / 2;
+  margin-right: auto;
 }
 
-ul.navigation li.n_projects {
-  grid-column: 4 / 4;
-}
-
+ul.navigation li.n_projects,
 ul.navigation li.n_about {
-  grid-column: 5 / 5;
+  margin-right: 2%;
 }
 
 ul.navigation li.n_contact {
-  grid-column: 6 / 6;
+  margin-right: 6%;
 }
 
 ul.navigation li.n_email {
-  grid-column: 8 / 8;
-}
-
-ul.navigation li.n_linkedin {
-  grid-column: 9 / 9;
+  margin-right: 1%;
 }
 
 .mobilenav {
   display: none;
-}
-
-ul.navigation {
-  position: sticky;
-  top: 0;
 }
 
 ul.navigation a,
@@ -367,6 +347,7 @@ ul.mobilenav li.n_about a {
   line-height: 24px;
   transition: all 0.3s;
   opacity: 1;
+  display: block;
 }
 
 ul.navigation li.n_projects a:hover,
@@ -513,6 +494,12 @@ div.hero {
   margin: 4em auto 2em auto;
 }
 
+div.hero h1 {
+  background: linear-gradient(105.44deg, #4085D0 0%, #2A73C3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* ----------------------------------------- */
 /* ----------------- PROJECTS -------------- */
 /* ----------------------------------------- */
@@ -520,10 +507,10 @@ div.project {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 10% 75% 15%;
+  grid-template-rows: 10% 340px;
   grid-column-gap: 20px;
   width: 90%;
-  height: 500px;
+  height: auto;
   transition: all ease-in 0.3s;
   /*&:hover {
         div.card {
@@ -559,19 +546,14 @@ div.project div.project_text {
 
 div.project div.phone_01 {
   grid-area: 2 / 9 / span 2 / span 3;
-  justify-items: end;
-}
-
-div.project div.phone_01 img {
-  object-fit: cover;
-  width: 100%;
 }
 
 div.project div.phone_02 {
   grid-area: 1 / 7 / span 2 / span 3;
 }
 
-div.project div.phone_02 img {
+div.project div.phone_02 img,
+div.project div.phone_01 img {
   object-fit: cover;
   width: 100%;
 }
@@ -580,8 +562,33 @@ div.project.case_study_01 {
   margin-top: 15vw;
 }
 
+div.project.case_study_01 div.phone_02 img,
+div.project.case_study_01 div.phone_01 img {
+  width: 70%;
+}
+
+@media only screen and (max-width: 1300px) {
+  div.project.case_study_01 div.phone_02 img,
+  div.project.case_study_01 div.phone_01 img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  div.project.case_study_01 div.phone_02 img,
+  div.project.case_study_01 div.phone_01 img {
+    width: 90%;
+  }
+}
+
 div.project.case_study_02 {
-  margin-top: 0;
+  margin-top: 2vw;
+}
+
+@media only screen and (max-width: 1100px) {
+  div.project.case_study_02 {
+    margin-top: 5vw;
+  }
 }
 
 div.project.case_study_02 div.card {
@@ -592,6 +599,16 @@ div.project.case_study_02 div.card:hover {
   background: linear-gradient(96.82deg, #794273 1.2%, #65295E 100.89%);
 }
 
+div.project.case_study_02 div.phone_01 {
+  grid-area: 1 / 7 / span 2 / span 5;
+}
+
+@media only screen and (max-width: 1300px) {
+  div.project.case_study_02 div.phone_01 {
+    grid-area: 1 / 7 / span 2 / span 5;
+  }
+}
+
 div.project.case_study_02 .button_02 {
   background-color: #AF7EA9;
 }
@@ -599,10 +616,11 @@ div.project.case_study_02 .button_02 {
 div.project.case_study_02 .button_02:hover {
   border: 1px solid #AF7EA9;
   color: #AF7EA9;
+  background-color: #F5FBFF;
 }
 
 div.project.case_study_03 {
-  margin-top: 0;
+  margin-top: 5vw;
 }
 
 div.project.case_study_03 div.card {
@@ -620,4 +638,46 @@ div.project.case_study_03 .button_02 {
 div.project.case_study_03 .button_02:hover {
   border: 1px solid #7FAE8C;
   color: #7FAE8C;
+  background-color: #F5FBFF;
+}
+
+/* ----------------------------------------- */
+/* ----------------- Case Study Page ------- */
+/* ----------------------------------------- */
+.container {
+  margin: 0 5%;
+}
+
+.container .blob_01,
+.container .blob_02 {
+  width: 112%;
+  margin-left: -6%;
+}
+
+.container .blob_01 {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.container .blob_02 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+.container .case_study_page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  /*background-color: white;*/
+  padding-top: 5em;
+}
+
+.container .case_study_page .case_study_head {
+  grid-area: 1 / 2 / 1 / span 5;
+  color: #F5FBFF;
 }
