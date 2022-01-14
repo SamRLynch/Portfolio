@@ -50,7 +50,7 @@ p {
     font-family: $body_font;
     font-weight: 300;
     font-size: 16pt;
-    line-height: 20pt;
+    line-height: 24pt;
 }
 
 h1 {
@@ -177,6 +177,10 @@ ul.navigation {
 
     li.n_linkedin {}
 
+    a, i {
+         padding: 1em 0.5em 0 0.5em;
+    }
+
 }
 
 .mobilenav {
@@ -187,10 +191,7 @@ ul.navigation,
 ul.mobilenav {
     a {
         font-family: $header_font;
-        background-image: linear-gradient($white, $white);
-        background-position: 0 94%;
-        background-repeat: no-repeat;
-        background-size: 0;
+
     }
 
     a,
@@ -199,7 +200,6 @@ ul.mobilenav {
         text-decoration: none;
         letter-spacing: .125rem;
         display: block;
-        padding: 1em 0.5em 0 0.5em;
         color: $black;
         line-height: 40px;
 
@@ -217,10 +217,6 @@ ul.mobilenav {
             font-size: 24px;
             color: $blue;
             transition: all 0.3s ease 0s;
-            /*
-            background: $blue;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;*/
 
             &:hover {
                 background: $blue_gradient;
@@ -302,9 +298,12 @@ ul.mobilenav {
     }
 }
 
-@media only screen and (max-width: 701px) {
+@media only screen and (max-width: 640px) {
+    ul.navigation {
+        display: none;
+    }
 
-    .mobilenav {
+    ul.mobilenav {
         flex-direction: column;
         display: flex;
         position: fixed;
@@ -314,13 +313,10 @@ ul.mobilenav {
         background-color: $white;
         text-align: center;
 
-        a,
-        i {
-            text-align: left;
-            padding: 10px;
-            color: $black;
-            text-decoration: none;
+        li {
+            display: none;
         }
+
 
         &.responsive {
             padding-top: 75pt;
@@ -360,19 +356,30 @@ ul.mobilenav {
             display: none;
         }
 
+        /*closed mobile menu*/
         li.mobilemenu {
-            display: block;
-            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 90%;
+            padding: 0 5%;
             background-color: $white;
             box-shadow: 0px 2px 10px rgba(3, 47, 97, 0.5);
-
             position: fixed;
             z-index: 100;
             top: 0pt;
 
             i,
             a {
-                font-size: 20pt;
+                padding-top: 0;
+                font-weight: bold;
+                font-size: 24px;
+                color: $blue;
+                transition: all 0.3s ease 0s;
+            }
+
+            a.mobile_dropdown i {
+                color: $black;
             }
 
         }
