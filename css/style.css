@@ -156,6 +156,7 @@ p {
   font-weight: 300;
   font-size: 16pt;
   line-height: 24pt;
+  margin-bottom: 10pt;
 }
 
 h1 {
@@ -177,6 +178,13 @@ h3 {
   font-family: "Lato", sans-serif;
   font-size: 26px;
   font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+h4 {
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
   margin-bottom: 0.5em;
 }
 
@@ -203,7 +211,7 @@ h3 {
 }
 
 .button_02 {
-  margin-top: 2em;
+  margin-top: 1em;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -274,7 +282,8 @@ ul.navigation li.n_email {
   margin-right: 1%;
 }
 
-ul.navigation a, ul.navigation i {
+ul.navigation a,
+ul.navigation i {
   padding: 1em 0.5em 0 0.5em;
 }
 
@@ -644,6 +653,110 @@ div.project.case_study_03 .button_02:hover {
   border: 1px solid #7FAE8C;
   color: #7FAE8C;
   background-color: #F5FBFF;
+}
+
+/* ----------------------------------------- */
+/* ----------------- Case Study Page ------- */
+/* ----------------------------------------- */
+.about {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-column-gap: 20px;
+  width: 90%;
+  height: auto;
+}
+
+.about h3 {
+  grid-area: 3 / 2 / 3 / span 7;
+}
+
+.about div:first-of-type {
+  grid-area: 1 / 2 / 1 / span 7;
+}
+
+.about div.abouticons {
+  grid-area: 2 / 2 / 2 / span 7;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3em;
+}
+
+.about div.abouticons a {
+  margin-right: 3%;
+  font-size: 24px;
+  text-decoration: none;
+  letter-spacing: .125rem;
+  display: block;
+  color: #000000;
+}
+
+.about div.abouticons a:hover i {
+  color: #4085D0;
+}
+
+.about div.process_containers {
+  grid-area: 4 / 1 / 4 / span 12;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.about div.process_containers p {
+  font-size: 12pt;
+  line-height: 16pt;
+}
+
+.about div.process_containers div {
+  color: #F5FBFF;
+  border-radius: 20px;
+  padding: 2.5em 1.5em 1.5em 1.5em;
+  width: 16vw;
+  position: relative;
+}
+
+.about div.process_containers div:before {
+  content: '';
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  z-index: 20;
+  position: absolute;
+  top: -25px;
+}
+
+.about div.process_containers div:nth-of-type(1) {
+  background: linear-gradient(137.81deg, #4085D0 3.44%, #2A73C3 98.75%);
+}
+
+.about div.process_containers div:nth-of-type(1):before {
+  background-image: url("../images/ICON_research.png");
+}
+
+.about div.process_containers div:nth-of-type(2) {
+  background: linear-gradient(136.15deg, #61936F 2.16%, #478258 98.96%);
+}
+
+.about div.process_containers div:nth-of-type(2):before {
+  background-image: url("../images/ICON_design.png");
+}
+
+.about div.process_containers div:nth-of-type(3) {
+  background: linear-gradient(137.53deg, #92608C 1.51%, #7E4477 98.09%);
+}
+
+.about div.process_containers div:nth-of-type(3):before {
+  background-image: url("../images/ICON_build.png");
+}
+
+.about div.process_containers div:nth-of-type(4) {
+  background: linear-gradient(136.55deg, #D07440 1.37%, #C2622C 98.17%);
+}
+
+.about div.process_containers div:nth-of-type(4):before {
+  background-image: url("../images/ICON_refine.png");
 }
 
 /* ----------------------------------------- */
