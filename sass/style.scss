@@ -175,16 +175,16 @@ ul.navigation {
 
 
     li.n_contact {
-        margin-right: 6%;
+        margin-right: 0;
     }
 
-    li.n_email {
+    /* li.n_email {
         margin-right: 1%;
 
     }
 
     li.n_linkedin {}
-
+*/
     a,
     i {
         padding: 1em 0.5em 0 0.5em;
@@ -549,10 +549,23 @@ div.project {
 }
 
 /* ----------------------------------------- */
-/* ----------------- Case Study Page ------- */
+/* ----------------- About ----------------- */
 /* ----------------------------------------- */
 .about {
     margin: 0 auto;
+
+    @media only screen and (max-width: 1200px) {
+        margin-top: 8vw;
+    }
+
+    @media only screen and (max-width: 1100px) {
+        margin-top: 8vw;
+    }
+
+    @media only screen and (max-width: 900px) {
+        margin-top: 15vw;
+    }
+
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(4, auto);
@@ -562,6 +575,8 @@ div.project {
 
     h3 {
         grid-area: 3 / 2 / 3 / span 7;
+        margin-top: 2em;
+        margin-bottom: 2em;
     }
 
     div:first-of-type {
@@ -654,6 +669,88 @@ div.project {
     }
 }
 
+
+/* ----------------------------------------- */
+/* ---------------- Contact ---------------- */
+/* ----------------------------------------- */
+
+
+div.contact {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 10% 340px;
+    grid-column-gap: 20px;
+    width: 90%;
+    height: auto;
+    transition: all ease-in 0.3s;
+
+    .contact_container {
+        border-radius: 20px;
+        background: $blue;
+        grid-area: 2 / 1 / 2 / span 12;
+        transition: all ease-in 0.3s;
+    }
+
+    form {
+        grid-area: 2 / 2 / 2 / span 5;
+        color: $white;
+
+        fieldset {
+            display: flex;
+            flex-direction: column;
+
+            input,
+            textarea {
+                background-color: $blue;
+                border: 1px solid $white;
+                border-radius: 5px;
+                padding: .75em 1.25rem;
+                margin-bottom: 1.5rem;
+                font-family: $body_font;
+                color: $white;
+
+                &::placeholder {
+                    color: $white;
+                    font-size: 10pt;
+                }
+            }
+
+
+
+                label {
+                    font-family: $header_font;
+                    font-size: 12pt;
+                    font-weight: 300;
+                    color: $white;
+                    display: inline-block;
+                    z-index: 3;
+                    width: auto;
+                    color: $white;
+                    padding-left: 15px;
+                    padding-right: 10px;
+                    margin-bottom: -5pt;
+                    position: relative;
+
+                    &:before {
+                        content: "";
+                        top: 0;
+                        left: 5px;
+                        background-color: $blue;
+                        height: 12px;
+                        width: 100%;
+                        z-index: -1;
+                        position: absolute;
+                    }
+
+    
+
+            }
+        }
+    }
+}
+
+
 /* ----------------------------------------- */
 /* ----------------- Case Study Page ------- */
 /* ----------------------------------------- */
@@ -700,3 +797,9 @@ div.project {
         }
     }
 }
+
+
+/* ----------------------------------------- */
+/* -------------- Mobile Styles ------------ */
+/* ----------------------------------------- */
+@media only screen and (max-width: 640px) {}

@@ -42,11 +42,6 @@
             <li class="n_projects"><a href="#projects" id="projects_m">Projects</a></li>
             <li class="n_about"><a href="#aboutme" id="about_m">About</a></li>
             <li class="n_contact"><a href="#contact" id="contact_m">Contact</a></li>
-            <li class="n_email">
-                <a href="mailto:SamRLynch@gmail.com" href="mailto:SamRLynch@gmail.com" id="email_m"><i class="fas fa-envelope"></i></a></li>
-            <li class="n_linkedin">
-                <a href="https://www.linkedin.com/in/samrlynch/" target="_blank" id="linkedin_m"><i class="fab fa-linkedin"></i></a>
-            </li>
         </ul>
         <ul class="mobilenav" id="myMobilenav">
             <li><a href="#projects" id="projects_m" onclick="nav_close()">PROJECTS</a></li>
@@ -117,24 +112,34 @@
                 <h4>RESEARCH</h4>
                 <p>Define the problem. Understand the user and their journey. Analyze UI and IA. Evaluate the relevant competition. Define success and requirements. </p>
             </div>
-
-                        <div>
+            <div>
                 <h4>DESIGN</h4>
                 <p>Solve the problem by combining visual design, user interface, and engaging interactions to provide an enjoyable user experience.</p>
             </div>
-
-                        <div>
+            <div>
                 <h4>BUILD</h4>
                 <p>Translate the design to code to build a responsive, accessible, and scalable product.</p>
             </div>
-
-                        <div>
+            <div>
                 <h4>REFINE</h4>
                 <p>Test prototypes with actual users to evaluate the product's ability to solve the problem. Make necessary iterations based on user insights and data gathered.</p>
             </div>
-
-
         </div>
+    </div>
+    <div class="contact">
+        <div class="contact_container"></div>
+        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xdobaave" method="post">
+            <fieldset id="fs-frm-inputs">
+                <label for="full-name">Full Name</label>
+                <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+                <label for="email-address">Email Address</label>
+                <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+                <label for="message">Message</label>
+                <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
+                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+            </fieldset>
+            <input type="submit" value="Submit">
+        </form>
     </div>
 </body>
 
