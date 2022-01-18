@@ -38,29 +38,28 @@
 <body>
     <nav class="top_nav_container">
         <ul class="navigation">
-            <li class="n_logo"><a href="#homepage">Sam Lynch</a></li>
+            <li class="n_logo"><a href="#home">Sam Lynch</a></li>
             <li class="n_projects"><a href="#projects" id="projects_m">Projects</a></li>
-            <li class="n_about"><a href="#aboutme" id="about_m">About</a></li>
+            <li class="n_about"><a href="#about" id="about_m">About</a></li>
             <li class="n_contact"><a href="#contact" id="contact_m">Contact</a></li>
         </ul>
         <ul class="mobilenav" id="myMobilenav">
             <li><a href="#projects" id="projects_m" onclick="nav_close()">PROJECTS</a></li>
-            <li><a href="#aboutme" id="about_m" onclick="nav_close()">ABOUT</a></li>
+            <li><a href="#about" id="about_m" onclick="nav_close()">ABOUT</a></li>
             <li><a href="#m_contact" id="contact_m" onclick="nav_close()">CONTACT</a></li>
-            <li><a href="mailto:SamRLynch@gmail.com" id="email_m" onclick="nav_close()"><i class="fas fa-envelope"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/samrlynch/" id="linkedin_m" target="_blank" onclick="nav_close()"><i class="fab fa-linkedin"></i></a></li>
             <li class="mobilemenu">
-                <a href="#homepage">Sam Lynch</a>
+                <a href="#home">Sam Lynch</a>
                 <a href="javascript:void(0);" style="font-size:15px;" class="mobile_dropdown" id="menu_m" onclick="myFunction()"><i class="fas fa-bars"></i></a>
             </li>
         </ul>
-    </nav>
+    </nav> <a class="anchor home" id=home></a>
     <div class="hero">
         <p>Hi, I'm</p>
         <h1>Sam Lynch.</h1>
         <p>I’m a product manager and creative technologist. <br /> I help create innovative solutions to complex problems. </p>
-        <button class="button">SEE MY WORK</button>
+        <a href="#projects"><button class="button">SEE MY WORK</button></a>
     </div>
+    <a class="anchor projects" id="projects"></a>
     <div class="project case_study_01">
         <div class="card">
         </div>
@@ -93,6 +92,7 @@
         <div class="phone_01"><img src="images/Project_2_B.png" alt="Website Redesign Case Study"></div>
         <div class="phone_02"><img src="images/Project_2_A.png" alt="Website Redesign Case Study"></div>
     </div>
+    <a class="anchor about" id="about"></a>
     <div class="about" id="aboutme">
         <div>
             <h2>About Me</h2>
@@ -126,16 +126,22 @@
             </div>
         </div>
     </div>
+    <a class="anchor contact" id="contact"></a>
     <div class="contact">
+        <div class="contact_text">
+            <h2>Get in Touch</h2>
+            <p>Have any questions? Feel free to drop me a line, and I will get back to you as soon as I can.</p>
+            <a href="mailto:SamRLynch@gmail.com" href="mailto:SamRLynch@gmail.com"><i class="fas fa-envelope"></i> SamRLynch@gmail.com</a>
+        </div>
         <div class="contact_container"></div>
         <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xdobaave" method="post">
             <fieldset id="fs-frm-inputs">
                 <label for="full-name">Full Name</label>
-                <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+                <input type="text" name="name" id="full-name" required="">
                 <label for="email-address">Email Address</label>
-                <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+                <input type="email" name="_replyto" id="email-address" required="">
                 <label for="message">Message</label>
-                <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
+                <textarea rows="5" name="message" id="message" required=""></textarea>
                 <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
             </fieldset>
             <input type="submit" value="Submit">

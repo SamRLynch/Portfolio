@@ -151,12 +151,29 @@ body {
   background-color: #F5FBFF;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 p {
   font-family: "Aleo", serif;
   font-weight: 300;
   font-size: 16pt;
   line-height: 24pt;
   margin-bottom: 10pt;
+}
+
+a {
+  font-family: "Aleo", serif;
+  font-weight: 300;
+  font-size: 16pt;
+  line-height: 24pt;
+  margin-bottom: 10pt;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 h1 {
@@ -449,26 +466,27 @@ ul.mobilenav li.n_icons a {
   }
   ul.mobilenav.responsive {
     padding-top: 75pt;
-    height: 101vh;
+    height: 110vh;
   }
   ul.mobilenav.responsive li {
     display: block;
   }
-  ul.mobilenav.responsive li:nth-child(n+1):nth-child(-n+6) {
+  ul.mobilenav.responsive li:nth-child(n+1):nth-child(-n+3) {
     margin-top: 0.5em;
     width: auto;
     margin-left: 20px;
     margin-right: 20px;
   }
-  ul.mobilenav.responsive li:nth-child(n+1):nth-child(-n+6) a {
+  ul.mobilenav.responsive li:nth-child(n+1):nth-child(-n+3) a {
     display: block;
     border-radius: 5px;
-    background-color: #4085D0;
-    font-size: 18pt;
+    background: linear-gradient(105.44deg, #4085D0 0%, #2A73C3 100%);
     padding-top: 10px;
     padding-bottom: 10px;
+    color: #F5FBFF;
+    font-size: 16px;
   }
-  ul.mobilenav.responsive li:nth-child(n+1):nth-child(-n+6) i {
+  ul.mobilenav.responsive li:nth-child(n+1):nth-child(-n+3) i {
     float: left;
     font-size: 18pt;
     display: block;
@@ -501,6 +519,27 @@ ul.mobilenav li.n_icons a {
   ul.mobilenav li.mobilemenu a.mobile_dropdown i {
     color: #000000;
   }
+}
+
+/* ----------------------------------------- */
+/* ---------- Anchor Links ----------------- */
+/* ----------------------------------------- */
+a.anchor {
+  display: block;
+  position: relative;
+  visibility: hidden;
+}
+
+a.anchor.projects {
+  top: 2vw;
+}
+
+a.anchor.about {
+  top: -9vw;
+}
+
+a.anchor.home {
+  top: -5vw;
 }
 
 /* ----------------------------------------- */
@@ -789,23 +828,37 @@ div.contact {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 10% 340px;
+  grid-template-rows: 10% 6vw auto 6vw;
   grid-column-gap: 20px;
   width: 90%;
   height: auto;
+  margin-bottom: 5em;
   transition: all ease-in 0.3s;
 }
 
 div.contact .contact_container {
   border-radius: 20px;
   background: #4085D0;
-  grid-area: 2 / 1 / 2 / span 12;
+  grid-area: 2 / 1 / span 3 / span 12;
   transition: all ease-in 0.3s;
 }
 
+div.contact .contact_text {
+  grid-area: 3 / 2 / 3 / span 4;
+  z-index: 15;
+}
+
+div.contact .contact_text h2,
+div.contact .contact_text p,
+div.contact .contact_text a,
+div.contact .contact_text i {
+  color: white;
+}
+
 div.contact form {
-  grid-area: 2 / 2 / 2 / span 5;
+  grid-area: 3 / 6 / 3 / span 4;
   color: #F5FBFF;
+  padding-top: 0.5em;
 }
 
 div.contact form fieldset {
@@ -848,12 +901,42 @@ div.contact form fieldset label {
 div.contact form fieldset label:before {
   content: "";
   top: 0;
-  left: 5px;
+  left: 8px;
   background-color: #4085D0;
   height: 12px;
-  width: 100%;
+  width: 50%;
   z-index: -1;
   position: absolute;
+}
+
+div.contact form fieldset label:nth-of-type(1):before {
+  width: 37%;
+}
+
+div.contact form fieldset label:nth-of-type(3):before {
+  width: 33%;
+}
+
+div.contact input[type="submit"] {
+  margin-top: 1em;
+  border: none;
+  color: white;
+  padding: 15px 5vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #64A5EE;
+  transition: all ease-in 0.3s;
+  border: 1px solid #F5FBFF;
+}
+
+div.contact input[type="submit"]:hover {
+  background-color: #F5FBFF;
+  border: 1px solid #64A5EE;
+  color: #64A5EE;
 }
 
 /* ----------------------------------------- */

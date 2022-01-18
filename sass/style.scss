@@ -30,7 +30,6 @@ $green_gradient: linear-gradient(105.44deg, #61936F 0%, #478258 100%);
 $dark_green_gradient: linear-gradient(96.82deg, #447B54 1.2%, #2B683C 100.89%);
 $purple_gradient: linear-gradient(112.03deg, #92608C 0%, #7E4477 100%);
 $dark_purple_gradient: linear-gradient(96.82deg, #794273 1.2%, #65295E 100.89%);
-
 $orange_gradient: linear-gradient(105.44deg, #D07440 0%, #C2622C 100%);
 
 
@@ -46,12 +45,30 @@ body {
     background-color: $white;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 p {
     font-family: $body_font;
     font-weight: 300;
     font-size: 16pt;
     line-height: 24pt;
     margin-bottom: 10pt;
+}
+
+a {
+    font-family: $body_font;
+    font-weight: 300;
+    font-size: 16pt;
+    line-height: 24pt;
+    margin-bottom: 10pt;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 h1 {
@@ -329,26 +346,26 @@ ul.mobilenav {
 
         &.responsive {
             padding-top: 75pt;
-            height: 101vh;
+            height: 110vh;
         }
 
         &.responsive li {
             display: block;
 
-            &:nth-child(n+1):nth-child(-n+6) {
+            &:nth-child(n+1):nth-child(-n+3) {
                 margin-top: 0.5em;
                 width: auto;
                 margin-left: 20px;
                 margin-right: 20px;
 
-
                 a {
                     display: block;
                     border-radius: 5px;
-                    background-color: $blue;
-                    font-size: 18pt;
+                    background: $blue_gradient;
                     padding-top: 10px;
                     padding-bottom: 10px;
+                    color: $white;
+                    font-size: 16px;
                 }
 
                 i {
@@ -394,6 +411,27 @@ ul.mobilenav {
         }
 
 
+    }
+
+}
+
+
+/* ----------------------------------------- */
+/* ---------- Anchor Links ----------------- */
+/* ----------------------------------------- */
+a.anchor {
+    display: block;
+    position: relative;
+    visibility: hidden;
+
+    &.projects {
+        top: 2vw;
+    }
+    &.about {
+        top: -9vw;
+    }
+    &.home {
+        top: -5vw;
     }
 
 }
@@ -679,22 +717,39 @@ div.contact {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 10% 340px;
+    grid-template-rows: 10% 6vw auto 6vw;
     grid-column-gap: 20px;
     width: 90%;
     height: auto;
+    margin-bottom: 5em;
     transition: all ease-in 0.3s;
+
 
     .contact_container {
         border-radius: 20px;
         background: $blue;
-        grid-area: 2 / 1 / 2 / span 12;
+        grid-area: 2 / 1 / span 3 / span 12;
         transition: all ease-in 0.3s;
     }
 
+    .contact_text {
+        grid-area: 3 / 2 / 3 / span 4;
+        z-index: 15;
+
+        h2,
+        p,
+        a,
+        i {
+            color: white;
+        }
+
+
+    }
+
     form {
-        grid-area: 2 / 2 / 2 / span 5;
+        grid-area: 3 / 6 / 3 / span 4;
         color: $white;
+        padding-top: 0.5em;
 
         fieldset {
             display: flex;
@@ -718,34 +773,63 @@ div.contact {
 
 
 
-                label {
-                    font-family: $header_font;
-                    font-size: 12pt;
-                    font-weight: 300;
-                    color: $white;
-                    display: inline-block;
-                    z-index: 3;
-                    width: auto;
-                    color: $white;
-                    padding-left: 15px;
-                    padding-right: 10px;
-                    margin-bottom: -5pt;
-                    position: relative;
+            label {
+                font-family: $header_font;
+                font-size: 12pt;
+                font-weight: 300;
+                color: $white;
+                display: inline-block;
+                z-index: 3;
+                width: auto;
+                color: $white;
+                padding-left: 15px;
+                padding-right: 10px;
+                margin-bottom: -5pt;
+                position: relative;
 
-                    &:before {
-                        content: "";
-                        top: 0;
-                        left: 5px;
-                        background-color: $blue;
-                        height: 12px;
-                        width: 100%;
-                        z-index: -1;
-                        position: absolute;
-                    }
 
-    
+                &:before {
+                    content: "";
+                    top: 0;
+                    left: 8px;
+                    background-color: $blue;
+                    height: 12px;
+                    width: 50%;
+                    z-index: -1;
+                    position: absolute;
+                }
 
+                &:nth-of-type(1):before {
+                    width: 37%;
+                }
+
+                &:nth-of-type(3):before {
+                    width: 33%;
+                }
             }
+
+        }
+    }
+
+    input[type="submit"] {
+        margin-top: 1em;
+        border: none;
+        color: white;
+        padding: 15px 5vw;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: $light_blue;
+        transition: all ease-in 0.3s;
+        border: 1px solid $white;
+
+        &:hover {
+            background-color: $white;
+            border: 1px solid $light_blue;
+            color: $light_blue;
         }
     }
 }
@@ -802,4 +886,6 @@ div.contact {
 /* ----------------------------------------- */
 /* -------------- Mobile Styles ------------ */
 /* ----------------------------------------- */
-@media only screen and (max-width: 640px) {}
+@media only screen and (max-width: 640px) {
+
+}
