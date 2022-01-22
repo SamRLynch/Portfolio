@@ -2,7 +2,7 @@
 /* ---------------- Imports  --------------- */
 /* ----------------------------------------- */
 @import 'css_reset';
-@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@300;400;700&family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@300;400;700&family=Courier+Prime&family=Lato:wght@400;700&display=swap');
 
 /* ----------------------------------------- */
 /* ---------------- Variables  ------------- */
@@ -11,6 +11,9 @@ $header_font: 'Lato',
 sans-serif;
 $body_font: 'Aleo',
 serif;
+$code_font: 'Courier Prime',
+monospace;
+
 
 
 $white: #F5FBFF;
@@ -31,6 +34,8 @@ $dark_green_gradient: linear-gradient(96.82deg, #447B54 1.2%, #2B683C 100.89%);
 $purple_gradient: linear-gradient(112.03deg, #92608C 0%, #7E4477 100%);
 $dark_purple_gradient: linear-gradient(96.82deg, #794273 1.2%, #65295E 100.89%);
 $orange_gradient: linear-gradient(105.44deg, #D07440 0%, #C2622C 100%);
+
+$code_gray: rgba(242, 242, 242, 1);
 
 
 /* ----------------------------------------- */
@@ -105,10 +110,18 @@ h3 {
 }
 
 h4 {
-    font-family: $header_font;
-    font-size: 24px;
+    font-family: $body_font;
+    font-size: 24pt;
     font-weight: 500;
     margin-bottom: 0.5em;
+}
+
+pre {
+    background-color: $code_gray;
+    border-radius: 5px;
+    font-family: $code_font;
+    padding: 0 1em;
+    font-size: 10pt;
 }
 
 /* ----------------------------------------- */
@@ -1251,13 +1264,16 @@ div.contact {
         /* ---------- PROTOTYPES ---------- */
         div.prototypes {
             grid-area: 9 / 2 / 9 / span 10;
-            a:first-of-type  {
+
+            a:first-of-type {
                 margin-right: 1em;
             }
+
             div {
                 display: flex;
                 margin-top: 2em;
-                justify-content: space-between;
+                justify-content: space-around;
+
                 img {
                     object-fit: cover;
                     max-width: 50%;
@@ -1269,18 +1285,176 @@ div.contact {
         /* ---------- TESTING ---------- */
         div.testing {
             grid-area: 10 / 2 / 10 / span 10;
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-gap: 20px;
+
+            h2 {
+                grid-area: 1 / 1 / 1 / span 10;
+            }
+
+            div:first-of-type {
+                grid-area: 2 / 1 / 2 / span 5;
+            }
+
+            div.testing_a_b {
+                grid-area: 2 / 6 / 2 / span 5;
+
+                p:before {
+                    background-image: url('../images/ICON_question.png');
+                    content: '';
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 50px;
+                    height: 50px;
+                    display: block;
+                    float: left;
+                    margin-right: 0.5em;
+                }
+
+                div {
+                    display: flex;
+
+                    img {
+                        align-self: flex-end;
+                    }
+                }
+            }
+
+            div.testing_tasks {
+                border-radius: 20px;
+                background: $blue_gradient;
+                padding: 2em 1.5em 1em 1.5em;
+                margin-bottom: 2em;
+
+                h4 {}
+
+                h4,
+                li {
+                    color: white;
+                }
+
+            }
+
+            div.results_img {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                margin-bottom: 2em;
+
+                img {
+                    margin-right: 1em;
+                }
+            }
+
+            div.testing_takeaways {
+                border-radius: 20px;
+                background: $purple_gradient;
+                padding: 2em 1.5em 1em 1.5em;
+                margin-bottom: 2em;
+
+                h4,
+                li {
+                    color: white;
+                }
+            }
         }
 
         /* ---------- FRONT_END ---------- */
         div.front_end {
             grid-area: 11 / 2 / 11 / span 10;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                margin-top: 1em;
+            }
+
+            div.languages {
+                img {
+                    margin-right: 2em;
+                }
+            }
+
+            div.fe_variables {
+                display: grid;
+                grid-template-rows: repeat(2, auto);
+                grid-template-columns: 25% 40% 35%;
+                grid-gap: 20px;
+
+                div {
+                    grid-area: 1 / 1 / 2 / 1;
+                }
+
+                pre {
+                    grid-area: 1 / 2 / 2 / 2;
+
+
+                    &:nth-of-type(2) {
+                        grid-area: 1 / 3 / 2 / 3;
+                    }
+                }
+            }
+
+            div.fe_grid {
+                display: grid;
+                grid-template-rows: repeat(2, auto);
+                grid-template-columns: 25% 40% 35%;
+                grid-gap: 20px;
+
+                div:nth-of-type(1) {
+                    grid-area: 1 / 1 / 2 / 1;
+                }
+
+                div:nth-of-type(2) {
+                    grid-area: 1 / 2 / 2 / 2;
+
+                    pre {
+                        margin-bottom: 1em;
+                    }
+                }
+
+                div:nth-of-type(3) {
+                    grid-area: 1 / 3 / 2 / 3;
+                }
+            }
+
+            div.fe_responsive {}
         }
 
         /* ---------- LAUNCH ---------- */
         div.launch {
             grid-area: 12 / 2 / 12 / span 10;
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: 15% 20% 10% 10%;
+            grid-gap: 20px;
+            h2 {
+                grid-area: 1 / 1 / 1 / span 10;
+            }
+            div {
+                grid-area: 2 / 1 / 2 / span 6;
+            }
+
+            img {
+                max-width: 100%;
+                &:nth-of-type(1) {
+                    grid-area: 3 / 1 / span 2 / span 4;
+                }
+                &:nth-of-type(2) {
+                    grid-area: 3 / 4 / span 2 / span 2;
+                }
+                &:nth-of-type(3) {
+                    grid-area: 2 / 7 / 2 / span 4;
+                }
+            }
         }
 
+        /* ---------- THANKS ---------- */
+        div.thankyou {
+            grid-area: 13 / 2 / 13 / span 10;
+            display: grid;
+        }
         /* ---------- CLOSE CASE STUDY GRID ---------- */
 
     }

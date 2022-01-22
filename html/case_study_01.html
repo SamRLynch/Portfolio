@@ -17,6 +17,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/x-icon" href="SL.png" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
     <script type="text/javascript">
     function myFunction() {
         var x = document.getElementById("myMobilenav");
@@ -201,8 +203,10 @@
             <div class="prototypes">
                 <h2>Prototypes</h2>
                 <p>Clickable prototypes were created on Figma for the desktop and mobile site designs.</p>
-                <a href="#"><button class="button_03"><img src="../images/ICON_figma.png" alt="figma icon" />Desktop Prototype</button></a>
-                <a href="#"><button class="button_03"><img src="../images/ICON_figma.png" alt="figma icon" />Mobile Prototype</button></a>
+                <div>
+                    <a href="#"><button class="button_03"><img src="../images/ICON_figma.png" alt="figma icon" />Desktop Prototype</button></a>
+                    <a href="#"><button class="button_03"><img src="../images/ICON_figma.png" alt="figma icon" />Mobile Prototype</button></a>
+                </div>
                 <div>
                     <img src="../images/prototype_01.png" alt="desktop prototype" />
                     <img src="../images/prototype_02.png" alt="mobile prototype" />
@@ -210,12 +214,181 @@
             </div>
             <div class="testing">
                 <h2>Testing</h2>
+                <div>
+                    <p>Usability testing was conducted on the desktop and mobile prototypes with 5 subjects. An A/B test was conducted on the mobile navigation layout with the same 5 subjects.</p>
+                    <div class="testing_tasks">
+                        <h4>Tasks</h4>
+                        <ul>
+                            <li>Make a dog grooming appointment</li>
+                            <li>Determine if the business is open on Friday at 9am</li>
+                            <li>Contact the owner of the business</li>
+                            <li>Determine if the business offers pet ear cleaning</li>
+                            <li>Read 3 testimonials</li>
+                        </ul>
+                    </div>
+                    <h3>Results</h3>
+                    <div class="results_img">
+                        <img src="../images/results_01.png" alt="40% Called to make and Appointment" />
+                        <img src="../images/results_02.png" alt="100% Determined the business was open at 9am" />
+                        <img src="../images/results_03.png" alt="100% Could contact the owner" />
+                        <img src="../images/results_04.png" alt="80% Found ear cleaning on services page" />
+                        <img src="../images/results_05.png" alt="100% Read 3 testimonials" />
+                    </div>
+                    <div class="testing_takeaways">
+                        <h4>Takeaways</h4>
+                        <ul>
+                            <li>Need to make it clear to the user they need to call to make an appointment.</li>
+                            <li>Adjust font spacing and list style in the services section.</li>
+                            <li>The majority of users contacted the owner through the contact section at the bottom.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="testing_a_b">
+                    <h3>A/B Testing</h3>
+                    <p>Do users prefer a top or bottom navigation on the mobile prototype?</p>
+                    <div>
+                        <img src="../images/A_B_01.png" alt="20% Option A" />
+                        <img src="../images/A_B_02.png" alt="80% Option B" />
+                    </div>
+                </div>
             </div>
             <div class="front_end">
                 <h2>Front-End Development</h2>
+                <h3>Languages</h3>
+                <div class="languages">
+                    <img src="../images/languages_01.png" alt="SASS/CSS 60%" />
+                    <img src="../images/languages_02.png" alt="HTML 35%" />
+                    <img src="../images/languages_03.png" alt="JavaScript 5%" />
+                    <a href="#"><button class="button_03"><img src="../images/ICON_github.png" alt="github icon" />Project on Github</button></a>
+                </div>
+                <h3>Variables &amp; Mixins</h3>
+                <div class="fe_variables">
+                    <div>
+                        <p>SASS variables and mixins were written for all colors, classes, and components based on the style guide.</p>
+                        <p>Maintaining variables allowed flexibility if any colors or styles needed to change in future iterations.</p>
+                    </div>
+                    <pre>
+                        <code>
+$header_font: 'PoppinsSemibold', 
+sans-serif;
+$body_font: 'OpenSansLight', 
+sans-serif;
+
+$background_color: #E6F2FF;
+$text_color: #E6F2FF;
+$accent_color: #3478C5;
+$nav_color: #032F61;
+$star_yellow: #efba42;
+$button_blue: #599BE8;
+$light_blue: #C1DDFE;
+$cell_blue: #3477C6;
+$white: #FFF;
+                        </code>
+                    </pre>
+                    <pre>
+            <code>
+@mixin body_font_mixin {
+    @include p_size;
+    font-family: $body_font;
+    display: block;
+    color: $white;
+    font-weight: 100;
+    margin-bottom: 10pt;
+}
+
+@mixin head_font_mixin {
+    font-family: $header_font;
+    @include header_size;
+    display: block;
+    color: $text_color;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+@mixin header_size {
+    font-size: 48pt;
+
+    @media only screen and 
+    (min-width: 1020px) {
+        font-size: 60pt;
+    }
+
+    @media only screen and 
+    (min-width: 1200px) {
+        font-size: 72pt;
+    }
+}
+            </code>
+                        
+                    </pre>
+                </div>
+                <h3>CSS Grid</h3>
+                <div class="fe_grid">
+                    <div>
+                        <p>Since the Figma designs were used a grid, I used CSS-grid to handle the site layout and simplify the responsive design process.</p>
+                        <p>The mosaic image layout was handled by using grid-template-areas for the featured pet gallery.</p>
+                    </div>
+                    <div>
+                        <pre>
+                        <code>
+.pet_gallery {
+    margin-top: 1em;
+    grid-area: 3 / 2 / 3 / span 6;
+    display: grid;
+    border-radius: 5px;
+    grid-template-areas:
+        "img1 img1 img3 img5 img5 img8"
+        "img1 img1 img4 img6 img9 img9"
+        "img2 img2 img4 img7 img9 img9";
+    grid-template-rows: 10vw 10vw 10vw;
+    grid-gap: 10px;
+}
+                        </code>
+                    </pre>
+                        <pre>
+                        <code>
+.pet_gallery {
+    grid-area: 3 / 2 / 3 / 2;
+    display: grid; 
+    grid-gap: 5px;
+    border-radius: 5px;
+    grid-template-areas:
+        "img1 img3"
+        "img2 img2"
+        "img4 img6"
+        "img4 img8"
+        "img5 img5"
+        "img9 img7";
+}
+                        </code>
+                    </pre>
+                    </div>
+                <div>
+                    <img src="../images/grid_desktop.png" alt="css grid desktop" />
+                    <img src="../images/grid_mobile.png" alt="css grid mobile" />
+
+                </div>
+
+
+                </div>
+
+                <h3>Responsive Navigation</h3>
+                <div class="fe_responsive">
+                    <p>On mobile screens, the CSS displays a hamburger menu. JavaScript toggles the mobile nav by adding the “responsive” class when the hamburger is clicked. </p>
+                </div>
             </div>
             <div class="launch">
                 <h2>Launch</h2>
+                <div>
+                <p>After QA testing on a development environment, the new website for BarndogGrooming.com was officially launched on December 29, 2021.</p>
+                </div>
+                <img src="../images/launch_01.png" alt="Desktop" />
+                <img src="../images/launch_02.png" alt="Mobile" />
+                <img src="../images/launch_03.png" alt="Rocket" />
+            </div>
+            <div class="thankyou">
+                <h2>THANK YOU</h2>
+                <p>For reading my case study</p>
             </div>
             <!--- close case study ---->
         </div>
