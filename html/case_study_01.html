@@ -42,31 +42,23 @@
         <ul class="navigation">
             <li class="n_logo"><a href="../index.html">Sam Lynch</a></li>
             <li class="n_projects"><a href="#projects" id="projects_m">Projects</a></li>
-            <li class="n_about"><a href="../index.html#aboutme" id="about_m">About</a></li>
+            <li class="n_about"><a href="#about" id="about_m">About</a></li>
             <li class="n_contact"><a href="#contact" id="contact_m">Contact</a></li>
-            <li class="n_email">
-                <a href="mailto:SamRLynch@gmail.com" href="mailto:SamRLynch@gmail.com" id="email_m"><i class="fas fa-envelope"></i></a></li>
-            <li class="n_linkedin">
-                <a href="https://www.linkedin.com/in/samrlynch/" target="_blank" id="linkedin_m"><i class="fab fa-linkedin"></i></a>
-            </li>
         </ul>
         <ul class="mobilenav" id="myMobilenav">
             <li><a href="#projects" id="projects_m" onclick="nav_close()">PROJECTS</a></li>
-            <li><a href="../index.html#aboutme" id="about_m" onclick="nav_close()">ABOUT</a></li>
+            <li><a href="#about" id="about_m" onclick="nav_close()">ABOUT</a></li>
             <li><a href="#m_contact" id="contact_m" onclick="nav_close()">CONTACT</a></li>
-            <li><a href="mailto:SamRLynch@gmail.com" id="email_m" onclick="nav_close()"><i class="fas fa-envelope"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/samrlynch/" id="linkedin_m" target="_blank" onclick="nav_close()"><i class="fab fa-linkedin"></i></a></li>
             <li class="mobilemenu">
-                <a href="#homepage">Sam Lynch</a>
+                <a href="#home">Sam Lynch</a>
                 <a href="javascript:void(0);" style="font-size:15px;" class="mobile_dropdown" id="menu_m" onclick="myFunction()"><i class="fas fa-bars"></i></a>
             </li>
         </ul>
     </nav>
     <div class="container">
-        <!--
-        <img class="blob_01" src="../images/CS_1_A.svg">
-        <img class="blob_02" src="../images/CS_1_B.svg">-->
         <div class="case_study_page">
+            <img class="blob_01" src="../images/CS_1_A.svg">
+            <img class="blob_02" src="../images/CS_1_B.svg">
             <div class="case_study_head">
                 <h1>Website Redesign</h1>
                 <h3>Case Study</h3>
@@ -204,8 +196,8 @@
                 <h2>Prototypes</h2>
                 <p>Clickable prototypes were created on Figma for the desktop and mobile site designs.</p>
                 <div>
-                    <a href="#"><button class="button_03"><img src="../images/ICON_figma.png" alt="figma icon" />Desktop Prototype</button></a>
-                    <a href="#"><button class="button_03"><img src="../images/ICON_figma.png" alt="figma icon" />Mobile Prototype</button></a>
+                    <a href="https://www.figma.com/proto/zWqgzP6w7eoTBbP6THnQOv/barndog-website?node-id=646%3A12449&scaling=min-zoom&page-id=405%3A6159&starting-point-node-id=646%3A12449"><button class="button_03"><img src="../images/ICON_figma.png" alt="figma icon" />Desktop Prototype</button></a>
+                    <a href="https://www.figma.com/proto/zWqgzP6w7eoTBbP6THnQOv/barndog-website?node-id=529%3A8286&scaling=scale-down&page-id=405%3A6160&starting-point-node-id=529%3A8286"><button class="button_03"><img src="../images/ICON_figma.png" alt="figma icon" />Mobile Prototype</button></a>
                 </div>
                 <div>
                     <img src="../images/prototype_01.png" alt="desktop prototype" />
@@ -259,7 +251,7 @@
                     <img src="../images/languages_01.png" alt="SASS/CSS 60%" />
                     <img src="../images/languages_02.png" alt="HTML 35%" />
                     <img src="../images/languages_03.png" alt="JavaScript 5%" />
-                    <a href="#"><button class="button_03"><img src="../images/ICON_github.png" alt="github icon" />Project on Github</button></a>
+                    <a href="https://github.com/SamRLynch/BarnDogGrooming"  target="_blank"><button class="button_03"><img src="../images/ICON_github.svg" alt="github icon" />Project on Github</button></a>
                 </div>
                 <h3>Variables &amp; Mixins</h3>
                 <div class="fe_variables">
@@ -363,15 +355,11 @@ $white: #FFF;
                         </code>
                     </pre>
                     </div>
-                <div>
-                    <img src="../images/grid_desktop.png" alt="css grid desktop" />
-                    <img src="../images/grid_mobile.png" alt="css grid mobile" />
-
+                    <div>
+                        <img src="../images/grid_desktop.png" alt="css grid desktop" />
+                        <img src="../images/grid_mobile.png" alt="css grid mobile" />
+                    </div>
                 </div>
-
-
-                </div>
-
                 <h3>Responsive Navigation</h3>
                 <div class="fe_responsive">
                     <p>On mobile screens, the CSS displays a hamburger menu. JavaScript toggles the mobile nav by adding the “responsive” class when the hamburger is clicked. </p>
@@ -380,15 +368,19 @@ $white: #FFF;
             <div class="launch">
                 <h2>Launch</h2>
                 <div>
-                <p>After QA testing on a development environment, the new website for BarndogGrooming.com was officially launched on December 29, 2021.</p>
+                    <p>After QA testing on a development environment, the new website for BarndogGrooming.com was officially launched on December 29, 2021.</p>
                 </div>
                 <img src="../images/launch_01.png" alt="Desktop" />
                 <img src="../images/launch_02.png" alt="Mobile" />
                 <img src="../images/launch_03.png" alt="Rocket" />
             </div>
             <div class="thankyou">
-                <h2>THANK YOU</h2>
+                <div><h2>THANK YOU</h2>
                 <p>For reading my case study</p>
+                </div>
+                <div class="smoke">
+                    <img src="../images/smoke.svg" alt="launch" />
+                </div>
             </div>
             <!--- close case study ---->
         </div>
