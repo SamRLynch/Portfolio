@@ -926,29 +926,29 @@ div.contact {
                 counter-reset: sectionCounter;
             }
 
-            h2::before {
-                content: counter(sectionCounter, decimal-leading-zero) ".";
-                color: $blue;
-                text-align: right;
-                margin-left: -54px;
-                margin-right: 5px;
+            h2 {
+                text-indent: 0;
+                margin-top: 2em;
+
+                &::before {
+                    content: counter(sectionCounter, decimal-leading-zero) ".";
+                    color: $blue;
+                    text-align: right;
+                    margin-left: -54px;
+                    margin-right: 5px;
+                }
+
+
+                &::after {
+                    width: 100px;
+                    padding-bottom: 10px;
+                    border-bottom: 4px solid $blue;
+                    content: '';
+                    display: block;
+                }
             }
         }
 
-
-
-        div h2 {
-            text-indent: 0;
-            margin-top: 2em;
-
-            &:after {
-                width: 100px;
-                padding-bottom: 10px;
-                border-bottom: 4px solid $blue;
-                content: '';
-                display: block;
-            }
-        }
 
         h3 {
             color: $blue;
@@ -1006,7 +1006,7 @@ div.contact {
             grid-area: 2 / 2 / 2 / span 10;
             display: flex;
             flex-direction: row;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             justify-content: space-between;
             z-index: 15;
 
@@ -1240,6 +1240,15 @@ div.contact {
                     max-width: 14%;
                     height: auto;
                 }
+            }
+
+            .styleguide {
+                img {
+                    max-width: 60%;
+                    border-radius: 10px;
+                }
+
+                margin-bottom: 2em;
             }
 
             .hifi_designs {
@@ -1521,15 +1530,316 @@ div.contact {
 
 }
 
+@media all and (max-width: 900px) {
+    .container {
+        .case_study_page {
+
+            p,
+            li {
+                line-height: 20pt;
+            }
+
+            grid-template-columns: 5% repeat(10, 1fr) 5%;
+
+            /* ---------- Section Number ---------- */
+            &>div {
+                h2 {
+                    margin-top: 1em;
+                }
+
+                h2::before {
+                    margin-left: 0;
+                }
+            }
+
+
+            /* ---------- BRIEF ---------- */
+            div.brief {
+                grid-area: 3 / 2 / 3 / span 10;
+
+                div.brief_container {
+                    flex-direction: column;
+
+                    div {
+                        width: 100%;
+                        margin-bottom: 1em;
+                    }
+                }
+            }
+
+            /* ---------- ROADMAP ---------- */
+            div.roadmap {
+                grid-area: 4 / 2 / 4 / span 8;
+            }
+
+
+
+            /* ---------- STAKEHOLDER ---------- */
+            div.stakeholder {
+
+                h4 {
+                    font-size: 20pt;
+                }
+
+                img {
+                    grid-area: 4 / 1 / 4 / span 5;
+                    margin-left: 0;
+                    max-width: 100%;
+                    object-fit: cover;
+                    z-index: 20;
+                    margin-bottom: -3em;
+                }
+
+                div.stakeholder_cards {
+                    grid-area: 3 / 1 / span 2 / span 10;
+
+                    div {
+                        padding: 2.5em 1.5em 1.5em 1.5em;
+                        position: relative;
+                    }
+                }
+            }
+
+            /* ---------- RESEARCH ---------- */
+            div.research {
+                div.site_analysis {
+                    grid-area: 2 / 1 / 2 / span 10;
+                }
+
+                div.competitor_analysis {
+                    grid-area: 3 / 1 / 3 / span 10;
+                }
+
+                div.user_persona {
+                    grid-area: 4 / 1 / 4 / span 10;
+                    display: flex;
+                    flex-flow: column wrap;
+
+                    div:nth-of-type(1) {
+                        padding-right: 0;
+                    }
+                }
+            }
+
+
+            /* ---------- DESIGN ---------- */
+            div.design {
+                div {
+                    justify-content: space-evenly;
+                    flex-wrap: wrap;
+                    ;
+
+                    img {
+                        max-width: 25%;
+                        height: auto;
+                    }
+                }
+
+                .styleguide {
+                    img {
+                        max-width: 50%;
+                    }
+                }
+
+                .mobile_img {
+                    max-width: 100%;
+                }
+            }
+
+            /* ---------- TESTING ---------- */
+            div.testing {
+                h2 {
+                    grid-area: 1 / 1 / 1 / span 10;
+                }
+
+                div:first-of-type {
+                    grid-area: 2 / 1 / 2 / span 10;
+                }
+
+                div.testing_a_b {
+                    grid-area: 3 / 1 / 3 / span 10;
+
+                    p:before {
+                        width: 25px;
+                        height: 25px;
+                    }
+
+                    div {
+                        width: 60%;
+                        margin: 0 auto;
+
+                        img {
+                            object-fit: cover;
+                            max-width: 50%;
+                            height: auto;
+                        }
+                    }
+
+                }
+
+                div.testing_tasks,
+                div.testing_takeaways {
+                    padding: 1.5em 1em 0.5em 1em;
+                }
+
+                div.results_img {
+                    padding: 0 5%;
+                    justify-content: space-evenly;
+
+                    img {
+                        margin-bottom: 1em;
+                    }
+                }
+            }
+
+            /* ---------- FRONT_END ---------- */
+            div.front_end {
+
+                h3 {
+                    margin-top: 1em;
+                }
+
+                div.languages {
+                    img {
+                        margin-right: 2em;
+                    }
+                }
+
+                div.fe_variables {
+                    grid-gap: 10px;
+                    grid-template-columns: 50% 50%;
+
+                    div {
+                        grid-area: 1 / 1 / 2 / span 2;
+                    }
+
+                    pre {
+                        grid-area: 2 / 1 / 2 / 1;
+
+                        &:nth-of-type(2) {
+                            grid-area: 2 / 2 / 2 / 2;
+                        }
+                    }
+                }
+
+                div.fe_grid {
+                    grid-template-columns: 50% 50%;
+                    grid-template-rows: repeat(3, auto);
+                    grid-gap: 10px;
+
+                    div:nth-of-type(1) {
+                        grid-area: 1 / 1 / 1 / span 2;
+                    }
+
+                    div:nth-of-type(2) {
+                        grid-area: 2 / 1 / 2 / span 2;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+
+                    div:nth-of-type(3) {
+                        grid-area: 3 / 1 / 3 / span 2;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+                }
+
+                div.fe_responsive {}
+            }
+
+            /* ---------- LAUNCH ---------- */
+            div.launch {
+                grid-area: 12 / 2 / 12 / span 10;
+                display: grid;
+                grid-template-columns: repeat(10, 1fr);
+                grid-template-rows: 15% 20%;
+                grid-gap: 20px;
+
+                h2 {
+                    grid-area: 1 / 1 / 1 / span 10;
+                }
+
+                div {
+                    grid-area: 2 / 1 / 2 / span 6;
+                }
+
+                img {
+                    max-width: 100%;
+
+                    &:nth-of-type(1) {
+                        grid-area: 3 / 1 / 3 / span 4;
+                    }
+
+                    &:nth-of-type(2) {
+                        grid-area: 3 / 4 / 3 / span 2;
+                    }
+
+                    &:nth-of-type(3) {
+                        grid-area: 2 / 7 / span 2 / span 4;
+                    }
+                }
+            }
+
+            /* ---------- THANKS ---------- */
+            div.thankyou {
+                grid-area: 13 / 1 / 13 / span 12;
+                display: grid;
+                grid-template-columns: 10% repeat(10, 1fr) 10%;
+                grid-template-rows: repeat(2, 1fr);
+                margin-top: -25vw;
+
+                div:first-of-type {
+                    grid-area: 2 / 2 / 2 / span 4;
+                    padding-top: 2em;
+
+                    h2,
+                    p {
+                        color: $white;
+
+                        &:before {
+                            content: none;
+                        }
+                    }
+                }
+
+                div.smoke {
+                    z-index: -15;
+                    grid-area: 1 / 1 / span 2 / span 12;
+
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                    }
+                }
+            }
+
+
+
+
+
+
+        }
+    }
+
+}
 
 @media all and (max-width: 700px) {
 
-    h1,
-    h2,
     h3,
+    h4,
     p {
         text-align: center;
     }
+
+    p {
+        font-size: 16pt;
+        line-height: 18pt;
+    }
+
+
+
 
     /* --------- Main Page------------ */
     div.project {
@@ -1622,7 +1932,6 @@ div.contact {
         .contact_text {
             padding-top: 3em;
             grid-area: 1 / 2 / 1 / span 10;
-
         }
 
         form {
@@ -1635,6 +1944,338 @@ div.contact {
             }
         }
     }
+
+
+    /* ------------------------------------ */
+    /* -------------- CASE STUDY ---------- */
+    /* ------------------------------------ */
+
+    div.container {
+
+
+
+    
+
+
+
+        .blob_01,
+        .blob_02 {
+            display: none;
+        }
+
+        .case_study_page {
+            grid-row-gap: 0;
+
+
+/* ---------- HERO ---------- */
+        .case_study_head {
+            grid-area: 1 / 1 / 1 / span 12;
+            padding-bottom: 3em;
+            background: $blue_gradient;
+            h1 {
+                text-align: center;
+                
+            }
+
+        }
+
+        .head_images {
+            grid-area: 1 / 5 / 1 / span 8;
+            margin-top: 3em;
+
+            div {
+                &:nth-of-type(1) {
+                    z-index: -10;
+                    grid-area: 1 / 1 / span 2 / span 3;
+                }
+
+                &:nth-of-type(2) {
+                    grid-area: 2 / 3 / span 2 / span 3;
+                }
+            }
+        }
+
+
+
+            /* ---------- Section HEads ---------- */
+            &>div {
+
+                h2 {
+                    margin-top: 1em;
+                    text-align: center;
+
+                    &::before {
+                        text-align: center;
+                        margin-left: auto;
+                        margin-right: auto;
+                        display: block;
+                        margin-bottom: 0.25em;
+                        font-size: 48px;
+                    }
+
+                    &::after {
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+            }
+
+
+            p,
+            li {
+                line-height: 20pt;
+            }
+
+            grid-template-columns: 18px repeat(10, 1fr) 18px;
+
+            /* ---------- OVERVIEW ---------- */
+            div.overview {
+                grid-area: 2 / 2 / 2 / span 10;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                p {
+                    font-size: 16pt;
+                    line-height: 20pt;
+                }
+
+                div {
+                    padding: 3em 1em 1em 1em;
+                    margin-right: 0;
+                    flex-basis: 100%;
+                    margin-top: 3em;
+
+                    &:before {
+                        width: 50px;
+                        height: 50px;
+                        z-index: 20;
+                        position: absolute;
+                        top: -25px;
+                        left: 41%;
+                    }
+                }
+            }
+
+            /* ---------- ROADMAP ---------- */
+            div.roadmap {
+                grid-area: 4 / 2 / 4 / span 10;
+            }
+
+
+            /* ---------- STAKEHOLDER ---------- */
+            div.stakeholder {
+
+                img {
+                    grid-area: 3 / 1 / 3 / span 10;
+                    margin-left: 0;
+                    margin-bottom: 0;
+                    z-index: -10;
+                    display: block;
+                }
+
+                div.stakeholder_cards {
+                    grid-area: 3 / 1 / span 2 / span 10;
+                    flex-direction: column;
+                    margin-top: 58%;
+
+                    div {
+                        padding: 3em 1em 1em 1em;
+                        margin-bottom: 3em;
+
+                        &:before {
+                            left: 41%;
+                        }
+
+                    }
+                }
+            }
+
+            /* ---------- RESEARCH ---------- */
+            div.research {}
+
+            /* ---------- SITEMAP ---------- */
+            div.sitemap {
+                text-align: center;
+
+            }
+
+
+            /* ---------- DESIGN ---------- */
+            div.design {
+
+                h3 {
+                    margin-top: 2em;
+
+                    &:first-of-type {
+                        margin-top: 0;
+                    }
+                }
+
+                div {
+
+                    img {
+                        max-width: 50%;
+                    }
+                }
+
+                .styleguide {
+                    img {
+                        max-width: 80%;
+                    }
+                }
+
+                .mobile_img {
+                    max-width: 100%;
+                }
+            }
+
+            /* ---------- PROTOTYPES ---------- */
+            div.prototypes {
+                grid-area: 9 / 2 / 9 / span 10;
+
+                a:first-of-type {
+                    margin-right: 1em;
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+
+
+            /* ---------- TESTING ---------- */
+            div.testing {
+
+                div.testing_a_b {
+
+                    div {
+                        width: 80%;
+                        margin: 0 auto;
+
+                    }
+
+                }
+
+
+            }
+
+            /* ---------- FRONT_END ---------- */
+            div.front_end {
+
+                h3 {
+                    margin-top: 1em;
+                }
+
+                div.languages {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    width: 90%;
+                    margin: 0 auto;
+
+                    img {
+                        margin-right: 1em;
+                    }
+                }
+
+                div.fe_variables {
+                    grid-gap: 10px;
+                    grid-template-columns: 100%;
+
+                    div {
+                        grid-area: 1 / 1 / 1 / 1;
+                    }
+
+                    pre {
+                        grid-area: 2 / 1 / 2 / 1;
+
+                        &:nth-of-type(2) {
+                            grid-area: 3 / 1 / 3 / 1;
+                        }
+                    }
+                }
+
+                div.fe_grid {
+                    grid-template-columns: 100%;
+                    grid-template-rows: repeat(5, auto);
+
+                    div:nth-of-type(1) {
+                        grid-area: 1 / 1 / 1 / 1;
+                    }
+
+                    div:nth-of-type(2) {
+                        grid-area: 2 / 1 / 2 / 1;
+                        flex-direction: column;
+                    }
+
+                    div:nth-of-type(3) {
+                        grid-area: 3 / 1 / 3 / 1;
+                        flex-direction: column;
+                    }
+                }
+
+                div.fe_responsive {}
+            }
+
+            /* ---------- LAUNCH ---------- */
+            div.launch {
+                grid-template-rows: auto;
+                grid-gap: 10px;
+
+                div {
+                    grid-area: 2 / 1 / 2 / span 10;
+                    margin-top: 0.5em;
+                    margin-bottom: 1em;
+                }
+
+                img {
+                    max-width: 100%;
+
+                    &:nth-of-type(1) {
+                        grid-area: 3 / 1 / 3 / span 6;
+                    }
+
+                    &:nth-of-type(2) {
+                        grid-area: 3 / 5 / 3 / span 2;
+                        margin-top: -1em;
+                        margin-right: -1em;
+                    }
+
+                    &:nth-of-type(3) {
+                        grid-area: 3 / 6 / span 2 / span 5;
+                    }
+                }
+            }
+
+            /* ---------- THANKS ---------- */
+            div.thankyou {
+                grid-area: 13 / 1 / 13 / span 12;
+                display: grid;
+                grid-template-rows: repeat(2, 1fr);
+                margin-top: -25vw;
+
+                div:first-of-type {
+                    grid-area: 1 / 1 / 1 / span 12;
+                    margin-top: 4em;
+                }
+
+                div.smoke {
+                    img {
+                        height: 90vw;
+                    }
+                }
+            }
+        }
+    }
+
+
 
 
     /* --------- Anchors ------------ */
