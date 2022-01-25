@@ -574,18 +574,33 @@ div.project {
     width: 90%;
     height: auto;
 
+    h2 {
+        grid-area: 1 / 2 / 1 / span all;
+    }
+
     h3 {
-        grid-area: 3 / 2 / 3 / span 7;
+        grid-area: 4 / 2 / 4 / span 7;
         margin-top: 2em;
         margin-bottom: 2em;
     }
 
     div:first-of-type {
-        grid-area: 1 / 2 / 1 / span 7;
+        grid-area: 2 / 2 / 2 / span 7;
+    }
+
+    div.headshot {
+        grid-area: 2 / 9 / 2 / span 4;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            filter: drop-shadow(4px 4px 13px rgba(3, 47, 97, 0.20));
+        }
     }
 
     div.abouticons {
-        grid-area: 2 / 2 / 2 / span 7;
         display: flex;
         flex-direction: row;
         margin-bottom: 3em;
@@ -607,7 +622,7 @@ div.project {
     }
 
     div.process_containers {
-        grid-area: 4 / 1 / 4 / span 12;
+        grid-area: 5 / 1 / 5 / span 12;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -1091,9 +1106,11 @@ div.contact {
             div.site_analysis {
                 grid-area: 2 / 1 / 2 / span 10;
                 display: flex;
+
                 div {
                     width: 40%;
                 }
+
                 img {
                     object-fit: contain;
                     margin-left: 10px;
@@ -1101,9 +1118,11 @@ div.contact {
                     filter: drop-shadow(0px 0px 13px rgba(3, 47, 97, 0.08));
                     border-radius: 10px;
                     margin-bottom: 1.5em;
+
                     &:nth-of-type(1) {
                         width: 22%;
                     }
+
                     &:nth-of-type(2) {
                         width: 12%;
                     }
@@ -1228,6 +1247,7 @@ div.contact {
 
             .styleguide {
                 flex-direction: column;
+
                 img {
                     max-width: 60%;
                     border-radius: 10px;
@@ -1600,18 +1620,20 @@ div.contact {
                 div.site_analysis {
                     grid-area: 2 / 1 / 2 / span 10;
                     flex-wrap: wrap;
-                        div {
-                            width: 100%;
+
+                    div {
+                        width: 100%;
+                    }
+
+                    img {
+                        &:nth-of-type(1) {
+                            width: 50%;
                         }
 
-                        img {
-                            &:nth-of-type(1) {
-                                width: 50%;
-                            }
-                            &:nth-of-type(2) {
-                                width: 28%;
-                            }
+                        &:nth-of-type(2) {
+                            width: 28%;
                         }
+                    }
                 }
 
                 div.competitor_analysis {
@@ -1848,7 +1870,7 @@ div.contact {
 
 
     div.hero {
-    margin-top: 8em;
+        margin-top: 8em;
     }
 
     /* --------- Main Page------------ */
@@ -1897,19 +1919,35 @@ div.contact {
 
     .about {
         margin-top: 6em;
+        text-align: center;
+        h2 {
+            grid-area: 1 / 2 / 1 / span 10;
 
-        h3 {
+        }
+
+
+        div:first-of-type {
             grid-area: 3 / 2 / 3 / span 10;
         }
 
-        div:first-of-type {
+        div.headshot {
+            grid-area: 2 / 2 / 2 / span 10;
+            margin-bottom: 1.5em;
+            margin-top: 0.5em;
+                img {
+                    max-width: 75%;
+                }
 
-            grid-area: 1 / 2 / 1 / span 10;
         }
-
+       h3 {
+            grid-area: 5 / 2 / 5 / span 10;
+        }
         div.abouticons {
-            grid-area: 2 / 4 / 2 / span 7;
-
+            justify-content: center;
+            margin-top: 1em;
+        }
+        div.process_containers {
+            grid-area: 6 / 1 / 6 / span 12;
         }
     }
 
@@ -2159,6 +2197,7 @@ div.contact {
 
                 .styleguide {
                     align-items: center;
+
                     img {
                         max-width: 80%;
                     }

@@ -699,18 +699,33 @@ div.project.case_study_03 .button_02:hover {
   }
 }
 
+.about h2 {
+  grid-area: 1 / 2 / 1 / span all;
+}
+
 .about h3 {
-  grid-area: 3 / 2 / 3 / span 7;
+  grid-area: 4 / 2 / 4 / span 7;
   margin-top: 2em;
   margin-bottom: 2em;
 }
 
 .about div:first-of-type {
-  grid-area: 1 / 2 / 1 / span 7;
+  grid-area: 2 / 2 / 2 / span 7;
+}
+
+.about div.headshot {
+  grid-area: 2 / 9 / 2 / span 4;
+}
+
+.about div.headshot img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  filter: drop-shadow(4px 4px 13px rgba(3, 47, 97, 0.2));
 }
 
 .about div.abouticons {
-  grid-area: 2 / 2 / 2 / span 7;
   display: flex;
   flex-direction: row;
   margin-bottom: 3em;
@@ -730,7 +745,7 @@ div.project.case_study_03 .button_02:hover {
 }
 
 .about div.process_containers {
-  grid-area: 4 / 1 / 4 / span 12;
+  grid-area: 5 / 1 / 5 / span 12;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1870,15 +1885,31 @@ div.contact input[type="submit"]:hover {
   }
   .about {
     margin-top: 6em;
+    text-align: center;
   }
-  .about h3 {
-    grid-area: 3 / 2 / 3 / span 10;
-  }
-  .about div:first-of-type {
+  .about h2 {
     grid-area: 1 / 2 / 1 / span 10;
   }
+  .about div:first-of-type {
+    grid-area: 3 / 2 / 3 / span 10;
+  }
+  .about div.headshot {
+    grid-area: 2 / 2 / 2 / span 10;
+    margin-bottom: 1.5em;
+    margin-top: 0.5em;
+  }
+  .about div.headshot img {
+    max-width: 75%;
+  }
+  .about h3 {
+    grid-area: 5 / 2 / 5 / span 10;
+  }
   .about div.abouticons {
-    grid-area: 2 / 4 / 2 / span 7;
+    justify-content: center;
+    margin-top: 1em;
+  }
+  .about div.process_containers {
+    grid-area: 6 / 1 / 6 / span 12;
   }
   div.process_containers {
     flex-flow: column wrap;
