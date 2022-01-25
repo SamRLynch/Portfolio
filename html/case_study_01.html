@@ -17,8 +17,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/x-icon" href="SL.png" />
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
     <script type="text/javascript">
     function myFunction() {
         var x = document.getElementById("myMobilenav");
@@ -38,7 +41,7 @@
 </head>
 
 <body>
-<nav class="top_nav_container">
+    <nav class="top_nav_container">
         <ul class="navigation">
             <li class="n_logo"><a href="#home">Sam Lynch</a></li>
             <li class="n_projects"><a href="#projects" id="projects_m">Projects</a></li>
@@ -54,7 +57,7 @@
                 <a href="javascript:void(0);" style="font-size:15px;" class="mobile_dropdown" id="menu_m" onclick="myFunction()"><i class="fas fa-bars"></i></a>
             </li>
         </ul>
-    </nav> 
+    </nav>
     <div class="container">
         <div class="case_study_page">
             <img class="blob_01" src="../images/CS_1_A.svg">
@@ -150,6 +153,78 @@
                 <div class="competitor_analysis">
                     <h3>Competitor Analysis</h3>
                     <p>A competitor analysis was run on websites of the three nearest dog groomers.</p>
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="../images/case_study_01.png" alt="Pupper Cite Dog Frooming">
+                                <p><b>Pupper City Dog Grooming</b></p>
+                                <p>Barnstead, NH</p>
+                            </td>
+                            <td>
+                                <img src="../images/case_study_02.png" alt="Lakeside Grooming">
+                                <p><b>Lakeside Grooming</b></p>
+                                <p>Gilmanton, NH</p>
+                            </td>
+                            <td>
+                                <img src="../images/case_study_03.png" alt="Lakeside Grooming">
+                                <p><b>Shampoodles</b></p>
+                                <p>Alton, NH</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Testimonials</p>
+                            </td>
+                            <td>
+                                <img src="../images/ICON_check_blue.png" alt="checkmark">
+                            </td>
+                            <td>
+                                <img src="../images/ICON_no_red.png" alt="no">
+                            </td>
+                            <td>
+                                <img src="../images/ICON_no_red.png" alt="no">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Map</p>
+                            </td>
+                            <td>
+                                <img src="../images/ICON_map_blue.png" alt="map">
+                            </td>
+                            <td>
+                                <img src="../images/ICON_no_red.png" alt="no">
+                            </td>
+                            <td>
+                                <img src="../images/ICON_map_blue.png" alt="map">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Responsive Design</p>
+                            </td>
+                            <td>
+                                <img src="../images/ICON_check_blue.png" alt="checkmark"> </td>
+                            <td>
+                                <img src="../images/ICON_no_red.png" alt="no">
+                            </td>
+                            <td>
+                                <img src="../images/ICON_no_red.png" alt="no">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Contact Info</p>
+                            </td>
+                            <td>
+                                <img src="../images/ICON_phone_email.png" alt="phone email">
+                            <td>
+                                <img src="../images/ICON_phone_email.png" alt="phone email"> </td>
+                            <td>
+                                <img src="../images/ICON_phone.png" alt="phone"> </td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="user_persona">
                     <div>
@@ -179,16 +254,14 @@
                     <img src="../images/wireframe_02.png" alt="wireframe sketch" />
                     <img src="../images/wireframe_03.png" alt="wireframe sketch" />
                     <img src="../images/wireframe_04.png" alt="desktop wireframe" />
-                    <img src="../images/wireframe_05.png" alt="desktop wireframe" />
-                    <img src="../images/wireframe_06.png" alt="mobile wireframe" />
                     <img src="../images/wireframe_07.png" alt="mobile wireframe" />
+                    <img src="../images/wireframe_06.png" alt="mobile wireframe" />
+                    <img src="../images/wireframe_05.png" alt="desktop wireframe" />
                 </div>
                 <h3>Styleguide</h3>
                 <div class="styleguide">
-                    
                     <img src="../images/STYLEGUIDE.png" alt="Barndog Grooming Styleguide" />
                 </div>
-
                 <h3>High-Fidelity Designs</h3>
                 <div class="hifi_designs">
                     <p>Styles, colors and assets were added to the wireframes. Since I had limited existing content to use, I decided to fill space with blob shapes and illustrations. I contracted an illustrator (fiverr.com/santiagolztn) to draw two dog grooming illustrations. </p>
@@ -199,7 +272,7 @@
             <div class="prototypes">
                 <h2>Prototypes</h2>
                 <p>Clickable prototypes were created on Figma for the desktop and mobile site designs.</p>
-                <div>
+                <div class="figma_buttons">
                     <a href="https://www.figma.com/proto/zWqgzP6w7eoTBbP6THnQOv/barndog-website?node-id=646%3A12449&scaling=min-zoom&page-id=405%3A6159&starting-point-node-id=646%3A12449"><button class="button_03"><img src="../images/ICON_figma.png" alt="figma icon" />Desktop Prototype</button></a>
                     <a href="https://www.figma.com/proto/zWqgzP6w7eoTBbP6THnQOv/barndog-website?node-id=529%3A8286&scaling=scale-down&page-id=405%3A6160&starting-point-node-id=529%3A8286"><button class="button_03"><img src="../images/ICON_figma.png" alt="figma icon" />Mobile Prototype</button></a>
                 </div>
@@ -255,7 +328,7 @@
                     <img src="../images/languages_01.png" alt="SASS/CSS 60%" />
                     <img src="../images/languages_02.png" alt="HTML 35%" />
                     <img src="../images/languages_03.png" alt="JavaScript 5%" />
-                    <a href="https://github.com/SamRLynch/BarnDogGrooming"  target="_blank"><button class="button_03"><img src="../images/ICON_github.svg" alt="github icon" />Project on Github</button></a>
+                    <a href="https://github.com/SamRLynch/BarnDogGrooming" target="_blank"><button class="button_03"><img src="../images/ICON_github.svg" alt="github icon" />Project on Github</button></a>
                 </div>
                 <h3>Variables &amp; Mixins</h3>
                 <div class="fe_variables">
@@ -264,7 +337,7 @@
                         <p>Maintaining variables allowed flexibility if any colors or styles needed to change in future iterations.</p>
                     </div>
                     <pre>
-                        <code>
+                        <code class="language-scss">
 $header_font: 'PoppinsSemibold', 
 sans-serif;
 $body_font: 'OpenSansLight', 
@@ -282,7 +355,7 @@ $white: #FFF;
                         </code>
                     </pre>
                     <pre>
-            <code>
+            <code class="language-scss">
 @mixin body_font_mixin {
     @include p_size;
     font-family: $body_font;
@@ -326,7 +399,7 @@ $white: #FFF;
                     </div>
                     <div>
                         <pre>
-                        <code>
+                        <code class="language-scss">
 .pet_gallery {
     margin-top: 1em;
     grid-area: 3 / 2 / 3 / span 6;
@@ -342,7 +415,7 @@ $white: #FFF;
                         </code>
                     </pre>
                         <pre>
-                        <code>
+                        <code class="language-scss">
 .pet_gallery {
     grid-area: 3 / 2 / 3 / 2;
     display: grid; 
@@ -379,8 +452,9 @@ $white: #FFF;
                 <img src="../images/launch_03.png" alt="Rocket" />
             </div>
             <div class="thankyou">
-                <div><h2>THANK YOU</h2>
-                <p>For reading my case study</p>
+                <div>
+                    <h2>THANK YOU</h2>
+                    <p>For reading my case study</p>
                 </div>
                 <div class="smoke">
                     <img src="../images/smoke.svg" alt="launch" />

@@ -376,99 +376,6 @@ ul.mobilenav {
     }
 }
 
-@media only screen and (max-width: 640px) {
-    ul.navigation {
-        display: none;
-    }
-
-    ul.mobilenav {
-        flex-direction: column;
-        display: flex;
-        position: fixed;
-        width: 100%;
-        z-index: 100;
-        top: 0;
-        background-color: $white;
-        text-align: center;
-        padding: 0;
-
-        li {
-            display: none;
-        }
-
-
-        &.responsive {
-            padding-top: 75pt;
-            height: 110vh;
-        }
-
-        &.responsive li {
-            display: block;
-
-            &:nth-child(n+1):nth-child(-n+3) {
-                margin-top: 0.5em;
-                width: auto;
-                margin-left: 20px;
-                margin-right: 20px;
-
-                a {
-                    display: block;
-                    border-radius: 5px;
-                    background: $blue_gradient;
-                    padding-top: 10px;
-                    padding-bottom: 10px;
-                    color: $white;
-                    font-size: 16px;
-                }
-
-                i {
-                    float: left;
-                    font-size: 18pt;
-                    display: block;
-                    line-height: 3pt;
-                    margin-right: 1em;
-                }
-            }
-        }
-
-        &.nav_close li {
-            display: none;
-        }
-
-        /*closed mobile menu*/
-        li.mobilemenu {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 90vw;
-            padding: 0 5%;
-            background-color: $white;
-            box-shadow: 0px 2px 10px rgba(3, 47, 97, 0.5);
-            position: fixed;
-            z-index: 100;
-            top: 0pt;
-            left: 0;
-
-            i,
-            a {
-                padding-top: 0;
-                font-weight: bold;
-                font-size: 24px;
-                color: $blue;
-                transition: all 0.3s ease 0s;
-            }
-
-            a.mobile_dropdown i {
-                color: $black;
-            }
-
-        }
-
-
-    }
-
-}
-
 
 /* ----------------------------------------- */
 /* ---------- Anchor Links ----------------- */
@@ -895,6 +802,7 @@ div.contact {
 /* ----------------- Case Study Page ------- */
 /* ----------------------------------------- */
 .container {
+    overflow: hidden;
 
     /* ---------- CASE STUDY GRID ---------- */
     .blob_01,
@@ -902,7 +810,6 @@ div.contact {
         width: 100%;
         grid-area: 1 / 1 / 1 / span-all;
         object-fit: cover;
-
     }
 
     .blob_02 {
@@ -1187,6 +1094,65 @@ div.contact {
 
             div.competitor_analysis {
                 grid-area: 2 / 5 / 2 / span 6;
+
+                table {
+                    margin-top: 1.5em;
+                    p {
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                    tr {
+                        &:nth-of-type(1) {
+                            td {
+                                vertical-align: top;
+                                border-bottom: 0;
+                                padding-top: 0;
+                                padding-right: 10px;
+                                text-align: left;
+
+                                img {
+                                    max-width: 125px;
+                                    margin-bottom: 0.5em;
+                                    filter: drop-shadow(0px 0px 13px rgba(3, 47, 97, 0.08));
+                                }
+                            }
+                        }
+
+                        &:nth-of-type(2) {
+                            td {
+                                border-top: 1px solid $black;
+                            }
+                        }
+
+                        &:nth-of-type(4) {}
+
+                        td {
+                            padding-top: 1em;
+                            padding-bottom: 0.5em;
+                            vertical-align: middle;
+                            border-bottom: 1px solid $black;
+
+                            &:nth-of-type(1) {
+                                margin-right: 2em;
+                            }
+
+                            img {
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+
+                p {
+                    margin-bottom: 0;
+                    text-align: left;
+                }
+
+                tr {
+                    td {
+                        text-align: center;
+                    }
+                }
             }
 
             div.user_persona {
@@ -1430,6 +1396,9 @@ div.contact {
 
                 div:nth-of-type(3) {
                     grid-area: 1 / 3 / 2 / 3;
+                    img {
+                        object-fit: none;
+                    }
                 }
             }
 
@@ -1532,6 +1501,12 @@ div.contact {
 
 @media all and (max-width: 900px) {
     .container {
+
+        .blob_01,
+        .blob_02 {
+            height: 110%;
+        }
+
         .case_study_page {
 
             p,
@@ -1951,53 +1926,53 @@ div.contact {
     /* ------------------------------------ */
 
     div.container {
-
-
-
-    
-
-
-
-        .blob_01,
-        .blob_02 {
-            display: none;
-        }
+        overflow: hidden;
 
         .case_study_page {
             grid-row-gap: 0;
 
+            /* ---------- HERO ---------- */
+            .case_study_head {
+                grid-area: 1 / 1 / 1 / span 12;
+                padding-bottom: 3em;
+                padding-top: 6em;
+                margin-top: 0;
 
-/* ---------- HERO ---------- */
-        .case_study_head {
-            grid-area: 1 / 1 / 1 / span 12;
-            padding-bottom: 3em;
-            background: $blue_gradient;
-            h1 {
-                text-align: center;
-                
-            }
-
-        }
-
-        .head_images {
-            grid-area: 1 / 5 / 1 / span 8;
-            margin-top: 3em;
-
-            div {
-                &:nth-of-type(1) {
-                    z-index: -10;
-                    grid-area: 1 / 1 / span 2 / span 3;
+                h1 {
+                    text-align: center;
                 }
 
-                &:nth-of-type(2) {
-                    grid-area: 2 / 3 / span 2 / span 3;
+                h1,
+                h3,
+                p {
+                    z-index: 5;
+                }
+
+            }
+
+            .head_images {
+                grid-area: 1 / 2 / 1 / span 10;
+                z-index: 0;
+                margin-top: 50vw;
+
+                div {
+                    img {
+                        width: 100%;
+                    }
+
+                    &:nth-of-type(1) {
+                        grid-area: 1 / 1 / span 2 / span 3;
+                    }
+
+                    &:nth-of-type(2) {
+                        grid-area: 2 / 3 / span 2 / span 3;
+                    }
                 }
             }
-        }
 
 
 
-            /* ---------- Section HEads ---------- */
+            /* ---------- Section Heads ---------- */
             &>div {
 
                 h2 {
@@ -2034,6 +2009,7 @@ div.contact {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
+                margin-top: 35vw;
 
                 p {
                     font-size: 16pt;
@@ -2092,14 +2068,37 @@ div.contact {
             }
 
             /* ---------- RESEARCH ---------- */
-            div.research {}
+            div.research {
+                div.competitor_analysis {
+                    table {
+                        margin: 1.5em 0;
+                        p {
+                            font-size: 13px;
+                            line-height: 17px;
+                        }
+                        tr {
+                            &:nth-of-type(1) {
+                                td {
+                                    img {
+                                        display: none;
+                                    }
+                                }
+                            }
+
+                            td img {
+                                max-width: 24px;
+                            }
+                        }
+                    }
+                }
+
+
+            }
 
             /* ---------- SITEMAP ---------- */
             div.sitemap {
                 text-align: center;
-
             }
-
 
             /* ---------- DESIGN ---------- */
             div.design {
@@ -2113,6 +2112,7 @@ div.contact {
                 }
 
                 div {
+                    justify-content: start;
 
                     img {
                         max-width: 50%;
@@ -2133,9 +2133,14 @@ div.contact {
             /* ---------- PROTOTYPES ---------- */
             div.prototypes {
                 grid-area: 9 / 2 / 9 / span 10;
+                text-align: center;
 
                 a:first-of-type {
-                    margin-right: 1em;
+                    margin-right: 0;
+                }
+
+                .figma_buttons {
+                    margin-top: 0em;
                 }
 
                 div {
@@ -2152,18 +2157,12 @@ div.contact {
 
             /* ---------- TESTING ---------- */
             div.testing {
-
                 div.testing_a_b {
-
                     div {
                         width: 80%;
                         margin: 0 auto;
-
                     }
-
                 }
-
-
             }
 
             /* ---------- FRONT_END ---------- */
@@ -2285,5 +2284,140 @@ div.contact {
 
     a.anchor.contact {
         top: -9vw;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    ul.mobilenav li.mobilemenu {
+        /* width: 91% !important;*/
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    ul.navigation {
+        display: none;
+    }
+
+    ul.mobilenav {
+        flex-direction: column;
+        display: flex;
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+        top: 0;
+        background-color: $white;
+        text-align: center;
+        padding: 0;
+
+        li {
+            display: none;
+        }
+
+
+        &.responsive {
+            padding-top: 75pt;
+            height: 110vh;
+        }
+
+        &.responsive li {
+            display: block;
+
+            &:nth-child(n+1):nth-child(-n+3) {
+                margin-top: 0.5em;
+                width: auto;
+                margin-left: 20px;
+                margin-right: 20px;
+
+                a {
+                    display: block;
+                    border-radius: 5px;
+                    background: $blue_gradient;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    color: $white;
+                    font-size: 16px;
+                }
+
+                i {
+                    float: left;
+                    font-size: 18pt;
+                    display: block;
+                    line-height: 3pt;
+                    margin-right: 1em;
+                }
+            }
+        }
+
+        &.nav_close li {
+            display: none;
+        }
+
+        /*closed mobile menu*/
+        li.mobilemenu {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            padding: 12px 0;
+            background-color: $white;
+            box-shadow: 0px 2px 10px rgba(3, 47, 97, 0.5);
+            position: fixed;
+            z-index: 100;
+            top: 0pt;
+            left: 0;
+
+            a {
+                &:nth-of-type(1) {
+                    margin-left: 5%;
+                }
+
+                &:nth-of-type(2) {
+                    margin-right: 5%;
+                }
+            }
+
+            i,
+            a {
+                padding-top: 0;
+                font-weight: bold;
+                font-size: 24px;
+                color: $blue;
+                transition: all 0.3s ease 0s;
+            }
+
+            a.mobile_dropdown i {
+                color: $black;
+            }
+
+        }
+
+
+    }
+
+}
+
+
+@media all and (max-width: 550px) {
+    div.container .case_study_page .head_images {
+        margin-top: 70vw;
+    }
+}
+
+@media all and (max-width: 450px) {
+    div.container .case_study_page {
+        .head_images {
+            margin-top: 90vw;
+        }
+
+        /* ---------- THANKS ---------- */
+        div.thankyou {
+            margin-top: -25vw;
+
+            div.smoke {
+                img {
+                    height: 140vw;
+                }
+            }
+        }
     }
 }
