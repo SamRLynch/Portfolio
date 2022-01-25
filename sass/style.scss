@@ -1089,29 +1089,47 @@ div.contact {
             }
 
             div.site_analysis {
-                grid-area: 2 / 1 / 2 / span 4;
+                grid-area: 2 / 1 / 2 / span 10;
+                display: flex;
+                div {
+                    width: 40%;
+                }
+                img {
+                    object-fit: contain;
+                    margin-left: 10px;
+                    align-self: flex-start;
+                    filter: drop-shadow(0px 0px 13px rgba(3, 47, 97, 0.08));
+                    border-radius: 10px;
+                    &:nth-of-type(1) {
+                        width: 22%;
+                    }
+                    &:nth-of-type(2) {
+                        width: 12%;
+                    }
+                }
             }
 
             div.competitor_analysis {
-                grid-area: 2 / 5 / 2 / span 6;
+                grid-area: 3 / 1 / 3 / span 10;
 
                 table {
-                    margin-top: 1.5em;
+                    margin: 1.5em auto;
+
                     p {
                         font-size: 16px;
                         line-height: 20px;
                     }
+
                     tr {
                         &:nth-of-type(1) {
                             td {
                                 vertical-align: top;
                                 border-bottom: 0;
                                 padding-top: 0;
-                                padding-right: 10px;
                                 text-align: left;
 
                                 img {
-                                    max-width: 125px;
+                                    max-width: 150px;
                                     margin-bottom: 0.5em;
                                     filter: drop-shadow(0px 0px 13px rgba(3, 47, 97, 0.08));
                                 }
@@ -1127,8 +1145,7 @@ div.contact {
                         &:nth-of-type(4) {}
 
                         td {
-                            padding-top: 1em;
-                            padding-bottom: 0.5em;
+                            padding: 1em 15px 0.5em 0;
                             vertical-align: middle;
                             border-bottom: 1px solid $black;
 
@@ -1156,7 +1173,7 @@ div.contact {
             }
 
             div.user_persona {
-                grid-area: 3 / 1 / 3 / span 10;
+                grid-area: 4 / 1 / 4 / span 10;
                 display: flex;
 
                 div:nth-of-type(1) {
@@ -1396,6 +1413,7 @@ div.contact {
 
                 div:nth-of-type(3) {
                     grid-area: 1 / 3 / 2 / 3;
+
                     img {
                         object-fit: none;
                     }
@@ -1579,6 +1597,19 @@ div.contact {
             div.research {
                 div.site_analysis {
                     grid-area: 2 / 1 / 2 / span 10;
+                    flex-wrap: wrap;
+                        div {
+                            width: 100%;
+                        }
+
+                        img {
+                            &:nth-of-type(1) {
+                                width: 50%;
+                            }
+                            &:nth-of-type(2) {
+                                width: 28%;
+                            }
+                        }
                 }
 
                 div.competitor_analysis {
@@ -2072,10 +2103,12 @@ div.contact {
                 div.competitor_analysis {
                     table {
                         margin: 1.5em 0;
+
                         p {
                             font-size: 13px;
                             line-height: 17px;
                         }
+
                         tr {
                             &:nth-of-type(1) {
                                 td {
