@@ -2,7 +2,8 @@
 /* ---------------- Imports  --------------- */
 /* ----------------------------------------- */
 @import 'css_reset';
-@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@300;400;700&family=Courier+Prime&family=Lato:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@300;400;700&family=Courier+Prime&family=Lato:wght@400;700&display=swap');
+
 /* ----------------------------------------- */
 /* ---------------- Variables  ------------- */
 /* ----------------------------------------- */
@@ -12,6 +13,7 @@ $body_font: 'Aleo',
 serif;
 $code_font: 'Courier Prime',
 monospace;
+
 
 
 $white: #F5FBFF;
@@ -35,78 +37,11 @@ $orange_gradient: linear-gradient(105.44deg, #D07440 0%, #C2622C 100%);
 
 $code_gray: rgba(242, 242, 242, 1);
 
-/* ----------------------------------------- */
-/* -------------- Drop Shadows ------------- */
-/* ----------------------------------------- */
-
-$blue_button_hover_background: linear-gradient(93.2deg, #64A5EE 3.44%, #64A5EE 100.8%);
-$blue_button_box_shadow: 0px 10px 20px rgba(37, 98, 167, 0.5),
-inset 2px 2px 4px rgba(64, 133, 208, 0.75),
-inset -8px -8px 12px #4085D0;
-$blue_button_hover_box_shadow: 0px 10px 20px #1055A2,
-inset 2px 2px 4px rgba(31, 101, 178, 0.75),
-inset -8px -8px 12px #1F65B3;
-
-$blue_button_hover_02_background: linear-gradient(93.2deg, #4085D0 3.44%, #2A73C3 100.8%);
-$blue_button_hover_02_box_shadow: 0px 10px 20px rgba(42, 114, 194, 0.5),
-inset 2px 2px 4px rgba(36, 103, 175, 0.75),
-inset -8px -8px 12px #1F68B8;
-
-$blue_button_hover_03_background: #8AC0FC;
-$blue_button_hover_03_box_shadow: 0px 10px 20px rgba(73, 133, 201, 0.5),
-inset 2px 2px 4px rgba(73, 133, 201, 0.75),
-inset -8px -8px 12px #4985C9;
-
-
-
-$purple_button_box_shadow: 0px 10px 20px rgba(0, 0, 0, 0.3),
-inset 2px 2px 4px rgba(147, 71, 137, 0.75),
-inset -8px -8px 12px rgba(147, 71, 137, 0.7);
-$purple_button_hover_box_shadow: 0px 20px 20px rgba(0, 0, 0, 0.3),
-inset 2px 2px 4px rgba(94, 41, 87, 0.75),
-inset -8px -8px 12px rgba(94, 41, 87, 0.75);
-
-$purple_button_hover_02_background: #CFA6CA;
-$purple_button_hover_02_box_shadow: 0px 10px 20px #612C5A,
-inset 2px 2px 4px rgba(140, 82, 133, 0.75),
-inset -8px -8px 12px rgba(140, 82, 133, 0.7);
-
-
-
-$green_button_box_shadow: 0px 10px 20px rgba(0, 0, 0, 0.3),
-inset 2px 2px 4px rgba(77, 135, 93, 0.6),
-inset -8px -8px 12px rgba(77, 135, 93, 0.75);
-$green_button_hover_box_shadow: 0px 10px 20px #0F3419,
-inset 2px 2px 4px rgba(39, 96, 55, 0.75),
-inset -8px -8px 12px #276037;
-
-$green_button_hover_02_background: #A7D4B4;
-$green_button_hover_02_box_shadow: 0px 10px 20px #215B32,
-inset 2px 2px 4px rgba(100, 165, 119, 0.6),
-inset -8px -8px 12px #64A577;
 
 /* ----------------------------------------- */
 /* ---------------- Mixins ----------------- */
 /* ----------------------------------------- */
-@mixin blue_clay_card {
-    background: $blue;
-    box-shadow: 0px 55px 100px rgba(92, 140, 194, 0.5), inset 12px 12px 20px rgba(53, 119, 190, 0.84), inset -45px -45px 72px #3577BE;
-    border-radius: 50px;
-}
 
-@mixin purple_clay_card {
-    background: $purple;
-    box-shadow: 0px 55px 100px rgba(106, 53, 100, 0.55), inset 12px 12px 20px rgba(133, 75, 126, 0.84), inset -45px -45px 72px #854B7E;
-    border-radius: 50px;
-}
-
-@mixin green_clay_card {
-    background: $green;
-    box-shadow: 0px 55px 100px rgba(18, 66, 31, 0.5), inset 12px 12px 20px rgba(68, 124, 84, 0.84), inset -45px -45px 72px #447C54;
-    border-radius: 50px;
-}
-
-@mixin orange_clay_card {}
 
 /* ----------------------------------------- */
 /* ---------------- GLOBAL ----------------- */
@@ -135,7 +70,7 @@ li {
 
 a {
     font-family: $body_font;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 16pt;
     line-height: 24pt;
     text-decoration: none;
@@ -191,93 +126,74 @@ pre {
 /* ----------------------------------------- */
 /* ---------------- Buttons ----------------- */
 /* ----------------------------------------- */
+
 .button {
-    font-family: $header_font;
-    font-size: 14pt;
-    color: $black;
-    line-height: 54px;
-    text-align: center;
-    border-radius: 18px;
-    margin: 0 auto;
-    background: #FFFFFF;
-    box-shadow: 0px 10px 20px #99BDD5, inset 2px 2px 4px rgba(220, 233, 241, 0.75), inset -8px -8px 12px #DCE9F1;
-    margin-bottom: 2em;
     margin-top: 2em;
-    transition: all 0.3s ease;
-    padding: 1em 2em;
-
-    &:hover {
-        box-shadow: 0px 10px 20px #99BDD5, inset 2px 2px 4px rgba(170, 197, 215, 0.75), inset -8px -8px 12px rgba(170, 197, 215, 0.7);
-    }
-
-    &.blue {
-        color: $white;
-        background: $light_blue;
-        box-shadow: $blue_button_box_shadow;
-
-        &:hover {
-            box-shadow: $blue_button_hover_box_shadow;
-        }
-    }
-
-    &.purple {
-        color: $white;
-        background: $light_purple;
-        box-shadow: $purple_button_box_shadow;
-
-        &.purple:hover {
-            box-shadow: $purple_button_hover_box_shadow;
-        }
-    }
-
-    &.green {
-        color: $white;
-        background: $light_green;
-        box-shadow: $green_button_box_shadow;
-
-        &.green:hover {
-            box-shadow: $green_button_hover_box_shadow;
-        }
-    }
-}
-
-.button:active,
-ul.navigation li:active {
-    animation: press 0.3s 1 linear;
-}
-
-@keyframes press {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(0.92);
-    }
-
-    to {
-        transform: scale(1);
-    }
-}
-
-input[type="submit"] {
-    font-family: $header_font;
-    font-size: 14pt;
-    color: $black;
-    line-height: 54px;
-    text-align: center;
-    border-radius: 18px;
-    margin: 0 auto;
-    color: $white;
-    background: $light_blue;
-    box-shadow: $blue_button_box_shadow;
-    margin-bottom: 2em;
-    transition: all 0.3s ease;
-    padding: 0.25em 3em;
     border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-image: $blue_gradient;
+    transition: all 0.3s ease 0s;
 
     &:hover {
-        box-shadow: $blue_button_hover_box_shadow;
+        background-image: $main_gradient;
+    }
+}
+
+.button_02 {
+    margin-top: 1em;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: $light_blue;
+    transition: all ease-in 0.3s;
+    border: 1px solid $white;
+
+    &:hover {
+        background-color: $white;
+        border: 1px solid $light_blue;
+        color: $light_blue;
+    }
+}
+
+.button_03 {
+    margin-top: 1em;
+    border: none;
+    color: $black;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: $white;
+    transition: all ease-in 0.3s;
+    border: 1px solid $black;
+
+    &:hover {
+        background-color: $black;
+        border: 1px solid $white;
+        color: $white;
+
+    }
+
+    img {
+        width: 20px;
+        margin-right: 1em;
     }
 }
 
@@ -306,12 +222,14 @@ ul.navigation {
     justify-items: center;
     text-transform: uppercase;
     background: $white;
-    box-shadow: 0px 10px 40px rgba(153, 189, 213, 0.73), inset -8px -8px 16px #DCE9F1;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     padding: 10px 5% 0 5%;
     justify-content: flex-end;
+    box-shadow: 0px 2px 10px rgba(3, 47, 97, 0.5);
+
+    li {}
 
     li.n_logo {
         margin-right: auto;
@@ -324,10 +242,18 @@ ul.navigation {
         margin-right: 2%;
     }
 
+
     li.n_contact {
         margin-right: 0;
     }
 
+    /* li.n_email {
+        margin-right: 1%;
+
+    }
+
+    li.n_linkedin {}
+*/
     a,
     i {
         padding: 1em 0.5em 0 0.5em;
@@ -343,6 +269,7 @@ ul.navigation,
 ul.mobilenav {
     a {
         font-family: $header_font;
+
     }
 
     a,
@@ -353,7 +280,6 @@ ul.mobilenav {
         display: block;
         color: $black;
         line-height: 40px;
-        border-radius: 10px;
 
         li:first-of-type a {
             border-bottom: none;
@@ -364,16 +290,17 @@ ul.mobilenav {
         align-self: center;
 
         a {
-            padding: 0.25em 1em;
+            padding-top: 0;
             font-weight: bold;
             font-size: 24px;
             color: $blue;
             transition: all 0.3s ease 0s;
 
             &:hover {
-                background: $light_blue;
-                box-shadow: $blue_button_box_shadow;
+                background: $blue_gradient;
+                border-radius: 5px;
                 color: $white;
+
             }
         }
     }
@@ -383,15 +310,17 @@ ul.mobilenav {
         align-self: center;
 
         a {
-            padding: 0.75em 1.5em;
+            padding: 8px;
             line-height: 24px;
-            transition: all 0.2s;
+            transition: all 0.3s;
+            opacity: 1;
             display: block;
 
             &:hover {
-                background: $light_blue;
-                box-shadow: $blue_button_box_shadow;
+                background: $blue_gradient;
+                border-radius: 5px;
                 color: $white;
+                opacity: 0.75;
             }
         }
     }
@@ -400,23 +329,51 @@ ul.mobilenav {
         align-self: center;
 
         a {
-            padding: 0.75em 1.5em;
+            padding: 8px;
+            border-radius: 5px;
             line-height: 24px;
-            transition: all 0.2s;
-            display: block;
-            color: $white;
-            background: $light_blue;
-            box-shadow: $blue_button_box_shadow;
+            transition: all 0.3s;
+            border: 1px solid $black;
 
             &:hover {
-                box-shadow: 0px 10px 20px rgba(37, 98, 167, 0.5),
-                    inset 2px 2px 4px rgba(31, 101, 178, 0.75),
-                    inset -8px -8px 12px #1F65B3;
+                background: $blue_gradient;
+                color: $white;
+                border: 1px solid transparent;
             }
         }
     }
 
+    li.n_email,
+    li.n_linkedin {
 
+        a,
+        i {
+            font-size: inherit;
+            padding: 0;
+            line-height: 64px;
+            font-size: 24px;
+        }
+
+        a:hover i {
+            color: $blue;
+        }
+    }
+
+    li.n_icons {
+        line-height: 64px;
+
+        a,
+        i {
+            padding: 0;
+            font-size: 25px;
+        }
+
+        a {
+            padding-right: 0.5em;
+            align-items: center;
+            justify-content: center;
+        }
+    }
 }
 
 
@@ -439,6 +396,7 @@ a.anchor {
     &.home {
         top: -5vw;
     }
+
 }
 
 /* ----------------------------------------- */
@@ -448,19 +406,11 @@ a.anchor {
 div.hero {
     text-align: center;
     margin: 4em auto 2em auto;
-    display: flex;
-    flex-direction: column;
 
     h1 {
         background: $blue_gradient;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin: 0.5em auto;
-    }
-
-    a.button {
-        margin-top: 2em;
-        padding: 0.35em 2.25em;
     }
 }
 
@@ -478,11 +428,14 @@ div.project {
     transition: all ease-in 0.3s;
 
     div.card {
-        @include blue_clay_card;
+        border-radius: 20px;
+        background: $blue_gradient;
         grid-area: 2 / 1 / 2 / span 12;
         transition: all ease-in 0.3s;
 
-        &:hover {}
+        &:hover {
+            background: $dark_blue_gradient;
+        }
     }
 
     div.project_text {
@@ -507,6 +460,19 @@ div.project {
         }
     }
 
+    /*&:hover {
+        div.card {
+            background: $dark_blue_gradient;
+        }
+
+        div.phone_02 {
+            margin-left: 5px
+        }
+
+        div.phone_01 {
+            margin-right: 5px
+        }
+    }*/
     &.case_study_01 {
         margin-top: 15vw;
 
@@ -534,9 +500,11 @@ div.project {
         }
 
         div.card {
-            @include purple_clay_card;
+            background: $purple_gradient;
 
-            &:hover {}
+            &:hover {
+                background: $dark_purple_gradient;
+            }
         }
 
         div.phone_01 {
@@ -547,19 +515,37 @@ div.project {
             grid-area: 1 / 7 / span 2 / span 5;
         }
 
+        .button_02 {
+            background-color: $light_purple;
 
+            &:hover {
+                border: 1px solid $light_purple;
+                color: $light_purple;
+                background-color: $white;
+            }
+        }
     }
 
     &.case_study_03 {
         margin-top: 5vw;
 
         div.card {
-            @include green_clay_card;
+            background: $green_gradient;
 
-            &:hover {}
+            &:hover {
+                background: $dark_green_gradient;
+            }
         }
 
+        .button_02 {
+            background-color: $light_green;
 
+            &:hover {
+                border: 1px solid $light_green;
+                color: $light_green;
+                background-color: $white;
+            }
+        }
     }
 }
 
@@ -719,7 +705,7 @@ div.contact {
 
     .contact_container {
         border-radius: 20px;
-        @include blue_clay_card;
+        background: $blue;
         grid-area: 2 / 1 / span 3 / span 12;
         transition: all ease-in 0.3s;
     }
@@ -800,6 +786,28 @@ div.contact {
                 }
             }
 
+        }
+    }
+
+    input[type="submit"] {
+        margin-top: 1em;
+        border: none;
+        color: white;
+        padding: 15px 5vw;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: $light_blue;
+        transition: all ease-in 0.3s;
+        border: 1px solid $white;
+
+        &:hover {
+            background-color: $white;
+            border: 1px solid $light_blue;
+            color: $light_blue;
         }
     }
 }
@@ -1879,10 +1887,6 @@ div.contact {
         div.project_text {
             grid-area: 2 / 1 / 2 / span 12;
             padding: 0 1em 3em 1em;
-
-            p {
-                margin-bottom: 2em;
-            }
         }
 
         div.phone_02 {
@@ -1916,7 +1920,6 @@ div.contact {
     .about {
         margin-top: 6em;
         text-align: center;
-
         h2 {
             grid-area: 1 / 2 / 1 / span 10;
 
@@ -1931,22 +1934,18 @@ div.contact {
             grid-area: 2 / 2 / 2 / span 10;
             margin-bottom: 1.5em;
             margin-top: 0.5em;
-
-            img {
-                max-width: 75%;
-            }
+                img {
+                    max-width: 75%;
+                }
 
         }
-
-        h3 {
+       h3 {
             grid-area: 5 / 2 / 5 / span 10;
         }
-
         div.abouticons {
             justify-content: center;
             margin-top: 1em;
         }
-
         div.process_containers {
             grid-area: 6 / 1 / 6 / span 12;
         }
@@ -2409,8 +2408,8 @@ div.contact {
 
                 a {
                     display: block;
-                    background: $light_blue;
-                    box-shadow: $blue_button_box_shadow;
+                    border-radius: 5px;
+                    background: $blue_gradient;
                     padding-top: 10px;
                     padding-bottom: 10px;
                     color: $white;
