@@ -58,7 +58,6 @@ inset 2px 2px 4px rgba(73, 133, 201, 0.75),
 inset -8px -8px 12px #4985C9;
 
 
-
 $purple_button_box_shadow: 0px 10px 20px rgba(0, 0, 0, 0.3),
 inset 2px 2px 4px rgba(147, 71, 137, 0.75),
 inset -8px -8px 12px rgba(147, 71, 137, 0.7);
@@ -70,7 +69,6 @@ $purple_button_hover_02_background: #CFA6CA;
 $purple_button_hover_02_box_shadow: 0px 10px 20px #612C5A,
 inset 2px 2px 4px rgba(140, 82, 133, 0.75),
 inset -8px -8px 12px rgba(140, 82, 133, 0.7);
-
 
 
 $green_button_box_shadow: 0px 10px 20px rgba(0, 0, 0, 0.3),
@@ -85,28 +83,168 @@ $green_button_hover_02_box_shadow: 0px 10px 20px #215B32,
 inset 2px 2px 4px rgba(100, 165, 119, 0.6),
 inset -8px -8px 12px #64A577;
 
+$blue_clay_card_xlg_box_shadow: 0px 55px 100px rgba(92, 140, 194, 0.5),
+inset 12px 12px 20px rgba(32, 102, 178, 0.84),
+inset -45px -45px 72px #2066B3;
+$purple_clay_card_xlg_box_shadow: 0px 55px 100px rgba(106, 53, 100, 0.55),
+inset 12px 12px 20px rgba(115, 59, 108, 0.84),
+inset -45px -45px 72px #733B6C;
+$green_clay_card_xlg_box_shadow: 0px 55px 100px rgba(18, 66, 31, 0.5),
+inset 12px 12px 20px rgba(55, 111, 71, 0.84),
+inset -45px -45px 72px #376F47;
+$orange_clay_card_xlg_box_shadow: 0px 55px 100px rgba(107, 49, 16, 0.5),
+inset 12px 12px 20px rgba(168, 84, 37, 0.84),
+inset -45px -45px 72px #A85425;
+
+$blue_clay_card_lg_box_shadow: 0px 55px 100px rgba(92, 140, 194, 0.5),
+inset 12px 12px 20px rgba(32, 102, 178, 0.5),
+inset -45px -45px 72px #2066B3;
+$purple_clay_card_lg_box_shadow: 0px 55px 100px rgba(106, 53, 100, 0.55),
+inset 12px 12px 20px rgba(115, 59, 108, 0.5),
+inset -45px -45px 72px #733B6C;
+$green_clay_card_lg_box_shadow: 0px 55px 100px rgba(18, 66, 31, 0.5),
+inset 12px 12px 20px rgba(55, 111, 71, 0.5),
+inset -45px -45px 72px #376F47;
+$orange_clay_card_lg_box_shadow: 0px 55px 100px rgba(107, 49, 16, 0.5),
+inset 12px 12px 20px rgba(168, 84, 37, 0.5),
+inset -45px -45px 72px #A85425;
+
+$blue_clay_card_md_box_shadow: 0px 45px 100px rgba(92, 140, 194, 0.5),
+inset 12px 12px 20px rgba(32, 102, 178, 0.5),
+inset -38px -38px 72px #2066B3;
+$purple_clay_card_md_box_shadow: 0px 45px 100px rgba(106, 53, 100, 0.55),
+inset 12px 12px 20px rgba(115, 59, 108, 0.5),
+inset -38px -38px 72px #733B6C;
+$green_clay_card_md_box_shadow: 0px 45px 100px rgba(18, 66, 31, 0.5),
+inset 12px 12px 20px rgba(55, 111, 71, 0.5),
+inset -38px -38px 72px #376F47;
+$orange_clay_card_md_box_shadow: 0px 45px 100px rgba(107, 49, 16, 0.5),
+inset 12px 12px 20px rgba(168, 84, 37, 0.5),
+inset -38px -38px 72px #A85425;
+
+$blue_clay_card_sm_box_shadow: 0px 35px 100px rgba(92, 140, 194, 0.5),
+inset 12px 12px 20px rgba(32, 102, 178, 0.5),
+inset -30px -30px 60px #2066B3;
+$purple_clay_card_sm_box_shadow: 0px 35px 100px rgba(106, 53, 100, 0.5),
+inset 10px 10px 20px rgba(115, 59, 108, 0.5),
+inset -30px -30px 60px #733B6C;
+$green_clay_card_sm_box_shadow: 0px 35px 100px rgba(18, 66, 31, 0.5),
+inset 10px 10px 20px rgba(55, 111, 71, 0.5),
+inset -30px -30px 60px #376F47;
+$orange_clay_card_sm_box_shadow: 0px 35px 100px rgba(107, 49, 16, 0.5),
+inset 10px 10px 20px rgba(168, 84, 37, 0.5),
+inset -30px -30px 60px #A85425;
+
+
+$blue_clay_card_xsm_box_shadow: 0px 24px 40px rgba(92, 140, 194, 0.5),
+inset 8px 8px 20px rgba(32, 102, 178, 0.5),
+inset -24px -24px 60px #2066B3;
+$purple_clay_card_xsm_box_shadow: 0px 24px 40px rgba(106, 53, 100, 0.55),
+inset 8px 8px 20px rgba(115, 59, 108, 0.5),
+inset -24px -24px 60px #733B6C;
+$green_clay_card_xsm_box_shadow: 0px 24px 40px rgba(18, 66, 31, 0.5),
+inset 8px 8px 20px rgba(55, 111, 71, 0.5),
+inset -24px -24px 60px #376F47;
+$orange_clay_card_xsm_box_shadow: 0px 24px 40px rgba(107, 49, 16, 0.41),
+inset 8px 8px 20px rgba(168, 84, 37, 0.5),
+inset -24px -24px 60px #A85425;
+
 /* ----------------------------------------- */
 /* ---------------- Mixins ----------------- */
 /* ----------------------------------------- */
+
+/*
+    @media (max-width: 400px) {
+        background-color: skyblue;
+    }
+
+    @media (min-width: 990px) {
+        background-color: blue;
+    }
+
+    @media (min-width: 990px) {
+        background-color: blue;
+    }
+
+
+        @media (max-width: 400px) {
+        box-shadow: $blue_clay_card_sm_box_shadow;
+    }
+    @media (max-width: 990px) {
+        box-shadow: $blue_clay_card_lg_box_shadow;
+    }
+    @media (min-width: 990px) {
+        box-shadow: $blue_clay_card_xlg_box_shadow;
+    }
+*/
+
 @mixin blue_clay_card {
     background: $blue;
-    box-shadow: 0px 55px 100px rgba(92, 140, 194, 0.5), inset 12px 12px 20px rgba(53, 119, 190, 0.84), inset -45px -45px 72px #3577BE;
     border-radius: 50px;
+
+    @media (max-width: 400px) {
+        box-shadow: $blue_clay_card_sm_box_shadow !important;
+    }
+
+    @media (max-width: 990px) {
+        box-shadow: $blue_clay_card_lg_box_shadow;
+    }
+
+    @media (min-width: 990px) {
+        box-shadow: $blue_clay_card_xlg_box_shadow;
+    }
 }
 
 @mixin purple_clay_card {
     background: $purple;
-    box-shadow: 0px 55px 100px rgba(106, 53, 100, 0.55), inset 12px 12px 20px rgba(133, 75, 126, 0.84), inset -45px -45px 72px #854B7E;
     border-radius: 50px;
+
+    @media (max-width: 400px) {
+        box-shadow: $purple_clay_card_sm_box_shadow !important;
+    }
+
+    @media (max-width: 990px) {
+        box-shadow: $purple_clay_card_lg_box_shadow;
+    }
+
+    @media (min-width: 990px) {
+        box-shadow: $purple_clay_card_xlg_box_shadow;
+    }
 }
 
 @mixin green_clay_card {
     background: $green;
-    box-shadow: 0px 55px 100px rgba(18, 66, 31, 0.5), inset 12px 12px 20px rgba(68, 124, 84, 0.84), inset -45px -45px 72px #447C54;
     border-radius: 50px;
+
+    @media (max-width: 400px) {
+        box-shadow: $green_clay_card_sm_box_shadow !important;
+    }
+
+    @media (max-width: 990px) {
+        box-shadow: $green_clay_card_lg_box_shadow;
+    }
+
+    @media (min-width: 990px) {
+        box-shadow: $green_clay_card_xlg_box_shadow;
+    }
 }
 
-@mixin orange_clay_card {}
+@mixin orange_clay_card {
+    background: $orange;
+    border-radius: 50px;
+
+    @media (max-width: 400px) {
+        box-shadow: $orange_clay_card_sm_box_shadow !important;
+    }
+
+    @media (max-width: 990px) {
+        box-shadow: $orange_clay_card_lg_box_shadow;
+    }
+
+    @media (min-width: 990px) {
+        box-shadow: $orange_clay_card_xlg_box_shadow;
+    }
+}
 
 /* ----------------------------------------- */
 /* ---------------- GLOBAL ----------------- */
@@ -306,7 +444,7 @@ ul.navigation {
     justify-items: center;
     text-transform: uppercase;
     background: $white;
-    box-shadow: 0px 10px 40px rgba(153, 189, 213, 0.73), inset -8px -8px 16px #DCE9F1;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.4), inset -8px -8px 16px #DCE9F1;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -450,7 +588,7 @@ div.hero {
     margin: 4em auto 2em auto;
     display: flex;
     flex-direction: column;
-
+    position: relative;
     h1 {
         background: $blue_gradient;
         -webkit-background-clip: text;
@@ -462,6 +600,14 @@ div.hero {
         margin-top: 2em;
         padding: 0.35em 2.25em;
     }
+
+    img {
+    position: absolute;
+    top: 30vh;
+    right: 1em;
+    width:50vw;
+    z-index: -5;
+    }
 }
 
 /* ----------------------------------------- */
@@ -471,7 +617,7 @@ div.project {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 10% 340px;
+    grid-template-rows: 10% 360px 2em;
     grid-column-gap: 20px;
     width: 90%;
     height: auto;
@@ -479,16 +625,19 @@ div.project {
 
     div.card {
         @include blue_clay_card;
-        grid-area: 2 / 1 / 2 / span 12;
+        grid-area: 2 / 1 / span 2 / span 12;
         transition: all ease-in 0.3s;
-
         &:hover {}
     }
 
     div.project_text {
         grid-area: 2 / 2 / 2 / span 5;
         color: $white;
-        margin-top: 6vw;
+        margin-top: 5vw;
+
+        p {
+            margin-bottom: 2em;
+        }
     }
 
     div.phone_01 {
@@ -530,7 +679,7 @@ div.project {
         margin-top: 2vw;
 
         @media only screen and (max-width: 1100px) {
-            margin-top: 5vw;
+            margin-top: 7em;
         }
 
         div.card {
@@ -551,7 +700,7 @@ div.project {
     }
 
     &.case_study_03 {
-        margin-top: 5vw;
+        margin-top: 8em;
 
         div.card {
             @include green_clay_card;
@@ -567,20 +716,20 @@ div.project {
 /* ----------------- About ----------------- */
 /* ----------------------------------------- */
 .about {
-    margin: 0 auto;
+    margin: 6em auto 0 auto;
 
-    @media only screen and (max-width: 1200px) {
-        margin-top: 12vw;
-    }
 
     @media only screen and (max-width: 1100px) {
-        margin-top: 13vw;
+        margin-top: 8em;
     }
 
     @media only screen and (max-width: 900px) {
-        margin-top: 19vw;
+        margin-top: 7em;
     }
+    @media only screen and (max-width: 700px) { 
+        margin-top: 4em;
 
+    }
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(4, auto);
@@ -599,7 +748,7 @@ div.project {
     }
 
     div:first-of-type {
-        grid-area: 2 / 2 / 2 / span 7;
+        grid-area: 2 / 2 / 2 / span 6;
     }
 
     div.headshot {
@@ -611,6 +760,7 @@ div.project {
             height: auto;
             border-radius: 20px;
             filter: drop-shadow(4px 4px 13px rgba(3, 47, 97, 0.20));
+            @include blue_clay_card
         }
     }
 
@@ -665,15 +815,16 @@ div.project {
             }
 
             &:nth-of-type(1) {
-                background: linear-gradient(137.81deg, #4085D0 3.44%, #2A73C3 98.75%);
-
+                box-shadow: $blue_clay_card_xsm_box_shadow;
+                background-color: $blue;
                 &:before {
                     background-image: url('../images/ICON_research.png');
                 }
             }
 
             &:nth-of-type(2) {
-                background: linear-gradient(136.15deg, #61936F 2.16%, #478258 98.96%);
+                box-shadow: $green_clay_card_xsm_box_shadow;
+                background-color: $green;
 
                 &:before {
                     background-image: url('../images/ICON_design.png');
@@ -681,16 +832,16 @@ div.project {
             }
 
             &:nth-of-type(3) {
-                background: linear-gradient(137.53deg, #92608C 1.51%, #7E4477 98.09%);
-
+                box-shadow: $purple_clay_card_xsm_box_shadow;
+                background-color: $purple;
                 &:before {
                     background-image: url('../images/ICON_build.png');
                 }
             }
 
             &:nth-of-type(4) {
-                background: linear-gradient(136.55deg, #D07440 1.37%, #C2622C 98.17%);
-
+                box-shadow: $orange_clay_card_xsm_box_shadow;
+                background-color: $orange;
                 &:before {
                     background-image: url('../images/ICON_refine.png');
                 }
@@ -1515,7 +1666,7 @@ div.contact {
 
 @media only screen and (max-width: 1200px) {}
 
-@media all and (max-width: 920px) {
+@media all and (max-width: 1085px) {
 
     /* --------- Main Page------------ */
     div.process_containers {
@@ -1523,8 +1674,7 @@ div.contact {
         justify-content: space-evenly;
 
         div {
-            padding: 2.5em 1em 1em 1em !important;
-            width: 42% !important;
+            width: 40% !important;
             margin-bottom: 4em;
         }
     }
@@ -1847,6 +1997,8 @@ div.contact {
 
 }
 
+
+
 @media all and (max-width: 700px) {
 
     h3,
@@ -1863,24 +2015,29 @@ div.contact {
 
     div.hero {
         margin-top: 8em;
-       a.button {
-    padding: 0.1em 1.5em;
-}
+
+        a.button {
+            padding: 0.1em 1.5em;
+        }
+
+        img {
+            top: 10vh;
+        }
     }
 
     /* --------- Main Page------------ */
     div.project {
         text-align: center;
-        grid-template-rows: auto;
+        grid-template-rows: auto auto 2em;
         padding-bottom: 2em;
         grid-column-gap: 0;
 
         div.card {
-            grid-area: 1 / 1 / span 2 / span 12;
+            grid-area: 1 / 1 / span 3 / span 12;
         }
 
         div.project_text {
-            grid-area: 2 / 1 / 2 / span 12;
+            grid-area: 2 / 2 / 2 / span 10;
             padding: 0 1em 3em 1em;
 
             p {
@@ -1917,7 +2074,6 @@ div.contact {
 
 
     .about {
-        margin-top: 6em;
         text-align: center;
 
         h2 {
@@ -2370,12 +2526,10 @@ div.contact {
 }
 
 @media only screen and (max-width: 450px) {
-    ul.mobilenav li.mobilemenu {
-        /* width: 91% !important;*/
-    }
+    ul.mobilenav li.mobilemenu {}
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 655px) {
     ul.navigation {
         display: none;
     }
