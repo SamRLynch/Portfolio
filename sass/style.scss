@@ -733,7 +733,6 @@ div.project {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(4, auto);
-    grid-column-gap: 20px;
     width: 90%;
     height: auto;
 
@@ -760,7 +759,7 @@ div.project {
             height: auto;
             border-radius: 20px;
             filter: drop-shadow(4px 4px 13px rgba(3, 47, 97, 0.20));
-            @include blue_clay_card
+            @include blue_clay_card;
         }
     }
 
@@ -799,7 +798,7 @@ div.project {
         div {
             color: $white;
             border-radius: 20px;
-            padding: 2.5em 1.5em 1.5em 1.5em;
+            padding: 3em 2em 2em 2em;
             width: 16vw;
             position: relative;
 
