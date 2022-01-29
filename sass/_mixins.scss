@@ -1,0 +1,121 @@
+/* ----------------------------------------- */
+/* ---------------- Mixins ----------------- */
+/* ----------------------------------------- */
+
+@mixin blue_clay_card {
+    background: $blue;
+    border-radius: 50px;
+
+    @media (max-width: 400px) {
+        box-shadow: $blue_clay_card_sm_box_shadow !important;
+    }
+
+    @media (max-width: 990px) {
+        box-shadow: $blue_clay_card_lg_box_shadow;
+
+        &:hover {
+            background: #3479C5;
+            box-shadow: $blue_clay_card_hover_lg_box_shadow;
+        }
+    }
+
+    @media (min-width: 990px) {
+        box-shadow: $blue_clay_card_xlg_box_shadow;
+
+        &:hover {
+            background: #3479C5;
+            box-shadow: $blue_clay_card_hover_xlg_box_shadow;
+        }
+    }
+
+    &:hover {
+        transition: all ease-in 0.3s;
+
+    }
+}
+
+@mixin purple_clay_card {
+    background: $purple;
+    border-radius: 50px;
+
+    @media (max-width: 400px) {
+        box-shadow: $purple_clay_card_sm_box_shadow !important;
+    }
+
+    @media (max-width: 990px) {
+        box-shadow: $purple_clay_card_lg_box_shadow;
+
+        &:hover {
+            background: #84517E;
+            box-shadow: $purple_clay_card_hover_lg_box_shadow;
+        }
+    }
+
+    @media (min-width: 990px) {
+        box-shadow: $purple_clay_card_xlg_box_shadow;
+
+        &:hover {
+            background: #84517E;
+            box-shadow: $purple_clay_card_hover_xlg_box_shadow;
+        }
+    }
+
+    &:hover {
+        transition: all ease-in 0.3s;
+
+    }
+}
+
+@mixin green_clay_card {
+    background: $green;
+    border-radius: 50px;
+
+    @media (max-width: 400px) {
+        box-shadow: $green_clay_card_sm_box_shadow !important;
+    }
+
+    @media (max-width: 990px) {
+        box-shadow: $green_clay_card_lg_box_shadow;
+
+        &:hover {
+            background: #50865F;
+            box-shadow: $green_clay_card_hover_lg_box_shadow;
+        }
+    }
+
+    @media (min-width: 990px) {
+        box-shadow: $green_clay_card_xlg_box_shadow;
+
+        &:hover {
+            background: #50865F;
+            box-shadow: $green_clay_card_hover_xlg_box_shadow;
+        }
+    }
+
+    &:hover {
+        transition: all ease-in 0.3s;
+
+    }
+}
+
+@mixin orange_clay_card {
+    background: $orange;
+    border-radius: 50px;
+
+    @media (max-width: 400px) {
+        box-shadow: $orange_clay_card_sm_box_shadow !important;
+    }
+
+    @media (max-width: 990px) {
+        box-shadow: $orange_clay_card_lg_box_shadow;
+    }
+
+    @media (min-width: 990px) {
+        box-shadow: $orange_clay_card_xlg_box_shadow;
+    }
+
+    &:hover {
+        transition: all ease-in 0.3s;
+
+    }
+}

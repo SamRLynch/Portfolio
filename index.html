@@ -9,9 +9,8 @@
     <meta name="description" content="Sam Lynch - Product Manager - Creative Technologist">
     <meta name="author" content="">
     <title>Sam Lynch - Product Manager</title>
-    <link rel="icon" type="image/x-icon" href="icon.png" />
-
     <link rel="icon" type="image/x-icon" href="SL.png" />
+        <script src="https://unpkg.com/scrollreveal"></script>
     <script type="text/javascript">
     function myFunction() {
         var x = document.getElementById("myMobilenav");
@@ -58,39 +57,44 @@
 
     </div>
     <a class="anchor projects" id="projects"></a>
-    <div class="project case_study_01">
-        <div class="card">
-        </div>
-        <div class="project_text">
-            <h2>Website Redesign</h2>
-            <p>A website for a small business was researched, redesigned, coded and launched in 8 weeks.</p>
-                        <a href="html/case_study_01.html" class="button blue">View Case Study</a>
-        </div>
-        <div class="phone_01"><img src="images/Project_1_A.png" alt="Website Redesign Case Study"></div>
-        <div class="phone_02"><img src="images/Project_1_B.png" alt="Website Redesign Case Study"></div>
-    </div>
-    <div class="project case_study_02">
-        <div class="card">
-        </div>
-        <div class="project_text">
-            <h2>Website Redesign</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-            <a href="#" class="button purple">View Case Study</a>
-        </div>
-        <div class="phone_01"><img src="images/Project_2.png" alt="Website Redesign Case Study"></div>
-    </div>
-    <div class="project case_study_03">
-        <div class="card">
-        </div>
-        <div class="project_text">
-            <h2>Website Redesign</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-            <a href="#" class="button green">View Case Study</a>
-        </div>
+    
 
-        <div class="phone_01"><img src="images/Project_2_B.png" alt="Website Redesign Case Study"></div>
-        <div class="phone_02"><img src="images/Project_2_A.png" alt="Website Redesign Case Study"></div>
+        <div class="container projects_div">
+    <div class="project case_study_01 load-hidden">
+        <div class="card">
+            <div class="project_text">
+                <h2>Website Redesign</h2>
+                <p>A website for a small business was researched, redesigned, coded and launched in 8 weeks.</p>
+                <a href="#" class="button blue">View Case Study</a>
+            </div>
+            <div class="phone_01"><img src="images/Project_1_A.png" alt="Website Redesign Case Study"></div>
+            <div class="phone_02"><img src="images/Project_1_B.png" alt="Website Redesign Case Study"></div>
+        </div>
     </div>
+    <div class="project case_study_02 load-hidden">
+        <div class="card">
+            <div class="project_text">
+                <h2>Website Redesign</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <a href="#" class="button purple">View Case Study</a>
+            </div>
+            <div class="phone_01"><img src="images/Project_2.png" alt="Website Redesign Case Study"></div>
+        </div>
+    </div>
+    <div class="project case_study_03 load-hidden">
+        <div class="card">
+            <div class="project_text">
+                <h2>Website Redesign</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <a href="#" class="button green">View Case Study</a>
+            </div>
+            <div class="phone_01"><img src="images/Project_2_B.png" alt="Website Redesign Case Study"></div>
+            <div class="phone_02"><img src="images/Project_2_A.png" alt="Website Redesign Case Study"></div>
+        </div>
+    </div>
+    </div>
+
+    
     <a class="anchor about" id="about"></a>
           
     <div class="about" id="aboutme">
@@ -152,6 +156,15 @@
             <input type="submit" value="Submit">
         </form>
     </div>
+
+
+        <script>    
+ScrollReveal().reveal('.case_study_01', {distance: '50px',  duration: 600, easing: 'ease-in' } );
+
+ScrollReveal().reveal('.case_study_02', {distance: '50px',  duration: 600, easing: 'ease-in' });
+
+ScrollReveal().reveal('.case_study_03', {distance: '50px',  duration: 600, easing: 'ease-in' });
+</script>
 </body>
 
 </html>
