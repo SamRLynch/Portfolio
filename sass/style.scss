@@ -38,6 +38,8 @@ $code_gray: rgba(242, 242, 242, 1);
 /* ----------------------------------------- */
 /* -------------- Drop Shadows ------------- */
 /* ----------------------------------------- */
+$white_button_box_shadow: 0px 10px 20px #99BDD5, inset 2px 2px 4px rgba(220, 233, 241, 0.75), inset -8px -8px 12px #DCE9F1;
+$white_button_hover_box_shadow: 0px 10px 20px #99BDD5, inset 2px 2px 4px rgba(170, 197, 215, 0.75), inset -8px -8px 12px rgba(170, 197, 215, 0.7);
 
 $blue_button_hover_background: linear-gradient(93.2deg, #64A5EE 3.44%, #64A5EE 100.8%);
 $blue_button_box_shadow: 0px 10px 20px rgba(37, 98, 167, 0.5),
@@ -338,14 +340,14 @@ pre {
     border-radius: 18px;
     margin: 0 auto;
     background: #FFFFFF;
-    box-shadow: 0px 10px 20px #99BDD5, inset 2px 2px 4px rgba(220, 233, 241, 0.75), inset -8px -8px 12px #DCE9F1;
+    box-shadow: $white_button_box_shadow;
     margin-bottom: 2em;
     margin-top: 2em;
     transition: all 0.3s ease;
     padding: 1em 2em;
 
     &:hover {
-        box-shadow: 0px 10px 20px #99BDD5, inset 2px 2px 4px rgba(170, 197, 215, 0.75), inset -8px -8px 12px rgba(170, 197, 215, 0.7);
+        box-shadow: $white_button_hover_box_shadow;
     }
 
     &.blue {
@@ -542,14 +544,14 @@ ul.mobilenav {
             line-height: 24px;
             transition: all 0.2s;
             display: block;
-            color: $white;
-            background: $light_blue;
-            box-shadow: $blue_button_box_shadow;
+            color: $black;
+            background: #FFFFFF;
+            box-shadow: $white_button_box_shadow;
 
             &:hover {
-                box-shadow: 0px 10px 20px rgba(37, 98, 167, 0.5),
-                    inset 2px 2px 4px rgba(31, 101, 178, 0.75),
-                    inset -8px -8px 12px #1F65B3;
+                background: $light_blue;
+                box-shadow: $blue_button_box_shadow;
+                color: $white;            
             }
         }
     }
@@ -589,6 +591,7 @@ div.hero {
     display: flex;
     flex-direction: column;
     position: relative;
+
     h1 {
         background: $blue_gradient;
         -webkit-background-clip: text;
@@ -602,11 +605,11 @@ div.hero {
     }
 
     img {
-    position: absolute;
-    top: 30vh;
-    right: 1em;
-    width:50vw;
-    z-index: -5;
+        position: absolute;
+        top: 30vh;
+        right: 1em;
+        width: 50vw;
+        z-index: -5;
     }
 }
 
@@ -627,6 +630,7 @@ div.project {
         @include blue_clay_card;
         grid-area: 2 / 1 / span 2 / span 12;
         transition: all ease-in 0.3s;
+
         &:hover {}
     }
 
@@ -717,8 +721,6 @@ div.project {
 /* ----------------------------------------- */
 .about {
     margin: 6em auto 0 auto;
-
-
     @media only screen and (max-width: 1100px) {
         margin-top: 8em;
     }
@@ -726,10 +728,12 @@ div.project {
     @media only screen and (max-width: 900px) {
         margin-top: 7em;
     }
-    @media only screen and (max-width: 700px) { 
+
+    @media only screen and (max-width: 700px) {
         margin-top: 4em;
 
     }
+
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(4, auto);
@@ -758,8 +762,9 @@ div.project {
             width: 100%;
             height: auto;
             border-radius: 20px;
-            filter: drop-shadow(4px 4px 13px rgba(3, 47, 97, 0.20));
-            @include blue_clay_card;
+            background: $blue;
+            border-radius: 50px;
+            box-shadow: $blue_clay_card_xsm_box_shadow;
         }
     }
 
@@ -816,6 +821,7 @@ div.project {
             &:nth-of-type(1) {
                 box-shadow: $blue_clay_card_xsm_box_shadow;
                 background-color: $blue;
+
                 &:before {
                     background-image: url('../images/ICON_research.png');
                 }
@@ -833,6 +839,7 @@ div.project {
             &:nth-of-type(3) {
                 box-shadow: $purple_clay_card_xsm_box_shadow;
                 background-color: $purple;
+
                 &:before {
                     background-image: url('../images/ICON_build.png');
                 }
@@ -841,6 +848,7 @@ div.project {
             &:nth-of-type(4) {
                 box-shadow: $orange_clay_card_xsm_box_shadow;
                 background-color: $orange;
+
                 &:before {
                     background-image: url('../images/ICON_refine.png');
                 }

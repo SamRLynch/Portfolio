@@ -479,14 +479,16 @@ ul.mobilenav li.n_contact a {
   line-height: 24px;
   transition: all 0.2s;
   display: block;
-  color: #F5FBFF;
-  background: #64A5EE;
-  box-shadow: 0px 10px 20px rgba(37, 98, 167, 0.5), inset 2px 2px 4px rgba(64, 133, 208, 0.75), inset -8px -8px 12px #4085D0;
+  color: #000000;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px #99BDD5, inset 2px 2px 4px rgba(220, 233, 241, 0.75), inset -8px -8px 12px #DCE9F1;
 }
 
 ul.navigation li.n_contact a:hover,
 ul.mobilenav li.n_contact a:hover {
-  box-shadow: 0px 10px 20px rgba(37, 98, 167, 0.5), inset 2px 2px 4px rgba(31, 101, 178, 0.75), inset -8px -8px 12px #1F65B3;
+  background: #64A5EE;
+  box-shadow: 0px 10px 20px rgba(37, 98, 167, 0.5), inset 2px 2px 4px rgba(64, 133, 208, 0.75), inset -8px -8px 12px #4085D0;
+  color: #F5FBFF;
 }
 
 /* ----------------------------------------- */
@@ -750,27 +752,9 @@ div.project.case_study_03 div.card {
   width: 100%;
   height: auto;
   border-radius: 20px;
-  filter: drop-shadow(4px 4px 13px rgba(3, 47, 97, 0.2));
   background: #4085D0;
   border-radius: 50px;
-}
-
-@media (max-width: 400px) {
-  .about div.headshot img {
-    box-shadow: 0px 35px 100px rgba(92, 140, 194, 0.5), inset 12px 12px 20px rgba(32, 102, 178, 0.5), inset -30px -30px 60px #2066B3 !important;
-  }
-}
-
-@media (max-width: 990px) {
-  .about div.headshot img {
-    box-shadow: 0px 55px 100px rgba(92, 140, 194, 0.5), inset 12px 12px 20px rgba(32, 102, 178, 0.5), inset -45px -45px 72px #2066B3;
-  }
-}
-
-@media (min-width: 990px) {
-  .about div.headshot img {
-    box-shadow: 0px 55px 100px rgba(92, 140, 194, 0.5), inset 12px 12px 20px rgba(32, 102, 178, 0.84), inset -45px -45px 72px #2066B3;
-  }
+  box-shadow: 0px 24px 40px rgba(92, 140, 194, 0.5), inset 8px 8px 20px rgba(32, 102, 178, 0.5), inset -24px -24px 60px #2066B3;
 }
 
 .about div.abouticons {
