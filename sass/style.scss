@@ -2,251 +2,11 @@
 /* ---------------- Imports  --------------- */
 /* ----------------------------------------- */
 @import 'css_reset';
+@import 'variables';
+@import 'mixins';
 @import url('https://fonts.googleapis.com/css2?family=Aleo:wght@300;400;700&family=Courier+Prime&family=Lato:wght@100;300;400;700;900&display=swap');
-/* ----------------------------------------- */
-/* ---------------- Variables  ------------- */
-/* ----------------------------------------- */
-$header_font: 'Lato',
-sans-serif;
-$body_font: 'Aleo',
-serif;
-$code_font: 'Courier Prime',
-monospace;
 
 
-$white: #F5FBFF;
-$black: #000000;
-$blue: #4085D0;
-$light_blue: #64A5EE;
-$green: #61936F;
-$light_green: #7FAE8C;
-$purple: #92608C;
-$light_purple: #AF7EA9;
-$orange: #D07440;
-$light_orange: #EC8A53;
-$main_gradient: linear-gradient(105.44deg, #4085D0 0%, #7E4477 100%);
-$blue_gradient: linear-gradient(105.44deg, #4085D0 0%, #2A73C3 100%);
-$dark_blue_gradient: linear-gradient(96.82deg, #2D74C1 1.2%, #1762B3 100.89%);
-$green_gradient: linear-gradient(105.44deg, #61936F 0%, #478258 100%);
-$dark_green_gradient: linear-gradient(96.82deg, #447B54 1.2%, #2B683C 100.89%);
-$purple_gradient: linear-gradient(112.03deg, #92608C 0%, #7E4477 100%);
-$dark_purple_gradient: linear-gradient(96.82deg, #794273 1.2%, #65295E 100.89%);
-$orange_gradient: linear-gradient(105.44deg, #D07440 0%, #C2622C 100%);
-
-$code_gray: rgba(242, 242, 242, 1);
-
-/* ----------------------------------------- */
-/* -------------- Drop Shadows ------------- */
-/* ----------------------------------------- */
-$white_button_box_shadow: 0px 10px 20px #99BDD5, inset 2px 2px 4px rgba(220, 233, 241, 0.75), inset -8px -8px 12px #DCE9F1;
-$white_button_hover_box_shadow: 0px 10px 20px #99BDD5, inset 2px 2px 4px rgba(170, 197, 215, 0.75), inset -8px -8px 12px rgba(170, 197, 215, 0.7);
-
-$blue_button_hover_background: linear-gradient(93.2deg, #64A5EE 3.44%, #64A5EE 100.8%);
-$blue_button_box_shadow: 0px 10px 20px rgba(37, 98, 167, 0.5),
-inset 2px 2px 4px rgba(64, 133, 208, 0.75),
-inset -8px -8px 12px #4085D0;
-$blue_button_hover_box_shadow: 0px 10px 20px #1055A2,
-inset 2px 2px 4px rgba(31, 101, 178, 0.75),
-inset -8px -8px 12px #1F65B3;
-
-$blue_button_hover_02_background: linear-gradient(93.2deg, #4085D0 3.44%, #2A73C3 100.8%);
-$blue_button_hover_02_box_shadow: 0px 10px 20px rgba(42, 114, 194, 0.5),
-inset 2px 2px 4px rgba(36, 103, 175, 0.75),
-inset -8px -8px 12px #1F68B8;
-
-$blue_button_hover_03_background: #8AC0FC;
-$blue_button_hover_03_box_shadow: 0px 10px 20px rgba(73, 133, 201, 0.5),
-inset 2px 2px 4px rgba(73, 133, 201, 0.75),
-inset -8px -8px 12px #4985C9;
-
-
-$purple_button_box_shadow: 0px 10px 20px rgba(0, 0, 0, 0.3),
-inset 2px 2px 4px rgba(147, 71, 137, 0.75),
-inset -8px -8px 12px rgba(147, 71, 137, 0.7);
-$purple_button_hover_box_shadow: 0px 20px 20px rgba(0, 0, 0, 0.3),
-inset 2px 2px 4px rgba(94, 41, 87, 0.75),
-inset -8px -8px 12px rgba(94, 41, 87, 0.75);
-
-$purple_button_hover_02_background: #CFA6CA;
-$purple_button_hover_02_box_shadow: 0px 10px 20px #612C5A,
-inset 2px 2px 4px rgba(140, 82, 133, 0.75),
-inset -8px -8px 12px rgba(140, 82, 133, 0.7);
-
-
-$green_button_box_shadow: 0px 10px 20px rgba(0, 0, 0, 0.3),
-inset 2px 2px 4px rgba(77, 135, 93, 0.6),
-inset -8px -8px 12px rgba(77, 135, 93, 0.75);
-$green_button_hover_box_shadow: 0px 10px 20px #0F3419,
-inset 2px 2px 4px rgba(39, 96, 55, 0.75),
-inset -8px -8px 12px #276037;
-
-$green_button_hover_02_background: #A7D4B4;
-$green_button_hover_02_box_shadow: 0px 10px 20px #215B32,
-inset 2px 2px 4px rgba(100, 165, 119, 0.6),
-inset -8px -8px 12px #64A577;
-
-$blue_clay_card_xlg_box_shadow: 0px 55px 100px rgba(92, 140, 194, 0.5),
-inset 12px 12px 20px rgba(32, 102, 178, 0.84),
-inset -45px -45px 72px #2066B3;
-$purple_clay_card_xlg_box_shadow: 0px 55px 100px rgba(106, 53, 100, 0.55),
-inset 12px 12px 20px rgba(115, 59, 108, 0.84),
-inset -45px -45px 72px #733B6C;
-$green_clay_card_xlg_box_shadow: 0px 55px 100px rgba(18, 66, 31, 0.5),
-inset 12px 12px 20px rgba(55, 111, 71, 0.84),
-inset -45px -45px 72px #376F47;
-$orange_clay_card_xlg_box_shadow: 0px 55px 100px rgba(107, 49, 16, 0.5),
-inset 12px 12px 20px rgba(168, 84, 37, 0.84),
-inset -45px -45px 72px #A85425;
-
-$blue_clay_card_lg_box_shadow: 0px 55px 100px rgba(92, 140, 194, 0.5),
-inset 12px 12px 20px rgba(32, 102, 178, 0.5),
-inset -45px -45px 72px #2066B3;
-$purple_clay_card_lg_box_shadow: 0px 55px 100px rgba(106, 53, 100, 0.55),
-inset 12px 12px 20px rgba(115, 59, 108, 0.5),
-inset -45px -45px 72px #733B6C;
-$green_clay_card_lg_box_shadow: 0px 55px 100px rgba(18, 66, 31, 0.5),
-inset 12px 12px 20px rgba(55, 111, 71, 0.5),
-inset -45px -45px 72px #376F47;
-$orange_clay_card_lg_box_shadow: 0px 55px 100px rgba(107, 49, 16, 0.5),
-inset 12px 12px 20px rgba(168, 84, 37, 0.5),
-inset -45px -45px 72px #A85425;
-
-$blue_clay_card_md_box_shadow: 0px 45px 100px rgba(92, 140, 194, 0.5),
-inset 12px 12px 20px rgba(32, 102, 178, 0.5),
-inset -38px -38px 72px #2066B3;
-$purple_clay_card_md_box_shadow: 0px 45px 100px rgba(106, 53, 100, 0.55),
-inset 12px 12px 20px rgba(115, 59, 108, 0.5),
-inset -38px -38px 72px #733B6C;
-$green_clay_card_md_box_shadow: 0px 45px 100px rgba(18, 66, 31, 0.5),
-inset 12px 12px 20px rgba(55, 111, 71, 0.5),
-inset -38px -38px 72px #376F47;
-$orange_clay_card_md_box_shadow: 0px 45px 100px rgba(107, 49, 16, 0.5),
-inset 12px 12px 20px rgba(168, 84, 37, 0.5),
-inset -38px -38px 72px #A85425;
-
-$blue_clay_card_sm_box_shadow: 0px 35px 100px rgba(92, 140, 194, 0.5),
-inset 12px 12px 20px rgba(32, 102, 178, 0.5),
-inset -30px -30px 60px #2066B3;
-$purple_clay_card_sm_box_shadow: 0px 35px 100px rgba(106, 53, 100, 0.5),
-inset 10px 10px 20px rgba(115, 59, 108, 0.5),
-inset -30px -30px 60px #733B6C;
-$green_clay_card_sm_box_shadow: 0px 35px 100px rgba(18, 66, 31, 0.5),
-inset 10px 10px 20px rgba(55, 111, 71, 0.5),
-inset -30px -30px 60px #376F47;
-$orange_clay_card_sm_box_shadow: 0px 35px 100px rgba(107, 49, 16, 0.5),
-inset 10px 10px 20px rgba(168, 84, 37, 0.5),
-inset -30px -30px 60px #A85425;
-
-
-$blue_clay_card_xsm_box_shadow: 0px 24px 40px rgba(92, 140, 194, 0.5),
-inset 8px 8px 20px rgba(32, 102, 178, 0.5),
-inset -24px -24px 60px #2066B3;
-$purple_clay_card_xsm_box_shadow: 0px 24px 40px rgba(106, 53, 100, 0.55),
-inset 8px 8px 20px rgba(115, 59, 108, 0.5),
-inset -24px -24px 60px #733B6C;
-$green_clay_card_xsm_box_shadow: 0px 24px 40px rgba(18, 66, 31, 0.5),
-inset 8px 8px 20px rgba(55, 111, 71, 0.5),
-inset -24px -24px 60px #376F47;
-$orange_clay_card_xsm_box_shadow: 0px 24px 40px rgba(107, 49, 16, 0.41),
-inset 8px 8px 20px rgba(168, 84, 37, 0.5),
-inset -24px -24px 60px #A85425;
-
-/* ----------------------------------------- */
-/* ---------------- Mixins ----------------- */
-/* ----------------------------------------- */
-
-/*
-    @media (max-width: 400px) {
-        background-color: skyblue;
-    }
-
-    @media (min-width: 990px) {
-        background-color: blue;
-    }
-
-    @media (min-width: 990px) {
-        background-color: blue;
-    }
-
-
-        @media (max-width: 400px) {
-        box-shadow: $blue_clay_card_sm_box_shadow;
-    }
-    @media (max-width: 990px) {
-        box-shadow: $blue_clay_card_lg_box_shadow;
-    }
-    @media (min-width: 990px) {
-        box-shadow: $blue_clay_card_xlg_box_shadow;
-    }
-*/
-
-@mixin blue_clay_card {
-    background: $blue;
-    border-radius: 50px;
-
-    @media (max-width: 400px) {
-        box-shadow: $blue_clay_card_sm_box_shadow !important;
-    }
-
-    @media (max-width: 990px) {
-        box-shadow: $blue_clay_card_lg_box_shadow;
-    }
-
-    @media (min-width: 990px) {
-        box-shadow: $blue_clay_card_xlg_box_shadow;
-    }
-}
-
-@mixin purple_clay_card {
-    background: $purple;
-    border-radius: 50px;
-
-    @media (max-width: 400px) {
-        box-shadow: $purple_clay_card_sm_box_shadow !important;
-    }
-
-    @media (max-width: 990px) {
-        box-shadow: $purple_clay_card_lg_box_shadow;
-    }
-
-    @media (min-width: 990px) {
-        box-shadow: $purple_clay_card_xlg_box_shadow;
-    }
-}
-
-@mixin green_clay_card {
-    background: $green;
-    border-radius: 50px;
-
-    @media (max-width: 400px) {
-        box-shadow: $green_clay_card_sm_box_shadow !important;
-    }
-
-    @media (max-width: 990px) {
-        box-shadow: $green_clay_card_lg_box_shadow;
-    }
-
-    @media (min-width: 990px) {
-        box-shadow: $green_clay_card_xlg_box_shadow;
-    }
-}
-
-@mixin orange_clay_card {
-    background: $orange;
-    border-radius: 50px;
-
-    @media (max-width: 400px) {
-        box-shadow: $orange_clay_card_sm_box_shadow !important;
-    }
-
-    @media (max-width: 990px) {
-        box-shadow: $orange_clay_card_lg_box_shadow;
-    }
-
-    @media (min-width: 990px) {
-        box-shadow: $orange_clay_card_xlg_box_shadow;
-    }
-}
 
 /* ----------------------------------------- */
 /* ---------------- GLOBAL ----------------- */
@@ -335,6 +95,7 @@ pre {
     font-family: $header_font;
     font-size: 14pt;
     color: $black;
+    width: 10em;
     line-height: 54px;
     text-align: center;
     border-radius: 18px;
@@ -344,7 +105,7 @@ pre {
     margin-bottom: 2em;
     margin-top: 2em;
     transition: all 0.3s ease;
-    padding: 1em 2em;
+
 
     &:hover {
         box-shadow: $white_button_hover_box_shadow;
@@ -551,7 +312,7 @@ ul.mobilenav {
             &:hover {
                 background: $light_blue;
                 box-shadow: $blue_button_box_shadow;
-                color: $white;            
+                color: $white;
             }
         }
     }
@@ -616,111 +377,219 @@ div.hero {
 /* ----------------------------------------- */
 /* ----------------- PROJECTS -------------- */
 /* ----------------------------------------- */
-div.project {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 10% 360px 2em;
-    grid-column-gap: 20px;
-    width: 90%;
-    height: auto;
-    transition: all ease-in 0.3s;
+.projects_div {
+    margin-top: 20%;
 
-    div.card {
-        @include blue_clay_card;
-        grid-area: 2 / 1 / span 2 / span 12;
-        transition: all ease-in 0.3s;
-
-        &:hover {}
+    @media only screen and (max-width: 700px) {
+        margin-top: 45%;
     }
 
-    div.project_text {
-        grid-area: 2 / 2 / 2 / span 5;
-        color: $white;
-        margin-top: 5vw;
+    div.project {
+        margin: 0 5%;
+        width: auto;
+        height: auto;
 
-        p {
-            margin-bottom: 2em;
+        h2 {
+            margin-top: 0;
+            margin-bottom: 1em;
+            text-align: left;
         }
-    }
 
-    div.phone_01 {
-        grid-area: 2 / 9 / span 2 / span 3;
-    }
-
-    div.phone_02 {
-        grid-area: 1 / 7 / span 2 / span 3;
-    }
-
-    div.phone_02,
-    div.phone_01 {
-        img {
-            object-fit: cover;
-            width: 100%;
+        .button {
+            margin: 0.5em auto 0 auto;
+            width: 14em;
+            line-height: 64px;
         }
-    }
 
-    &.case_study_01 {
-        margin-top: 15vw;
-
-        div.phone_02,
-        div.phone_01 {
-            img {
-                @media only screen and (max-width: 1300px) {
-                    width: 100%
-                }
-
-                @media only screen and (max-width: 1600px) {
-                    width: 90%;
-                }
-
-                width: 70%;
-            }
-        }
-    }
-
-    &.case_study_02 {
-        margin-top: 2vw;
-
-        @media only screen and (max-width: 1100px) {
-            margin-top: 7em;
-        }
 
         div.card {
-            @include purple_clay_card;
+            @include blue_clay_card;
+            padding: 5em;
+            display: flex;
+            position: relative;
 
-            &:hover {}
-        }
+            div.project_text {
+                color: $white;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                width: 50%;
 
-        div.phone_01 {
-            @media only screen and (max-width: 1300px) {
-                grid-area: 1 / 7 / span 2 / span 5;
+                p {
+                    margin-bottom: 2em;
+                }
             }
 
-            grid-area: 1 / 7 / span 2 / span 5;
+            /* ----------------- project images -------------- */
+            div.phone_02,
+            div.phone_01 {
+                transition: all ease-in 0.3s;
+                width: 22%;
+                position: absolute;
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+
+            div.phone_01 {
+                top: 0;
+                right: 3%;
+            }
+
+            div.phone_02 {
+                top: -10%;
+                right: 19%;
+            }
+
+            &:hover {
+                div.phone_01 {
+                    right: 4%;
+
+                }
+
+                div.phone_02 {
+                    right: 18%;
+                }
+            }
+
+
+
+            @media only screen and (max-width: 990px) {
+
+                div.phone_02,
+                div.phone_01 {
+                    width: 27%;
+                }
+
+                div.phone_02 {
+                    right: 22%;
+                }
+
+
+                &:hover {
+                    div.phone_01 {
+                        right: 4%;
+                    }
+
+                    div.phone_02 {
+                        right: 21%;
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 700px) {
+                flex-direction: column-reverse;
+                padding: 0 2.5em 4em 2.5em;
+
+                div.project_text {
+                    width: 100%;
+                    margin-top: 80%;
+
+                    p {
+                        margin-bottom: 1em;
+                    }
+
+                    h2 {
+                        text-align: center;
+                    }
+                }
+
+                div.phone_02,
+                div.phone_01 {
+                    width: 40%;
+                }
+
+                div.phone_02 {
+                    right: 43%;
+                }
+
+                div.phone_01 {
+                    top: -5%;
+                    right: 12%;
+                }
+
+                &:hover {
+                    div.phone_01 {
+                        right: 12%;
+                    }
+
+                    div.phone_02 {
+                        right: 43%;
+                    }
+                }
+            }
         }
 
+        &.case_study_02 {
+            margin-top: 10em;
 
-    }
+            div.card {
+                @include purple_clay_card;
 
-    &.case_study_03 {
-        margin-top: 8em;
+                div.phone_01 {
+                    width: 40%;
+                    top: -10%;
+                    right: 3%;
+                }
 
-        div.card {
-            @include green_clay_card;
+                &:hover {
+                    div.phone_01 {
+                        width: 41%;
+                        right: 2%;
+                    }
+                }
 
-            &:hover {}
+                @media only screen and (max-width: 700px) {
+                    div.phone_01 {
+                        width: 80%;
+                        right: 9%;
+                    }
+
+                    &:hover {
+                        div.phone_01 {
+                            right: 9%;
+                            width: 80%;
+                        }
+                    }
+
+                }
+            }
+
+
+
+
+
         }
 
+        &.case_study_03 {
+            margin-top: 10em;
 
+            div.card {
+                @include green_clay_card;
+
+                &:hover {}
+            }
+
+
+        }
+
+        @media only screen and (min-width: 1200px) {
+            &.case_study_02, &.case_study_02 {
+                margin-top: 15em;
+            }
+        }
     }
 }
+
 
 /* ----------------------------------------- */
 /* ----------------- About ----------------- */
 /* ----------------------------------------- */
 .about {
     margin: 6em auto 0 auto;
+
     @media only screen and (max-width: 1100px) {
         margin-top: 8em;
     }
@@ -967,7 +836,6 @@ div.contact {
 /* ----------------- Case Study Page ------- */
 /* ----------------------------------------- */
 .container {
-    overflow: hidden;
 
     /* ---------- CASE STUDY GRID ---------- */
     .blob_01,
@@ -2022,7 +1890,7 @@ div.contact {
 
     div.hero {
         margin-top: 8em;
-
+        padding: 0 5%;
         a.button {
             padding: 0.1em 1.5em;
         }
@@ -2033,51 +1901,7 @@ div.contact {
     }
 
     /* --------- Main Page------------ */
-    div.project {
-        text-align: center;
-        grid-template-rows: auto auto 2em;
-        padding-bottom: 2em;
-        grid-column-gap: 0;
 
-        div.card {
-            grid-area: 1 / 1 / span 3 / span 12;
-        }
-
-        div.project_text {
-            grid-area: 2 / 2 / 2 / span 10;
-            padding: 0 1em 3em 1em;
-
-            p {
-                margin-bottom: 2em;
-            }
-        }
-
-        div.phone_02 {
-            grid-area: 1 / 2 / 1 / span 6;
-            margin-top: -3em;
-        }
-
-        div.phone_01 {
-            grid-area: 1 / 6 / 1 / span 6;
-        }
-
-        &.case_study_01 {
-            margin-top: 8em;
-        }
-
-        &.case_study_02 {
-            margin-top: 5em;
-
-            div.phone_01 {
-                grid-area: 1 / 3 / 1 / span 8;
-                margin-top: -3em;
-            }
-        }
-
-        &.case_study_03 {
-            margin-top: 5em;
-        }
-    }
 
 
     .about {
@@ -2095,7 +1919,7 @@ div.contact {
 
         div.headshot {
             grid-area: 2 / 2 / 2 / span 10;
-            margin-bottom: 1.5em;
+            margin-bottom: 2.5em;
             margin-top: 0.5em;
 
             img {
@@ -2110,7 +1934,7 @@ div.contact {
 
         div.abouticons {
             justify-content: center;
-            margin-top: 1em;
+            margin-top: 2.5em;
         }
 
         div.process_containers {
@@ -2123,7 +1947,7 @@ div.contact {
         justify-content: center;
 
         div {
-            padding: 2.5em 1em 1em 1em !important;
+            padding: 2.5em 1.5em 1.5em 1.5em !important;
             width: 100% !important;
             margin-bottom: 3em;
             text-align: center;
@@ -2166,7 +1990,6 @@ div.contact {
     /* ------------------------------------ */
 
     div.container {
-        overflow: hidden;
 
         .case_study_page {
             grid-row-gap: 0;
