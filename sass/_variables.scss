@@ -33,6 +33,10 @@ $code_gray: rgba(242, 242, 242, 1);
 /* ----------------------------------------- */
 /* -------------- Drop Shadows ------------- */
 /* ----------------------------------------- */
+
+
+/* -------------- BUTTONS ------------- */
+
 $white_button_box_shadow: 0px 10px 20px #99BDD5,
 inset 2px 2px 4px rgba(220, 233, 241, 0.75),
 inset -8px -8px 12px #DCE9F1;
@@ -84,69 +88,76 @@ $green_button_hover_02_box_shadow: 0px 10px 20px #215B32,
 inset 2px 2px 4px rgba(100, 165, 119, 0.6),
 inset -8px -8px 12px #64A577;
 
+
+/* -------------- CARDS ------------- */
+
+
+/* -------------- XLG ------------- */
 $blue_clay_card_xlg_box_shadow: 0px 55px 100px rgba(92, 140, 194, 0.5),
 inset 12px 12px 20px rgba(32, 102, 178, 0.84),
 inset -45px -45px 72px #2066B3;
 
-$blue_clay_card_hover_xlg_box_shadow: 0px 55px 100px rgba(92, 140, 194, 0.5),
-inset 12px 12px 20px rgba(26, 88, 156, 0.84),
-inset -45px -45px 72px #1A589C;
 $purple_clay_card_xlg_box_shadow: 0px 55px 100px rgba(106, 53, 100, 0.55),
 inset 12px 12px 20px rgba(115, 59, 108, 0.84),
 inset -45px -45px 72px #733B6C;
-$purple_clay_card_hover_xlg_box_shadow: 0px 55px 100px rgba(106, 53, 100, 0.55),
-inset 12px 12px 20px rgba(101, 49, 95, 0.84),
-inset -45px -45px 72px #65315F;
 
 $green_clay_card_xlg_box_shadow: 0px 55px 100px rgba(18, 66, 31, 0.5),
 inset 12px 12px 20px rgba(55, 111, 71, 0.84),
 inset -45px -45px 72px #376F47;
-$green_clay_card_hover_xlg_box_shadow: 0px 55px 100px rgba(18, 66, 31, 0.5),
-inset 12px 12px 20px rgba(49, 101, 64, 0.84),
-inset -45px -45px 72px #316540;
-;
 
 $orange_clay_card_xlg_box_shadow: 0px 55px 100px rgba(107, 49, 16, 0.5),
 inset 12px 12px 20px rgba(168, 84, 37, 0.84),
 inset -45px -45px 72px #A85425;
-$orange_clay_card_hover_xlg_box_shadow: 0px 55px 100px rgba(107, 49, 16, 0.5),
+
+
+$blue_clay_card_hover_xlg_box_shadow: 0px 55px 100px rgba(92, 140, 194, 0.75),
+inset 12px 12px 20px rgba(26, 88, 156, 0.84),
+inset -45px -45px 72px #1A589C;
+
+$purple_clay_card_hover_xlg_box_shadow: 0px 55px 100px rgba(106, 53, 100, 0.75),
+inset 12px 12px 20px rgba(101, 49, 95, 0.84),
+inset -45px -45px 72px #65315F;
+
+$green_clay_card_hover_xlg_box_shadow: 0px 55px 100px rgba(18, 66, 31, 0.75),
+inset 12px 12px 20px rgba(49, 101, 64, 0.84),
+inset -45px -45px 72px #316540;
+
+$orange_clay_card_hover_xlg_box_shadow: 0px 55px 100px rgba(107, 49, 16, 0.75),
 inset 12px 12px 20px rgba(142, 65, 21, 0.84),
 inset -45px -45px 72px #8E4115;
-;
 
 
+
+
+/* -------------- LG ------------- */
 $blue_clay_card_lg_box_shadow: 0px 55px 100px rgba(92, 140, 194, 0.5),
 inset 12px 12px 20px rgba(32, 102, 178, 0.5),
 inset -45px -45px 72px #2066B3;
-$blue_clay_card_hover_lg_box_shadow: 0px 55px 100px rgba(92, 140, 194, 0.5),
-inset 12px 12px 20px rgba(12, 78, 150, 0.5),
-inset -45px -45px 72px #0C4E96;
-;
-
 $purple_clay_card_lg_box_shadow: 0px 55px 100px rgba(106, 53, 100, 0.55),
 inset 12px 12px 20px rgba(115, 59, 108, 0.5),
 inset -45px -45px 72px #733B6C;
-$purple_clay_card_hover_lg_box_shadow: 0px 55px 100px rgba(106, 53, 100, 0.55),
-inset 12px 12px 20px rgba(87, 36, 81, 0.5),
-inset -45px -45px 72px #572451;
-;
-
 $green_clay_card_lg_box_shadow: 0px 55px 100px rgba(18, 66, 31, 0.5),
 inset 12px 12px 20px rgba(55, 111, 71, 0.5),
 inset -45px -45px 72px #376F47;
-$green_clay_card_hover_lg_box_shadow: 0px 55px 100px rgba(18, 66, 31, 0.5),
-inset 12px 12px 20px rgba(34, 87, 49, 0.5),
-inset -45px -45px 72px #225731;
-;
-
 $orange_clay_card_lg_box_shadow: 0px 55px 100px rgba(107, 49, 16, 0.5),
 inset 12px 12px 20px rgba(168, 84, 37, 0.5),
 inset -45px -45px 72px #A85425;
-$orange_clay_card_hover_lg_box_shadow: 0px 55px 100px rgba(107, 49, 16, 0.5),
+
+$blue_clay_card_hover_lg_box_shadow: 0px 55px 100px rgba(92, 140, 194, 0.5),
+inset 12px 12px 20px rgba(12, 78, 150, 0.75),
+inset -45px -45px 72px #0C4E96;
+$purple_clay_card_hover_lg_box_shadow: 0px 55px 100px rgba(106, 53, 100, 0.75),
+inset 12px 12px 20px rgba(87, 36, 81, 0.5),
+inset -45px -45px 72px #572451;
+$green_clay_card_hover_lg_box_shadow: 0px 55px 100px rgba(18, 66, 31, 0.75),
+inset 12px 12px 20px rgba(34, 87, 49, 0.5),
+inset -45px -45px 72px #225731;
+$orange_clay_card_hover_lg_box_shadow: 0px 55px 100px rgba(107, 49, 16, 0.75),
 inset 12px 12px 20px rgba(135, 59, 16, 0.5),
 inset -45px -45px 72px #873B10;
-;
 
+
+/* -------------- MD ------------- */
 $blue_clay_card_md_box_shadow: 0px 45px 100px rgba(92, 140, 194, 0.5),
 inset 12px 12px 20px rgba(32, 102, 178, 0.5),
 inset -38px -38px 72px #2066B3;
@@ -160,6 +171,7 @@ $orange_clay_card_md_box_shadow: 0px 45px 100px rgba(107, 49, 16, 0.5),
 inset 12px 12px 20px rgba(168, 84, 37, 0.5),
 inset -38px -38px 72px #A85425;
 
+/* -------------- SM ------------- */
 $blue_clay_card_sm_box_shadow: 0px 35px 100px rgba(92, 140, 194, 0.5),
 inset 12px 12px 20px rgba(32, 102, 178, 0.5),
 inset -30px -30px 60px #2066B3;
@@ -173,7 +185,7 @@ $orange_clay_card_sm_box_shadow: 0px 35px 100px rgba(107, 49, 16, 0.5),
 inset 10px 10px 20px rgba(168, 84, 37, 0.5),
 inset -30px -30px 60px #A85425;
 
-
+/* -------------- XSM ------------- */
 $blue_clay_card_xsm_box_shadow: 0px 24px 40px rgba(92, 140, 194, 0.5),
 inset 8px 8px 20px rgba(32, 102, 178, 0.5),
 inset -24px -24px 60px #2066B3;

@@ -144,6 +144,13 @@ table {
 /* ----------------------------------------- */
 /* -------------- Drop Shadows ------------- */
 /* ----------------------------------------- */
+/* -------------- BUTTONS ------------- */
+/* -------------- CARDS ------------- */
+/* -------------- XLG ------------- */
+/* -------------- LG ------------- */
+/* -------------- MD ------------- */
+/* -------------- SM ------------- */
+/* -------------- XSM ------------- */
 /* ----------------------------------------- */
 /* ---------------- Mixins ----------------- */
 /* ----------------------------------------- */
@@ -200,8 +207,9 @@ h1 {
 h2 {
   font-family: "Lato", sans-serif;
   font-size: 36px;
+  line-height: 42px;
   font-weight: bold;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 
 h3 {
@@ -492,30 +500,40 @@ a.anchor.home {
 /* ------------------- HERO ---------------- */
 /* ----------------------------------------- */
 div.hero {
-  text-align: center;
-  margin: 4em auto 2em auto;
+  margin: 4em 5% 2em 5%;
   display: flex;
   flex-direction: column;
   position: relative;
+  text-align: left;
+  padding-left: 5em;
 }
 
 div.hero h1 {
   background: linear-gradient(105.44deg, #4085D0 0%, #2A73C3 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 0.5em auto;
+  margin: 0.15em 0;
+}
+
+div.hero p {
+  margin: 0;
 }
 
 div.hero a.button {
-  margin-top: 2em;
   padding: 0.35em 2.25em;
+  margin: 3em 0 0 0;
+  width: 10em;
+}
+
+div.hero h1, div.hero p, div.hero a {
+  width: 45%;
 }
 
 div.hero img {
   position: absolute;
-  top: 30vh;
-  right: 1em;
-  width: 50vw;
+  top: -6%;
+  right: -5%;
+  width: 55%;
   z-index: -5;
 }
 
@@ -528,7 +546,7 @@ div.hero img {
 
 @media only screen and (max-width: 700px) {
   .projects_div {
-    margin-top: 45%;
+    margin-top: 70%;
   }
 }
 
@@ -577,7 +595,7 @@ div.hero img {
   }
   .projects_div div.project div.card:hover {
     background: #3479C5;
-    box-shadow: 0px 55px 100px rgba(92, 140, 194, 0.5), inset 12px 12px 20px rgba(12, 78, 150, 0.5), inset -45px -45px 72px #0C4E96;
+    box-shadow: 0px 55px 100px rgba(92, 140, 194, 0.5), inset 12px 12px 20px rgba(12, 78, 150, 0.75), inset -45px -45px 72px #0C4E96;
   }
 }
 
@@ -587,7 +605,7 @@ div.hero img {
   }
   .projects_div div.project div.card:hover {
     background: #3479C5;
-    box-shadow: 0px 55px 100px rgba(92, 140, 194, 0.5), inset 12px 12px 20px rgba(26, 88, 156, 0.84), inset -45px -45px 72px #1A589C;
+    box-shadow: 0px 55px 100px rgba(92, 140, 194, 0.75), inset 12px 12px 20px rgba(26, 88, 156, 0.84), inset -45px -45px 72px #1A589C;
   }
 }
 
@@ -631,11 +649,11 @@ div.hero img {
 }
 
 .projects_div div.project div.card:hover div.phone_01 {
-  right: 4%;
+  right: calc(3% + 3px);
 }
 
 .projects_div div.project div.card:hover div.phone_02 {
-  right: 18%;
+  right: calc(19% - 3px);
 }
 
 @media only screen and (max-width: 990px) {
@@ -647,10 +665,10 @@ div.hero img {
     right: 22%;
   }
   .projects_div div.project div.card:hover div.phone_01 {
-    right: 4%;
+    right: calc(3% + 3px);
   }
   .projects_div div.project div.card:hover div.phone_02 {
-    right: 21%;
+    right: calc(22% - 3px);
   }
 }
 
@@ -709,7 +727,7 @@ div.hero img {
   }
   .projects_div div.project.case_study_02 div.card:hover {
     background: #84517E;
-    box-shadow: 0px 55px 100px rgba(106, 53, 100, 0.55), inset 12px 12px 20px rgba(87, 36, 81, 0.5), inset -45px -45px 72px #572451;
+    box-shadow: 0px 55px 100px rgba(106, 53, 100, 0.75), inset 12px 12px 20px rgba(87, 36, 81, 0.5), inset -45px -45px 72px #572451;
   }
 }
 
@@ -719,7 +737,7 @@ div.hero img {
   }
   .projects_div div.project.case_study_02 div.card:hover {
     background: #84517E;
-    box-shadow: 0px 55px 100px rgba(106, 53, 100, 0.55), inset 12px 12px 20px rgba(101, 49, 95, 0.84), inset -45px -45px 72px #65315F;
+    box-shadow: 0px 55px 100px rgba(106, 53, 100, 0.75), inset 12px 12px 20px rgba(101, 49, 95, 0.84), inset -45px -45px 72px #65315F;
   }
 }
 
@@ -734,8 +752,7 @@ div.hero img {
 }
 
 .projects_div div.project.case_study_02 div.card:hover div.phone_01 {
-  width: 41%;
-  right: 2%;
+  top: calc(-10% + 5px);
 }
 
 @media only screen and (max-width: 700px) {
@@ -770,7 +787,7 @@ div.hero img {
   }
   .projects_div div.project.case_study_03 div.card:hover {
     background: #50865F;
-    box-shadow: 0px 55px 100px rgba(18, 66, 31, 0.5), inset 12px 12px 20px rgba(34, 87, 49, 0.5), inset -45px -45px 72px #225731;
+    box-shadow: 0px 55px 100px rgba(18, 66, 31, 0.75), inset 12px 12px 20px rgba(34, 87, 49, 0.5), inset -45px -45px 72px #225731;
   }
 }
 
@@ -780,7 +797,7 @@ div.hero img {
   }
   .projects_div div.project.case_study_03 div.card:hover {
     background: #50865F;
-    box-shadow: 0px 55px 100px rgba(18, 66, 31, 0.5), inset 12px 12px 20px rgba(49, 101, 64, 0.84), inset -45px -45px 72px #316540;
+    box-shadow: 0px 55px 100px rgba(18, 66, 31, 0.75), inset 12px 12px 20px rgba(49, 101, 64, 0.84), inset -45px -45px 72px #316540;
   }
 }
 
@@ -789,7 +806,7 @@ div.hero img {
 }
 
 @media only screen and (min-width: 1200px) {
-  .projects_div div.project.case_study_02, .projects_div div.project.case_study_02 {
+  .projects_div div.project.case_study_02, .projects_div div.project.case_study_03 {
     margin-top: 15em;
   }
 }
@@ -818,20 +835,15 @@ div.hero img {
   }
 }
 
-@media only screen and (max-width: 700px) {
-  .about {
-    margin-top: 4em;
-  }
-}
-
 .about h2 {
   grid-area: 1 / 2 / 1 / span all;
 }
 
-.about h3 {
-  grid-area: 4 / 2 / 4 / span 7;
+.about h2.how_i_work {
+  grid-area: 4 / 1 / 4 / span all;
   margin-top: 2em;
   margin-bottom: 2em;
+  text-align: center;
 }
 
 .about div:first-of-type {
@@ -942,15 +954,13 @@ div.hero img {
 /* ---------------- Contact ---------------- */
 /* ----------------------------------------- */
 div.contact {
-  margin: 0 auto;
+  margin: 10em auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 10% 6vw auto 6vw;
   grid-column-gap: 20px;
   width: 90%;
   height: auto;
-  margin-bottom: 5em;
-  transition: all ease-in 0.3s;
 }
 
 div.contact .contact_container {
@@ -971,28 +981,16 @@ div.contact .contact_container {
   div.contact .contact_container {
     box-shadow: 0px 55px 100px rgba(92, 140, 194, 0.5), inset 12px 12px 20px rgba(32, 102, 178, 0.5), inset -45px -45px 72px #2066B3;
   }
-  div.contact .contact_container:hover {
-    background: #3479C5;
-    box-shadow: 0px 55px 100px rgba(92, 140, 194, 0.5), inset 12px 12px 20px rgba(12, 78, 150, 0.5), inset -45px -45px 72px #0C4E96;
-  }
 }
 
 @media (min-width: 990px) {
   div.contact .contact_container {
     box-shadow: 0px 55px 100px rgba(92, 140, 194, 0.5), inset 12px 12px 20px rgba(32, 102, 178, 0.84), inset -45px -45px 72px #2066B3;
   }
-  div.contact .contact_container:hover {
-    background: #3479C5;
-    box-shadow: 0px 55px 100px rgba(92, 140, 194, 0.5), inset 12px 12px 20px rgba(26, 88, 156, 0.84), inset -45px -45px 72px #1A589C;
-  }
-}
-
-div.contact .contact_container:hover {
-  transition: all ease-in 0.3s;
 }
 
 div.contact .contact_text {
-  grid-area: 3 / 2 / 3 / span 4;
+  grid-area: 3 / 2 / 3 / span 5;
   z-index: 15;
 }
 
@@ -1003,8 +1001,27 @@ div.contact .contact_text i {
   color: white;
 }
 
+div.contact .contact_text a:hover,
+div.contact .contact_text i:hover {
+  color: #000000;
+}
+
+div.contact .contact_text i {
+  font-size: 20pt;
+  margin-right: 0.25em;
+}
+
+div.contact .contact_text .abouticons {
+  margin-top: 1.5em;
+}
+
+div.contact .contact_text .abouticons i {
+  margin-right: 0.5em;
+  font-size: 26pt;
+}
+
 div.contact form {
-  grid-area: 3 / 6 / 3 / span 4;
+  grid-area: 3 / 8 / 3 / span 4;
   color: #F5FBFF;
   padding-top: 0.5em;
 }
@@ -1746,7 +1763,7 @@ div.contact form fieldset label:nth-of-type(3):before {
     justify-content: space-evenly;
   }
   div.process_containers div {
-    width: 40% !important;
+    width: 39% !important;
     margin-bottom: 4em;
   }
 }
@@ -1975,6 +1992,7 @@ div.contact form fieldset label:nth-of-type(3):before {
 }
 
 @media all and (max-width: 700px) {
+  h1,
   h3,
   h4,
   p {
@@ -1988,11 +2006,17 @@ div.contact form fieldset label:nth-of-type(3):before {
     margin-top: 8em;
     padding: 0 5%;
   }
+  div.hero p, div.hero h1, div.hero a {
+    width: 100%;
+  }
   div.hero a.button {
     padding: 0.1em 1.5em;
+    margin: 12em auto 0 auto;
   }
   div.hero img {
-    top: 10vh;
+    position: relative;
+    margin-top: -16em;
+    width: 100%;
   }
   /* --------- Main Page------------ */
   .about {
@@ -2033,7 +2057,7 @@ div.contact form fieldset label:nth-of-type(3):before {
     text-align: center;
   }
   div.process_containers div:before {
-    left: 40%;
+    left: calc(50% - 25px);
   }
   div.contact {
     grid-template-rows: auto auto;
@@ -2306,12 +2330,6 @@ div.contact form fieldset label:nth-of-type(3):before {
     height: 90vw;
   }
   /* --------- Anchors ------------ */
-  a.anchor.about {
-    top: -12vw;
-  }
-  a.anchor.contact {
-    top: -9vw;
-  }
 }
 
 @media only screen and (max-width: 655px) {
