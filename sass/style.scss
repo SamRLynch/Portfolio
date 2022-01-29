@@ -361,16 +361,20 @@ div.hero {
         -webkit-text-fill-color: transparent;
         margin: 0.15em 0;
     }
+
     p {
         margin: 0;
     }
+
     a.button {
         padding: 0.35em 2.25em;
         margin: 3em 0 0 0;
         width: 10em;
     }
 
-    h1, p, a {
+    h1,
+    p,
+    a {
         width: 45%;
     }
 
@@ -625,10 +629,15 @@ div.hero {
     }
 
     h2.how_i_work {
-        grid-area: 4 / 1 / 4 / span all;
+        grid-area: 4 / 2 / 4 / span all;
         margin-top: 2em;
         margin-bottom: 2em;
-        text-align: center;
+        text-align: left;
+
+        @media only screen and (max-width: 700px) {
+                    grid-area: 4 / 1 / 4 / span all;
+            text-align: center;
+        }
     }
 
     div:first-of-type {
@@ -797,6 +806,7 @@ div.contact {
             font-size: 20pt;
             margin-right: 0.25em;
         }
+
         .abouticons {
             margin-top: 1.5em;
 
@@ -1917,6 +1927,7 @@ div.contact {
 
 
 @media all and (max-width: 700px) {
+
     h1,
     h3,
     h4,
@@ -1933,9 +1944,13 @@ div.contact {
     div.hero {
         margin-top: 8em;
         padding: 0 5%;
-        p, h1, a {
+
+        p,
+        h1,
+        a {
             width: 100%;
         }
+
         a.button {
             padding: 0.1em 1.5em;
             margin: 12em auto 0 auto;
