@@ -384,6 +384,12 @@ div.hero {
         right: -5%;
         width: 55%;
         z-index: -5;
+
+        transform:
+    perspective(1000px)
+    rotateX(4deg)
+    rotateY(-16deg)
+    rotateZ(4deg);
     }
 }
 
@@ -1953,12 +1959,12 @@ div.contact {
 
         a.button {
             padding: 0.1em 1.5em;
-            margin: 12em auto 0 auto;
+            margin: 15em auto 0 auto;
         }
 
         img {
             position: relative;
-            margin-top: -16em;
+            margin-top: -20em;
             width: 100%;
         }
     }
