@@ -13,6 +13,7 @@
 /* ----------------------------------------- */
 body {
     background-color: $white;
+    overflow-x: hidden;
 }
 
 html {
@@ -380,16 +381,13 @@ div.hero {
 
     img {
         position: absolute;
-        top: -6%;
-        right: -5%;
-        width: 55%;
+        top: -3em;
+        right: -10%;
+        width: 58%;
         z-index: -5;
 
         transform:
-    perspective(1000px)
-    rotateX(4deg)
-    rotateY(-16deg)
-    rotateZ(4deg);
+            perspective(1000px) rotateX(4deg) rotateY(-16deg) rotateZ(4deg);
     }
 }
 
@@ -641,7 +639,7 @@ div.hero {
         text-align: left;
 
         @media only screen and (max-width: 700px) {
-                    grid-area: 4 / 1 / 4 / span all;
+            grid-area: 4 / 1 / 4 / span all;
             text-align: center;
         }
     }
@@ -1959,12 +1957,12 @@ div.contact {
 
         a.button {
             padding: 0.1em 1.5em;
-            margin: 15em auto 0 auto;
+            margin: 16em auto 0 auto;
         }
 
         img {
             position: relative;
-            margin-top: -20em;
+            margin-top: -17em;
             width: 100%;
         }
     }

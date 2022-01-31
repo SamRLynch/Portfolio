@@ -159,6 +159,7 @@ table {
 /* ----------------------------------------- */
 body {
   background-color: #F5FBFF;
+  overflow-x: hidden;
 }
 
 html {
@@ -533,9 +534,9 @@ div.hero a {
 
 div.hero img {
   position: absolute;
-  top: -6%;
-  right: -5%;
-  width: 55%;
+  top: -3em;
+  right: -10%;
+  width: 58%;
   z-index: -5;
   transform: perspective(1000px) rotateX(4deg) rotateY(-16deg) rotateZ(4deg);
 }
@@ -2023,11 +2024,11 @@ div.contact form fieldset label:nth-of-type(3):before {
   }
   div.hero a.button {
     padding: 0.1em 1.5em;
-    margin: 15em auto 0 auto;
+    margin: 16em auto 0 auto;
   }
   div.hero img {
     position: relative;
-    margin-top: -20em;
+    margin-top: -17em;
     width: 100%;
   }
   /* --------- Main Page------------ */
