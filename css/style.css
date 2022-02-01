@@ -538,6 +538,7 @@ div.hero img {
   right: -10%;
   width: 58%;
   z-index: -5;
+  object-fit: cover;
   transform: perspective(1000px) rotateX(4deg) rotateY(-16deg) rotateZ(4deg);
 }
 
@@ -892,6 +893,18 @@ div.hero img {
 
 .about div.abouticons a:hover i {
   color: #4085D0;
+}
+
+.about div.abouticons a:nth-of-type(3):before {
+  color: red;
+}
+
+.about div.abouticons .fa-file:after {
+  content: 'Resume';
+  display: block;
+  font-size: 10pt;
+  font-family: "Aleo", serif;
+  padding-top: 0.25em;
 }
 
 .about div.process_containers {
@@ -2024,12 +2037,13 @@ div.contact form fieldset label:nth-of-type(3):before {
   }
   div.hero a.button {
     padding: 0.1em 1.5em;
-    margin: 16em auto 0 auto;
+    margin: 18em auto 0 auto;
   }
   div.hero img {
     position: relative;
-    margin-top: -17em;
-    width: 100%;
+    margin-top: -20em;
+    width: 114%;
+    right: 5%;
   }
   /* --------- Main Page------------ */
   .about {

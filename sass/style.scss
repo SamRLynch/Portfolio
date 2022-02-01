@@ -385,9 +385,9 @@ div.hero {
         right: -10%;
         width: 58%;
         z-index: -5;
-
+        object-fit: cover;
         transform:
-            perspective(1000px) rotateX(4deg) rotateY(-16deg) rotateZ(4deg);
+        perspective(1000px) rotateX(4deg) rotateY(-16deg) rotateZ(4deg);
     }
 }
 
@@ -680,6 +680,17 @@ div.hero {
                     color: $blue;
                 }
             }
+            &:nth-of-type(3):before {
+                color: red;
+            }
+        }
+
+        .fa-file:after {
+            content: 'Resume';
+            display: block;
+            font-size: 10pt;
+            font-family: $body-font;
+            padding-top: 0.25em;
         }
     }
 
@@ -755,6 +766,7 @@ div.hero {
 /* ----------------------------------------- */
 /* ---------------- Contact ---------------- */
 /* ----------------------------------------- */
+
 
 
 div.contact {
@@ -1957,13 +1969,14 @@ div.contact {
 
         a.button {
             padding: 0.1em 1.5em;
-            margin: 16em auto 0 auto;
+            margin: 18em auto 0 auto;
         }
 
         img {
             position: relative;
-            margin-top: -17em;
-            width: 100%;
+            margin-top: -20em;
+            width: 114%;
+            right: 5%;
         }
     }
 
