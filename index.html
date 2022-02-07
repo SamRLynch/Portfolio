@@ -11,22 +11,8 @@
     <title>Sam Lynch - Product Manager</title>
     <link rel="icon" type="image/x-icon" href="SL.png" />
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script type="text/javascript">
-    function myFunction() {
-        var x = document.getElementById("myMobilenav");
-        if (x.className === "mobilenav") { x.className += " responsive"; } else { x.className = "mobilenav"; }
-    }
-    </script>
-    <script type="text/javascript">
-    function nav_close() {
-        var x = document.getElementById("myMobilenav");
-        if (x.className === "mobilenav") {
-            x.className += " nav_close";
-        } else {
-            x.className = "mobilenav";
-        }
-    }
-    </script>
+    <script src="js/mobile_nav_menu.js" type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -68,6 +54,17 @@
                 <div class="phone_02"><img src="images/Project_1_B.png" alt="Website Redesign Case Study"></div>
             </div>
         </div>
+        <div class="project case_study_03 load-hidden">
+            <div class="card">
+                <div class="project_text">
+                    <h2>Government Website Redesign</h2>
+                    <p>Concept redesign of the US Forest Service website.</p>
+                    <a href="html/case_study_03.html" class="button green">View Case Study</a>
+                </div>
+                <div class="phone_01"><img src="images/Project_2_B.png" alt="Website Redesign Case Study"></div>
+                <div class="phone_02"><img src="images/Project_2_A.png" alt="Website Redesign Case Study"></div>
+            </div>
+        </div>
         <div class="project case_study_02 load-hidden">
             <div class="card">
                 <div class="project_text">
@@ -78,17 +75,7 @@
                 <div class="phone_01"><img src="images/Project_2.png" alt="Website Redesign Case Study"></div>
             </div>
         </div>
-        <div class="project case_study_03 load-hidden">
-            <div class="card">
-                <div class="project_text">
-                    <h2>Website Redesign</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                    <a href="#" class="button green">View Case Study</a>
-                </div>
-                <div class="phone_01"><img src="images/Project_2_B.png" alt="Website Redesign Case Study"></div>
-                <div class="phone_02"><img src="images/Project_2_A.png" alt="Website Redesign Case Study"></div>
-            </div>
-        </div>
+        
     </div>
     <a class="anchor about" id="about"></a>
     <div class="about" id="aboutme">

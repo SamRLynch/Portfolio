@@ -40,14 +40,26 @@ $code_gray: rgba(242, 242, 242, 1);
 $white_button_box_shadow: 0px 10px 20px #99BDD5,
 inset 2px 2px 4px rgba(220, 233, 241, 0.75),
 inset -8px -8px 12px #DCE9F1;
+$blue_button_box_shadow: 0px 10px 20px rgba(37, 98, 167, 0.5),
+inset 2px 2px 4px rgba(64, 133, 208, 0.75),
+inset -8px -8px 12px #4085D0;
+$green_button_hover_02_background: #A7D4B4;
+$green_button_hover_02_box_shadow: 0px 10px 20px #215B32,
+inset 2px 2px 4px rgba(100, 165, 119, 0.6),
+inset -8px -8px 12px #64A577;
+$purple_button_box_shadow: 0px 10px 20px rgba(0, 0, 0, 0.3),
+inset 2px 2px 4px rgba(147, 71, 137, 0.75),
+inset -8px -8px 12px rgba(147, 71, 137, 0.7);
+$green_button_box_shadow: 0px 10px 20px rgba(0, 0, 0, 0.3),
+inset 2px 2px 4px rgba(77, 135, 93, 0.6),
+inset -8px -8px 12px rgba(77, 135, 93, 0.75);
+
+
 $white_button_hover_box_shadow: 0px 10px 20px #99BDD5,
 inset 2px 2px 4px rgba(170, 197, 215, 0.75),
 inset -8px -8px 12px rgba(170, 197, 215, 0.7);
 
 $blue_button_hover_background: linear-gradient(93.2deg, #64A5EE 3.44%, #64A5EE 100.8%);
-$blue_button_box_shadow: 0px 10px 20px rgba(37, 98, 167, 0.5),
-inset 2px 2px 4px rgba(64, 133, 208, 0.75),
-inset -8px -8px 12px #4085D0;
 $blue_button_hover_box_shadow: 0px 10px 20px #1055A2,
 inset 2px 2px 4px rgba(31, 101, 178, 0.75),
 inset -8px -8px 12px #1F65B3;
@@ -56,37 +68,26 @@ $blue_button_hover_02_background: linear-gradient(93.2deg, #4085D0 3.44%, #2A73C
 $blue_button_hover_02_box_shadow: 0px 10px 20px rgba(42, 114, 194, 0.5),
 inset 2px 2px 4px rgba(36, 103, 175, 0.75),
 inset -8px -8px 12px #1F68B8;
-
 $blue_button_hover_03_background: #8AC0FC;
 $blue_button_hover_03_box_shadow: 0px 10px 20px rgba(73, 133, 201, 0.5),
 inset 2px 2px 4px rgba(73, 133, 201, 0.75),
 inset -8px -8px 12px #4985C9;
 
-
-$purple_button_box_shadow: 0px 10px 20px rgba(0, 0, 0, 0.3),
-inset 2px 2px 4px rgba(147, 71, 137, 0.75),
-inset -8px -8px 12px rgba(147, 71, 137, 0.7);
-$purple_button_hover_box_shadow: 0px 20px 20px rgba(0, 0, 0, 0.3),
-inset 2px 2px 4px rgba(94, 41, 87, 0.75),
-inset -8px -8px 12px rgba(94, 41, 87, 0.75);
-
 $purple_button_hover_02_background: #CFA6CA;
 $purple_button_hover_02_box_shadow: 0px 10px 20px #612C5A,
 inset 2px 2px 4px rgba(140, 82, 133, 0.75),
 inset -8px -8px 12px rgba(140, 82, 133, 0.7);
+$purple_button_hover_box_shadow: 0px 20px 20px rgba(0, 0, 0, 0.3),
+inset 2px 2px 4px rgba(94, 41, 87, 0.75),
+inset -8px -8px 12px rgba(94, 41, 87, 0.75);
 
-
-$green_button_box_shadow: 0px 10px 20px rgba(0, 0, 0, 0.3),
-inset 2px 2px 4px rgba(77, 135, 93, 0.6),
-inset -8px -8px 12px rgba(77, 135, 93, 0.75);
 $green_button_hover_box_shadow: 0px 10px 20px #0F3419,
 inset 2px 2px 4px rgba(39, 96, 55, 0.75),
 inset -8px -8px 12px #276037;
 
-$green_button_hover_02_background: #A7D4B4;
-$green_button_hover_02_box_shadow: 0px 10px 20px #215B32,
-inset 2px 2px 4px rgba(100, 165, 119, 0.6),
-inset -8px -8px 12px #64A577;
+
+
+
 
 
 /* -------------- CARDS ------------- */

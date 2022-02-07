@@ -47,9 +47,8 @@ a {
 }
 
 
-ul {
-    list-style-type: decimal;
-    padding-left: 2em;
+ul, ol {
+    padding-left: 1em;
 }
 
 h1 {
@@ -182,6 +181,56 @@ input[type="submit"] {
     &:hover {
         box-shadow: $blue_button_hover_box_shadow;
     }
+}
+
+.button_02 {
+    margin-top: 1em;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #64A5EE;
+    transition: all ease-in 0.3s;
+    border: 1px solid #F5FBFF;
+}
+
+.button_02:hover {
+    background-color: #F5FBFF;
+    border: 1px solid #64A5EE;
+    color: #64A5EE;
+}
+
+.button_03 {
+    margin-top: 1em;
+    border: none;
+    color: #000000;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #F5FBFF;
+    transition: all ease-in 0.3s;
+    border: 1px solid #000000;
+}
+
+.button_03:hover {
+    background-color: #000000;
+    border: 1px solid #F5FBFF;
+    color: #F5FBFF;
+}
+
+.button_03 img {
+    width: 20px;
+    margin-right: 1em;
 }
 
 /* ----------------------------------------- */
@@ -323,6 +372,121 @@ ul.mobilenav {
 }
 
 
+
+
+
+/* ----------------------------------------- */
+/* ----------- Table of Contents ----------- */
+/* ----------------------------------------- */
+
+
+ul.navigation.case_study_nav {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2), inset -8px -8px 16px #DCE9F1;
+}
+
+.toc_nav {
+    display: flex;
+    position: fixed;
+    top: 74px;
+    left: 0;
+    width: 100%;
+    list-style-type: none;
+    padding-left: 0;
+    z-index: 100;
+    justify-content: space-evenly;
+    border-radius: 0;
+    background: $white;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3), inset -8px -8px 16px #DCE9F1;
+
+    li {
+        text-align: center;
+        margin-bottom: 0;
+        font-size: 0.75rem;
+        font-weight: 300;
+        line-height: 0.75rem;
+        border-radius: 10pt;
+
+        a {
+            font-size: 0.75rem;
+            line-height: 0.75rem;
+            font-family: $header_font;
+            font-weight: 300;
+            color: $black;
+            hyphens: auto;
+            padding: 0.75rem 1.25rem;
+            border-radius: 5px;
+            display: block;
+
+            span.num {
+                font-weight: bold;
+            }
+
+            @media only screen and (max-width: 940px) {
+                span.num {
+                    display: block;
+                }
+            }
+
+            &:hover {
+                background: $light_blue;
+                box-shadow: $blue_button_box_shadow;
+                color: $white;
+            }
+        }
+    }
+
+    &.green_nav {
+        li a:hover {
+            background: $light_green;
+            box-shadow: $green_button_box_shadow;
+        }
+    }
+
+
+}
+
+
+a.cs_anchor {
+    display: none;
+    position: relative;
+    visibility: hidden;
+
+}
+
+div.case_study_page {
+    h2 {
+        position: relative;
+    }
+
+    h2 span {
+        position: absolute;
+        top: -150px;
+    }
+}
+
+
+
+@media only screen and (max-width: 655px) {
+    .toc_nav {
+        top: 64px;
+        flex-wrap: wrap;
+        z-index: 45;
+        padding-top: 0.5em;
+
+        li {
+            width: 15%;
+        }
+
+        .list-grou-item {
+            padding: 0;
+        }
+    }
+
+    ul.mobilenav li.mobilemenu {
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3), inset -8px -8px 16px #DCE9F1 !important;
+    }
+}
+
 /* ----------------------------------------- */
 /* ---------- Anchor Links ----------------- */
 /* ----------------------------------------- */
@@ -342,6 +506,47 @@ a.anchor {
     &.home {
         top: -5vw;
     }
+}
+
+
+
+/* ----------------------------------------- */
+/* --------------------- Cards ------------- */
+/* ----------------------------------------- */
+
+
+.orange_card,
+.purple_card,
+.blue_card,
+.green_card {
+    color: $white;
+    padding: 2em 2em;
+
+    @media only screen and (max-width: 800px) {
+        padding: 1.5em 1.5em;
+    }
+
+    p,
+    li {
+        font-size: 12pt;
+        line-height: 16pt;
+    }
+}
+
+.orange_card {
+    @include orange_clay_card;
+}
+
+.purple_card {
+    @include purple_clay_card;
+}
+
+.blue_card {
+    @include blue_clay_card;
+}
+
+.green_card {
+    @include green_clay_card;
 }
 
 /* ----------------------------------------- */
@@ -387,7 +592,7 @@ div.hero {
         z-index: -5;
         object-fit: cover;
         transform:
-        perspective(1000px) rotateX(4deg) rotateY(-16deg) rotateZ(4deg);
+            perspective(1000px) rotateX(4deg) rotateY(-16deg) rotateZ(4deg);
     }
 }
 
@@ -680,6 +885,7 @@ div.hero {
                     color: $blue;
                 }
             }
+
             &:nth-of-type(3):before {
                 color: red;
             }
@@ -1048,7 +1254,7 @@ div.contact {
                 }
 
                 &:nth-of-type(1) {
-                    background: $blue_gradient;
+                    @include blue_clay_card;
 
                     &:before {
                         background-image: url('../images/ICON_product.png');
@@ -1056,7 +1262,7 @@ div.contact {
                 }
 
                 &:nth-of-type(2) {
-                    background: $orange_gradient;
+                    @include orange_clay_card;
 
                     &:before {
                         background-image: url('../images/ICON_challenge.png');
@@ -1064,7 +1270,7 @@ div.contact {
                 }
 
                 &:nth-of-type(3) {
-                    background: $green_gradient;
+                    @include green_clay_card;
 
                     &:before {
                         background-image: url('../images/ICON_solution.png');
@@ -1157,7 +1363,7 @@ div.contact {
                     }
 
                     &:nth-of-type(1) {
-                        background: $green_gradient;
+                        @include green_clay_card;
                         margin-right: 2%;
 
                         &:before {
@@ -1166,7 +1372,7 @@ div.contact {
                     }
 
                     &:nth-of-type(2) {
-                        background: $orange_gradient;
+                        @include orange_clay_card;
 
                         &:before {
                             background-image: url('../images/ICON_problems.png');
@@ -1541,6 +1747,7 @@ div.contact {
 
             h2 {
                 grid-area: 1 / 1 / 1 / span 10;
+                margin-top: 1em;
             }
 
             div {
@@ -1597,11 +1804,314 @@ div.contact {
             }
         }
 
+
+        /* ------------- Forest Service Case Study ------------- */
+        &.cs_03 {
+
+            h3,
+            h2::before {
+                color: $green;
+            }
+
+            h2::after {
+                border-bottom: 4px solid $green;
+            }
+
+            h4 {
+                font-size: 20pt;
+
+            }
+
+            .case_study_head {
+                @include green_clay_card;
+                grid-area: 1 / 2 / 1 / span 6;
+                padding: 2.5em 3em;
+                margin-top: 5em;
+            }
+
+            .blob_01 {
+                grid-area: 1 / 1 / span 2 / span-all;
+            }
+
+            div {
+                &.overview {
+                    grid-area: 3 / 2 / 3 / span 10;
+                }
+
+                &.brief {
+                    grid-area: 4 / 2 / 4 / span 10;
+                }
+
+                &.research {
+                    grid-area: 5 / 2 / 5 / span 10;
+                }
+
+                &.information_architecture {
+                    grid-area: 6 / 2 / 6 / span 10;
+                }
+
+                &.design {
+                    grid-area: 7 / 2 / 7 / span 10;
+                }
+
+                &.wireframes {
+                    grid-area: 8 / 2 / 8 / span 10;
+                }
+
+                &.testing {
+                    grid-area: 9 / 2 / 9 / span 10;
+                }
+
+                &.styleguide {
+                    grid-area: 10 / 2 / 10 / span 10;
+                }
+
+                &.hi_fi_wireframes {
+                    grid-area: 11 / 2 / 11 / span 10;
+                }
+
+                &.prototypes {
+                    grid-area: 12 / 2 / 12 / span 10;
+                }
+
+                &.conclusion {
+                    grid-area: 13 / 2 / 13 / span 10;
+                }
+
+                &.thankyou {
+                    grid-area: 14 / 2 / 14 / span 10;
+                }
+
+                &.research {
+                    div.site_analysis {
+                        grid-area: 3 / 1 / 3 / span 10;
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+
+                        h3 {
+                            width: 100%;
+                        }
+
+                        >div {
+                            width: auto;
+                            display: flex;
+                            justify-content: space-between;
+
+                            &:first-of-type {
+                                justify-content: flex-start;
+
+                                p {
+                                    width: 50%;
+                                    margin-right: 1em;
+                                }
+
+                                img {
+                                    width: 2em;
+                                }
+
+                                margin-bottom: 1em;
+                            }
+
+                            &.orange_card {
+                                width: 40%;
+                            }
+                        }
+
+                        div {
+                            width: auto;
+                        }
+
+                        img {
+                            border-radius: 50px;
+                            margin-bottom: 0;
+                            width: 45%;
+
+                        }
+                    }
+
+                    div.user_persona {
+                        grid-area: 2 / 1 / 2 / span 10;
+                        display: flex;
+                    }
+                }
+
+                &.information_architecture {
+                    display: flex;
+                    flex-direction: column;
+
+                    div {
+                        display: flex;
+                        flex-flow: wrap row;
+                        margin-top: 1.5em;
+
+                        h3 {
+                            width: 100%;
+                            margin-bottom: 1em;
+                        }
+
+                        img {
+                            max-width: 100%;
+                            display: block;
+                            object-fit: cover;
+                            border-radius: 20px;
+                        }
+
+                        &.redlining {
+                            img {
+                                &:first-of-type {
+                                    width: 70%;
+                                }
+
+                                &:nth-of-type(2) {
+                                    width: 25%;
+                                }
+                            }
+                        }
+
+                        /*cardsorting*/
+                        &.cardsorting {
+
+                            >div:first-of-type {
+                                display: flex;
+                                flex-direction: column;
+                                width: 40%;
+                                margin-right: 2em;
+
+                                img {
+                                    margin-bottom: 2em;
+                                }
+                            }
+
+                            div:nth-of-type(2) {
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+
+                &.wireframes {
+                    div {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-start;
+
+                        img {
+                            object-fit: cover;
+                            height: auto;
+
+                            &:nth-of-type(1) {
+                                width: 55%;
+                            }
+
+                            &:nth-of-type(2) {
+                                width: 25%;
+                            }
+
+                            &:nth-of-type(3) {
+                                width: 15%;
+                            }
+                        }
+                    }
+                }
+
+                &.testing {
+                    display: flex;
+                    flex-direction: column;
+
+                    div {
+                        div.a_b {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-end;
+
+                            img {
+                                max-width: 50%;
+                                object-fit: cover;
+
+                            }
+                        }
+
+                        &.cards {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+
+                            div {
+                                max-width: 40%;
+                            }
+                        }
+                    }
+                }
+
+                &.styleguide,
+                &.hi_fi_wireframes {
+                    div {
+                        display: flex;
+                        flex-flow: row nowrap;
+
+                        img {
+                            max-width: 50%;
+                            object-fit: contain;
+                            border-radius: 20px;
+                            height: auto;
+                            align-self: flex-start;
+
+                            &:first-of-type {
+                                margin-right: 1em;
+                            }
+                        }
+                    }
+                }
+
+                &.prototypes {
+                    div {
+                        display: flex;
+
+                        div {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+
+                            img {
+                                object-fit: cover;
+                                max-width: 95%;
+                                margin-top: 1em;
+                            }
+                        }
+                    }
+                }
+
+                &.conclusion {
+                    .cards {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        div {
+                            max-width: 40%;
+                        }
+                    }
+                }
+
+                &.thankyou {
+                    margin-top: 0;
+
+                    div {
+                        @include green_clay_card;
+                    }
+                }
+
+
+            }
+
+
+        }
+
         /* ---------- CLOSE CASE STUDY GRID ---------- */
 
     }
 }
-
 
 /* ----------------------------------------- */
 /* --------- Responsive Designs ------------ */
@@ -2419,13 +2929,82 @@ div.contact {
                     }
                 }
             }
+
+            &.cs_03 {
+                & div.research {
+                    div.site_analysis {
+                        >div {
+                            width: auto;
+                            flex-direction: column;
+
+                            &.orange_card {}
+
+                            &:first-of-type {
+                                text-align: center;
+
+                                p {
+                                    width: 100%;
+                                }
+
+                            }
+                        }
+
+                        img:nth-of-type(1) {
+                            width: 98%;
+                            margin-top: 2em;
+                        }
+
+                    }
+
+                    div.user_persona {
+                        grid-area: 2 / 1 / 2 / span 10;
+                        display: flex;
+
+                    }
+
+                }
+
+                & div.testing {
+
+                    div {
+                        &.cards {
+                            flex-direction: column;
+
+                            div {
+                                max-width: 100%;
+                                margin-bottom: 1.5em;
+                            }
+                        }
+                    }
+                }
+
+
+
+                & div.styleguide,
+                & div.hi_fi_wireframes {
+                    div {
+                        flex-flow: column nowrap;
+
+                        img {
+                            max-width: 100%;
+                            margin-bottom: 1.5em;
+
+                            &:first-of-type {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+
         }
+
+
     }
 
 
-
-
-    /* --------- Anchors ------------ */
 
 }
 
@@ -2500,9 +3079,9 @@ div.contact {
             width: 100%;
             padding: 12px 0;
             background-color: $white;
-            box-shadow: 0px 2px 10px rgba(3, 47, 97, 0.5);
+            box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.4), inset -8px -8px 16px #DCE9F1;
             position: fixed;
-            z-index: 100;
+            z-index: 115;
             top: 0pt;
             left: 0;
 

@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <meta name="description" content="Sam Lynch - Product Manager - Creative Technologist">
     <meta name="author" content="">
-    <meta name="keywords" content="Dog Grooming,Pet Grooming,dog grooming,Barnstead, New Hampshire, NH, Barn Dog Grooming">
     <title>Sam Lynch - Product Manager</title>
     <link rel="icon" type="image/x-icon" href="icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,30 +18,13 @@
     <link rel="icon" type="image/x-icon" href="SL.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
-    <script>
-    hljs.initHighlightingOnLoad();
-    </script>
-    <script type="text/javascript">
-    function myFunction() {
-        var x = document.getElementById("myMobilenav");
-        if (x.className === "mobilenav") { x.className += " responsive"; } else { x.className = "mobilenav"; }
-    }
-    </script>
-    <script type="text/javascript">
-    function nav_close() {
-        var x = document.getElementById("myMobilenav");
-        if (x.className === "mobilenav") {
-            x.className += " nav_close";
-        } else {
-            x.className = "mobilenav";
-        }
-    }
-    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="../js/mobile_nav_menu.js" type="text/javascript"></script>
 </head>
 
 <body>
     <nav class="top_nav_container">
-        <ul class="navigation">
+        <ul class="navigation case_study_nav">
             <li class="n_logo"><a href="../index.html">Sam Lynch</a></li>
             <li class="n_projects"><a href="../index.html#projects" id="projects_m">Projects</a></li>
             <li class="n_about"><a href="../index.html#about" id="about_m">About</a></li>
@@ -58,6 +40,18 @@
             </li>
         </ul>
     </nav>
+    <ul class="toc_nav">
+        <li class="list-group-item"><a href="#01_brief"><span class="num">1.</span> Brief</a></li>
+        <li class="list-group-item"><a href="#02_roadmap"><span class="num">2.</span> Roadmap</a></li>
+        <li class="list-group-item"><a href="#03_stakeholder"><span class="num">3.</span> Stakeholder </a></li>
+        <li class="list-group-item"><a href="#04_research"><span class="num">4.</span> Research</a></li>
+        <li class="list-group-item"><a href="#05_sitemap"><span class="num">5.</span> Sitemap </a></li>
+        <li class="list-group-item"><a href="#06_design"><span class="num">6.</span> Design</a></li>
+        <li class="list-group-item"><a href="#07_prototypes"><span class="num">7.</span> Prototypes</a></li>
+        <li class="list-group-item"><a href="#08_testing"><span class="num">8.</span> Testing</a></li>
+        <li class="list-group-item"><a href="#09_dev"><span class="num">9.</span> Dev</a></li>
+        <li class="list-group-item"><a href="#10_launch"><span class="num">10.</span> Launch</a></li>
+    </ul>
     <div class="container">
         <div class="case_study_page">
             <img class="blob_01" src="../images/CS_1_A.svg">
@@ -87,7 +81,7 @@
                 </div>
             </div>
             <div class="brief">
-                <h2>Brief</h2>
+                <h2><span id="01_brief"></span>Brief</h2>
                 <div class="brief_container">
                     <div>
                         <h3>Project Type</h3>
@@ -109,11 +103,11 @@
                 </div>
             </div>
             <div class="roadmap">
-                <h2>Product Roadmap</h2>
+                <h2><span id="02_roadmap"></span>Product Roadmap</h2>
                 <img src="../images/ProductRoadmap.png" alt="product roadmap" />
             </div>
             <div class="stakeholder">
-                <h2>Stakeholder Interview</h2>
+                <h2><span id="03_stakeholder"></span>Stakeholder Interview</h2>
                 <img src="../images/groomer_illustration.png" alt="dog grooming illustration" />
                 <p>I met with the stakeholder who is the owner of Barndog Grooming. I conducted an interview to hear their requirements for the site redesign as well as gain insight in to their customers.</p>
                 <div class="stakeholder_cards">
@@ -137,18 +131,19 @@
                 </div>
             </div>
             <div class="research">
-                <h2>Research</h2>
+                <h2><span id="04_research"></span>Research</h2>
                 <div class="site_analysis">
-                    <div><h3>Site Analysis</h3>
-                    <p>The current website was avaluated for Jakob Nielsen's 10 general principles for interaction design.</p>
-                    <p><b>Negative Findings</b></p>
-                    <ul>
-                        <li>Inconsistent spacing</li>
-                        <li>No calls to action</li>
-                        <li>Dull color palette</li>
-                        <li>Erratic alignment</li>
-                        <li>Parallax headers do not work properly</li>
-                    </ul>
+                    <div>
+                        <h3>Site Analysis</h3>
+                        <p>The current website was avaluated for Jakob Nielsen's 10 general principles for interaction design.</p>
+                        <p><b>Negative Findings</b></p>
+                        <ul>
+                            <li>Inconsistent spacing</li>
+                            <li>No calls to action</li>
+                            <li>Dull color palette</li>
+                            <li>Erratic alignment</li>
+                            <li>Parallax headers do not work properly</li>
+                        </ul>
                     </div>
                     <img src="../images/site_analysis_01.png" alt="desktop website">
                     <img src="../images/site_analysis_02.png" alt="mobile website">
@@ -240,7 +235,7 @@
                 </div>
             </div>
             <div class="sitemap">
-                <h2>Sitemap Redesign</h2>
+                <h2><span id="05_sitemap"></span>Sitemap Redesign</h2>
                 <h3>Original Sitemap</h3>
                 <p>A sitemap was created to outline the current site architecture. </p>
                 <img src="../images/sitemap_01.png" alt="original sitemap">
@@ -249,7 +244,7 @@
                 <img src="../images/sitemap_02.png" alt="redesigned sitemap" />
             </div>
             <div class="design">
-                <h2>Design</h2>
+                <h2><span id="06_design"></span>Design</h2>
                 <h3>Wireframes</h3>
                 <p>Sketches and wireframes were designed for each page on the sitemap.</p>
                 <div>
@@ -273,7 +268,7 @@
                 <img src="../images/mobile_design.png" class="mobile_img" alt="mobile page designs" />
             </div>
             <div class="prototypes">
-                <h2>Prototypes</h2>
+                <h2><span id="07_prototypes"></span>Prototypes</h2>
                 <p>Clickable prototypes were created on Figma for the desktop and mobile site designs.</p>
                 <div class="figma_buttons">
                     <a href="https://www.figma.com/proto/zWqgzP6w7eoTBbP6THnQOv/barndog-website?node-id=646%3A12449&scaling=min-zoom&page-id=405%3A6159&starting-point-node-id=646%3A12449"><button class="button_03"><img src="../images/ICON_figma.png" alt="figma icon" />Desktop Prototype</button></a>
@@ -285,7 +280,7 @@
                 </div>
             </div>
             <div class="testing">
-                <h2>Testing</h2>
+                <h2><span id="08_testing"></span>Testing</h2>
                 <div>
                     <p>Usability testing was conducted on the desktop and mobile prototypes with 5 subjects. An A/B test was conducted on the mobile navigation layout with the same 5 subjects.</p>
                     <div class="testing_tasks">
@@ -325,7 +320,7 @@
                 </div>
             </div>
             <div class="front_end">
-                <h2>Front-End Development</h2>
+                <h2><span id="09_dev"></span>Front-End Development</h2>
                 <h3>Languages</h3>
                 <div class="languages">
                     <img src="../images/languages_01.png" alt="SASS/CSS 60%" />
@@ -446,7 +441,7 @@ $white: #FFF;
                 </div>
             </div>
             <div class="launch">
-                <h2>Launch</h2>
+                <h2><span id="10_launch"></span>Launch</h2>
                 <div>
                     <p>After QA testing on a development environment, the new website for BarndogGrooming.com was officially launched on December 29, 2021.</p>
                 </div>
