@@ -1815,6 +1815,16 @@ div.contact {
 
         /* ------------- Forest Service Case Study ------------- */
         &.cs_03 {
+
+            /* ---------- Section Counter ---------- */
+            &>div:nth-of-type(3) {
+                counter-reset: sectionCounter;
+            }
+
+            &>div:nth-of-type(4) {
+                counter-reset: none;
+            }
+
             overflow: hidden;
 
             h3,
@@ -1839,6 +1849,9 @@ div.contact {
                 h1 {
                     font-size: 32px;
                     line-height: 36px;
+                }
+                h3 {
+                    color: white;
                 }
             }
 
@@ -1892,7 +1905,7 @@ div.contact {
                 }
 
                 &.thankyou {
-                    grid-area: 14 / 2 / 14 / span 10;
+                    grid-area: 14 / 1 / 14 / span 12;
                 }
 
                 &.research {
@@ -2109,10 +2122,27 @@ div.contact {
 
                 &.thankyou {
                     margin-top: 0;
-
-                    div {
-                        @include green_clay_card;
+                    grid-template-rows: auto;
+                    div:nth-of-type(1) {
+                        grid-area: 1 / 1 / 1 / span 12;
+                        img {
+                            width: 100%;
+                        }
                     }
+
+                    div:nth-of-type(2) {
+                        background-color: $green;
+                        grid-area: 2 / 1 / 2 / span 12;
+                        padding: 0 10% 5em 10%;
+                        margin-top: -2em;
+                        color: white;
+
+                        h2:after {
+                            border-bottom: 4px solid $light_green;
+                        }
+                    }
+
+
                 }
 
 
@@ -3080,8 +3110,9 @@ div.contact {
                     display: block;
                     background: $blue;
                     box-shadow: 0px 10px 20px rgba(37, 98, 167, 0.5),
-                                inset 2px 2px 4px rgba(31, 101, 178, 0.75),
-                                inset -8px -8px 12px #1F65B3;;
+                        inset 2px 2px 4px rgba(31, 101, 178, 0.75),
+                        inset -8px -8px 12px #1F65B3;
+                    ;
                     padding-top: 10px;
                     padding-bottom: 10px;
                     color: $white;
