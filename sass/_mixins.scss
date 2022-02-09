@@ -1,10 +1,71 @@
 /* ----------------------------------------- */
 /* ---------------- Mixins ----------------- */
 /* ----------------------------------------- */
+@mixin clay_card_responsive {
+
+    li,
+    p {
+        font-size: 14pt;
+        line-height: 16pt;
+    }
+
+    padding: 3rem 2rem;
+
+    @media only screen and (max-width: 700px) {
+        margin-top: 3rem;
+        padding: 4rem 3rem;
+
+        p,
+        li {
+            font-size: 16pt;
+            line-height: 20pt;
+        }
+
+        h4 {
+            margin-bottom: 2rem;
+            font-size: 28pt;
+        }
+    }
+}
+
+
+@mixin clay_card {
+    border-radius: 50px;
+
+    h3,
+    h4,
+    li,
+    p {
+        color: white;
+    }
+
+    @include clay_card_responsive;
+}
+
+@mixin clay_card_icon {
+    width: 50px;
+    height: 50px;
+    z-index: 20;
+    position: absolute;
+    top: -25px;
+    left: 2rem;
+    content: '';
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media only screen and (max-width: 700px) {
+        width: 80px;
+        height: 80px;
+        top: -42px;
+        left: calc(50% - 40px);
+    }
+}
+
+
 
 @mixin blue_clay_card {
     background: $blue;
-    border-radius: 50px;
+    @include clay_card;
 
     @media (max-width: 400px) {
         box-shadow: $blue_clay_card_sm_box_shadow !important;
@@ -36,7 +97,7 @@
 
 @mixin purple_clay_card {
     background: $purple;
-    border-radius: 50px;
+    @include clay_card;
 
     @media (max-width: 400px) {
         box-shadow: $purple_clay_card_sm_box_shadow !important;
@@ -68,7 +129,7 @@
 
 @mixin green_clay_card {
     background: $green;
-    border-radius: 50px;
+    @include clay_card;
 
     @media (max-width: 400px) {
         box-shadow: $green_clay_card_sm_box_shadow !important;
@@ -100,7 +161,7 @@
 
 @mixin orange_clay_card {
     background: $orange;
-    border-radius: 50px;
+    @include clay_card;
 
     @media (max-width: 400px) {
         box-shadow: $orange_clay_card_sm_box_shadow !important;

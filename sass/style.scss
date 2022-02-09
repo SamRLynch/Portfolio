@@ -525,20 +525,7 @@ a.anchor {
 .orange_card,
 .purple_card,
 .blue_card,
-.green_card {
-    color: $white;
-    padding: 2em 2em;
-
-    @media only screen and (max-width: 800px) {
-        padding: 1.5em 1.5em;
-    }
-
-    p,
-    li {
-        font-size: 12pt;
-        line-height: 16pt;
-    }
-}
+.green_card {}
 
 .orange_card {
     @include orange_clay_card;
@@ -762,7 +749,10 @@ div.hero {
 
             div.card {
                 @include purple_clay_card;
-
+                padding: 5em;
+                                div.project_text {
+                    margin-top: 60%;
+                }
                 div.phone_01 {
                     width: 40%;
                     top: -10%;
@@ -802,10 +792,12 @@ div.hero {
 
             div.card {
                 @include green_clay_card;
-
+                padding: 5em;
+                div.project_text {
+                    margin-top: 60%;
+                }
                 &:hover {}
             }
-
 
         }
 
@@ -818,6 +810,7 @@ div.hero {
         }
     }
 }
+
 
 
 /* ----------------------------------------- */
@@ -920,26 +913,15 @@ div.hero {
         }
 
         div {
-            color: $white;
-            border-radius: 20px;
-            padding: 3em 2em 2em 2em;
             width: 16vw;
             position: relative;
 
             &:before {
-                content: '';
-                background-repeat: no-repeat;
-                background-size: contain;
-                width: 50px;
-                height: 50px;
-                z-index: 20;
-                position: absolute;
-                top: -25px;
+                @include clay_card_icon
             }
 
             &:nth-of-type(1) {
-                box-shadow: $blue_clay_card_xsm_box_shadow;
-                background-color: $blue;
+                @include blue_clay_card;
 
                 &:before {
                     background-image: url('../images/ICON_research.png');
@@ -947,8 +929,7 @@ div.hero {
             }
 
             &:nth-of-type(2) {
-                box-shadow: $green_clay_card_xsm_box_shadow;
-                background-color: $green;
+                @include green_clay_card;
 
                 &:before {
                     background-image: url('../images/ICON_design.png');
@@ -956,8 +937,7 @@ div.hero {
             }
 
             &:nth-of-type(3) {
-                box-shadow: $purple_clay_card_xsm_box_shadow;
-                background-color: $purple;
+                @include purple_clay_card;
 
                 &:before {
                     background-image: url('../images/ICON_build.png');
@@ -965,8 +945,7 @@ div.hero {
             }
 
             &:nth-of-type(4) {
-                box-shadow: $orange_clay_card_xsm_box_shadow;
-                background-color: $orange;
+                @include orange_clay_card;
 
                 &:before {
                     background-image: url('../images/ICON_refine.png');
@@ -1245,7 +1224,7 @@ div.contact {
             div {
                 color: $white;
                 border-radius: 20px;
-                padding: 2.5em 1.5em 1.5em 1.5em;
+                /*padding: 2.5em 1.5em 1.5em 1.5em;*/
                 margin-right: 20px;
                 flex-basis: 26%;
                 position: relative;
@@ -1356,7 +1335,6 @@ div.contact {
                 div {
                     color: $white;
                     border-radius: 20px;
-                    padding: 2.5em 1.5em 1.5em 1.5em;
                     position: relative;
 
                     &:before {
@@ -1637,18 +1615,8 @@ div.contact {
             }
 
             div.testing_tasks {
-                border-radius: 20px;
-                background: $blue_gradient;
-                padding: 2em 1.5em 1em 1.5em;
+                @include blue_clay_card;
                 margin-bottom: 2em;
-
-                h4 {}
-
-                h4,
-                li {
-                    color: white;
-                }
-
             }
 
             div.results_img {
@@ -1663,15 +1631,9 @@ div.contact {
             }
 
             div.testing_takeaways {
-                border-radius: 20px;
-                background: $purple_gradient;
-                padding: 2em 1.5em 1em 1.5em;
+                @include purple_clay_card;
                 margin-bottom: 2em;
 
-                h4,
-                li {
-                    color: white;
-                }
             }
         }
 
@@ -1850,6 +1812,7 @@ div.contact {
                     font-size: 32px;
                     line-height: 36px;
                 }
+
                 h3 {
                     color: white;
                 }
@@ -2123,8 +2086,10 @@ div.contact {
                 &.thankyou {
                     margin-top: 0;
                     grid-template-rows: auto;
+
                     div:nth-of-type(1) {
                         grid-area: 1 / 1 / 1 / span 12;
+
                         img {
                             width: 100%;
                         }
@@ -2247,7 +2212,6 @@ div.contact {
                     grid-area: 3 / 1 / span 2 / span 10;
 
                     div {
-                        padding: 2.5em 1.5em 1.5em 1.5em;
                         position: relative;
                     }
                 }
@@ -2346,9 +2310,7 @@ div.contact {
                 }
 
                 div.testing_tasks,
-                div.testing_takeaways {
-                    padding: 1.5em 1em 0.5em 1em;
-                }
+                div.testing_takeaways {}
 
                 div.results_img {
                     padding: 0 5%;
@@ -2580,7 +2542,6 @@ div.contact {
         justify-content: center;
 
         div {
-            padding: 2.5em 1.5em 1.5em 1.5em !important;
             width: 100% !important;
             margin-bottom: 3em;
             text-align: center;
@@ -2720,12 +2681,7 @@ div.contact {
                     margin-top: 3em;
 
                     &:before {
-                        width: 50px;
-                        height: 50px;
-                        z-index: 20;
-                        position: absolute;
-                        top: -25px;
-                        left: 41%;
+                        @include clay_card_icon
                     }
                 }
             }
@@ -2753,7 +2709,6 @@ div.contact {
                     margin-top: 58%;
 
                     div {
-                        padding: 3em 1em 1em 1em;
                         margin-bottom: 3em;
 
                         &:before {
