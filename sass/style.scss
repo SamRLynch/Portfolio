@@ -619,7 +619,7 @@ div.hero {
                 margin: 0.5em auto 0 auto;
             }
 
-            width: 14em;
+            width: 12em;
             line-height: 64px;
         }
 
@@ -750,9 +750,7 @@ div.hero {
             div.card {
                 @include purple_clay_card;
                 padding: 5em;
-                                div.project_text {
-                    margin-top: 60%;
-                }
+
                 div.phone_01 {
                     width: 40%;
                     top: -10%;
@@ -793,12 +791,19 @@ div.hero {
             div.card {
                 @include green_clay_card;
                 padding: 5em;
-                div.project_text {
-                    margin-top: 60%;
-                }
+
+
+
                 &:hover {}
             }
 
+        }
+
+        &.case_study_03,
+        &.case_study_02 {
+            div.project_text {
+                margin-top: 0;
+            }
         }
 
         @media only screen and (min-width: 1200px) {
@@ -1159,7 +1164,7 @@ div.contact {
         .case_study_head {
             grid-area: 1 / 2 / 1 / span 5;
             color: $white;
-            margin-top: 3em;
+            margin-top: 6em;
 
             h1 {}
 
@@ -1230,14 +1235,7 @@ div.contact {
                 position: relative;
 
                 &:before {
-                    content: '';
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                    width: 50px;
-                    height: 50px;
-                    z-index: 20;
-                    position: absolute;
-                    top: -25px;
+                    @include clay_card_icon;
                 }
 
                 &:nth-of-type(1) {
@@ -1338,14 +1336,7 @@ div.contact {
                     position: relative;
 
                     &:before {
-                        content: '';
-                        background-repeat: no-repeat;
-                        background-size: contain;
-                        width: 50px;
-                        height: 50px;
-                        z-index: 20;
-                        position: absolute;
-                        top: -27px;
+                        @include clay_card_icon;
                     }
 
                     &:nth-of-type(1) {
@@ -1806,7 +1797,7 @@ div.contact {
             .case_study_head {
                 @include green_clay_card;
                 padding: 2.5em 3em;
-                margin-top: 13em;
+                margin-top: 25%;
 
                 h1 {
                     font-size: 32px;
@@ -1820,6 +1811,10 @@ div.contact {
 
             .blob_01 {
                 grid-area: 1 / 1 / span 2 / span 12;
+                width: 100%;
+                height: 540px;
+                overflow: hidden;
+                margin-bottom: 4em;
             }
 
             div {
@@ -2675,13 +2670,12 @@ div.contact {
                 }
 
                 div {
-                    padding: 3em 1em 1em 1em;
                     margin-right: 0;
                     flex-basis: 100%;
-                    margin-top: 3em;
+                    margin-top: 6em !important;
 
                     &:before {
-                        @include clay_card_icon
+                        @include clay_card_icon;
                     }
                 }
             }

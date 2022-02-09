@@ -8,8 +8,14 @@
         font-size: 14pt;
         line-height: 16pt;
     }
+    h4 {
+        
+    }
+    padding: 4rem 3rem;
 
-    padding: 3rem 2rem;
+    @media only screen and (max-width: 1000px) {
+        padding: 3rem 2rem;
+    }
 
     @media only screen and (max-width: 700px) {
         margin-top: 3rem;
@@ -43,16 +49,24 @@
 }
 
 @mixin clay_card_icon {
-    width: 50px;
-    height: 50px;
+
     z-index: 20;
     position: absolute;
-    top: -25px;
-    left: 2rem;
     content: '';
     background-repeat: no-repeat;
     background-size: contain;
 
+@media only screen and (min-width: 1001px){    width: 70px;
+    height: 70px;
+    top: -36px;
+    left: 3em;
+}
+    @media only screen and (max-width: 1000px) {
+        width: 50px;
+        height: 50px;
+        top: -25px;
+        left: 2rem
+    }
     @media only screen and (max-width: 700px) {
         width: 80px;
         height: 80px;

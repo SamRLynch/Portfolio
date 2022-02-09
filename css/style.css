@@ -655,7 +655,7 @@ a.anchor.home {
 .orange_card {
   background: #D07440;
   border-radius: 50px;
-  padding: 3rem 2rem;
+  padding: 4rem 3rem;
 }
 
 .orange_card h3,
@@ -669,6 +669,12 @@ a.anchor.home {
 .orange_card p {
   font-size: 14pt;
   line-height: 16pt;
+}
+
+@media only screen and (max-width: 1000px) {
+  .orange_card {
+    padding: 3rem 2rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -712,7 +718,7 @@ a.anchor.home {
 .purple_card {
   background: #92608C;
   border-radius: 50px;
-  padding: 3rem 2rem;
+  padding: 4rem 3rem;
 }
 
 .purple_card h3,
@@ -726,6 +732,12 @@ a.anchor.home {
 .purple_card p {
   font-size: 14pt;
   line-height: 16pt;
+}
+
+@media only screen and (max-width: 1000px) {
+  .purple_card {
+    padding: 3rem 2rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -777,7 +789,7 @@ a.anchor.home {
 .blue_card {
   background: #4085D0;
   border-radius: 50px;
-  padding: 3rem 2rem;
+  padding: 4rem 3rem;
 }
 
 .blue_card h3,
@@ -791,6 +803,12 @@ a.anchor.home {
 .blue_card p {
   font-size: 14pt;
   line-height: 16pt;
+}
+
+@media only screen and (max-width: 1000px) {
+  .blue_card {
+    padding: 3rem 2rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -842,7 +860,7 @@ a.anchor.home {
 .green_card {
   background: #61936F;
   border-radius: 50px;
-  padding: 3rem 2rem;
+  padding: 4rem 3rem;
 }
 
 .green_card h3,
@@ -856,6 +874,12 @@ a.anchor.home {
 .green_card p {
   font-size: 14pt;
   line-height: 16pt;
+}
+
+@media only screen and (max-width: 1000px) {
+  .green_card {
+    padding: 3rem 2rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -978,7 +1002,7 @@ div.hero img {
 
 .projects_div div.project .button {
   margin: 0.5em 0 0 0;
-  width: 14em;
+  width: 12em;
   line-height: 64px;
 }
 
@@ -991,7 +1015,7 @@ div.hero img {
 .projects_div div.project div.card {
   background: #4085D0;
   border-radius: 50px;
-  padding: 3rem 2rem;
+  padding: 4rem 3rem;
   padding: 5em;
   display: flex;
   position: relative;
@@ -1009,6 +1033,12 @@ div.hero img {
 .projects_div div.project div.card p {
   font-size: 14pt;
   line-height: 16pt;
+}
+
+@media only screen and (max-width: 1000px) {
+  .projects_div div.project div.card {
+    padding: 3rem 2rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -1157,7 +1187,7 @@ div.hero img {
 .projects_div div.project.case_study_02 div.card {
   background: #92608C;
   border-radius: 50px;
-  padding: 3rem 2rem;
+  padding: 4rem 3rem;
   padding: 5em;
 }
 
@@ -1172,6 +1202,12 @@ div.hero img {
 .projects_div div.project.case_study_02 div.card p {
   font-size: 14pt;
   line-height: 16pt;
+}
+
+@media only screen and (max-width: 1000px) {
+  .projects_div div.project.case_study_02 div.card {
+    padding: 3rem 2rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -1220,10 +1256,6 @@ div.hero img {
   transition: all ease-in 0.3s;
 }
 
-.projects_div div.project.case_study_02 div.card div.project_text {
-  margin-top: 60%;
-}
-
 .projects_div div.project.case_study_02 div.card div.phone_01 {
   width: 40%;
   top: -10%;
@@ -1252,7 +1284,7 @@ div.hero img {
 .projects_div div.project.case_study_03 div.card {
   background: #61936F;
   border-radius: 50px;
-  padding: 3rem 2rem;
+  padding: 4rem 3rem;
   padding: 5em;
 }
 
@@ -1267,6 +1299,12 @@ div.hero img {
 .projects_div div.project.case_study_03 div.card p {
   font-size: 14pt;
   line-height: 16pt;
+}
+
+@media only screen and (max-width: 1000px) {
+  .projects_div div.project.case_study_03 div.card {
+    padding: 3rem 2rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -1315,8 +1353,8 @@ div.hero img {
   transition: all ease-in 0.3s;
 }
 
-.projects_div div.project.case_study_03 div.card div.project_text {
-  margin-top: 60%;
+.projects_div div.project.case_study_03 div.project_text, .projects_div div.project.case_study_02 div.project_text {
+  margin-top: 0;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -1434,15 +1472,29 @@ div.hero img {
 }
 
 .about div.process_containers div:before {
-  width: 50px;
-  height: 50px;
   z-index: 20;
   position: absolute;
-  top: -25px;
-  left: 2rem;
   content: '';
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+@media only screen and (min-width: 1001px) {
+  .about div.process_containers div:before {
+    width: 70px;
+    height: 70px;
+    top: -36px;
+    left: 3em;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .about div.process_containers div:before {
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 2rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -1457,7 +1509,7 @@ div.hero img {
 .about div.process_containers div:nth-of-type(1) {
   background: #4085D0;
   border-radius: 50px;
-  padding: 3rem 2rem;
+  padding: 4rem 3rem;
 }
 
 .about div.process_containers div:nth-of-type(1) h3,
@@ -1471,6 +1523,12 @@ div.hero img {
 .about div.process_containers div:nth-of-type(1) p {
   font-size: 14pt;
   line-height: 16pt;
+}
+
+@media only screen and (max-width: 1000px) {
+  .about div.process_containers div:nth-of-type(1) {
+    padding: 3rem 2rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -1526,7 +1584,7 @@ div.hero img {
 .about div.process_containers div:nth-of-type(2) {
   background: #61936F;
   border-radius: 50px;
-  padding: 3rem 2rem;
+  padding: 4rem 3rem;
 }
 
 .about div.process_containers div:nth-of-type(2) h3,
@@ -1540,6 +1598,12 @@ div.hero img {
 .about div.process_containers div:nth-of-type(2) p {
   font-size: 14pt;
   line-height: 16pt;
+}
+
+@media only screen and (max-width: 1000px) {
+  .about div.process_containers div:nth-of-type(2) {
+    padding: 3rem 2rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -1595,7 +1659,7 @@ div.hero img {
 .about div.process_containers div:nth-of-type(3) {
   background: #92608C;
   border-radius: 50px;
-  padding: 3rem 2rem;
+  padding: 4rem 3rem;
 }
 
 .about div.process_containers div:nth-of-type(3) h3,
@@ -1609,6 +1673,12 @@ div.hero img {
 .about div.process_containers div:nth-of-type(3) p {
   font-size: 14pt;
   line-height: 16pt;
+}
+
+@media only screen and (max-width: 1000px) {
+  .about div.process_containers div:nth-of-type(3) {
+    padding: 3rem 2rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -1664,7 +1734,7 @@ div.hero img {
 .about div.process_containers div:nth-of-type(4) {
   background: #D07440;
   border-radius: 50px;
-  padding: 3rem 2rem;
+  padding: 4rem 3rem;
 }
 
 .about div.process_containers div:nth-of-type(4) h3,
@@ -1678,6 +1748,12 @@ div.hero img {
 .about div.process_containers div:nth-of-type(4) p {
   font-size: 14pt;
   line-height: 16pt;
+}
+
+@media only screen and (max-width: 1000px) {
+  .about div.process_containers div:nth-of-type(4) {
+    padding: 3rem 2rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -1934,7 +2010,7 @@ div.contact form fieldset label:nth-of-type(3):before {
 .container .case_study_page .case_study_head {
   grid-area: 1 / 2 / 1 / span 5;
   color: #F5FBFF;
-  margin-top: 3em;
+  margin-top: 6em;
 }
 
 .container .case_study_page .case_study_head h3 {
@@ -2003,20 +2079,44 @@ div.contact form fieldset label:nth-of-type(3):before {
 }
 
 .container .case_study_page div.overview div:before {
+  z-index: 20;
+  position: absolute;
   content: '';
   background-repeat: no-repeat;
   background-size: contain;
-  width: 50px;
-  height: 50px;
-  z-index: 20;
-  position: absolute;
-  top: -25px;
+}
+
+@media only screen and (min-width: 1001px) {
+  .container .case_study_page div.overview div:before {
+    width: 70px;
+    height: 70px;
+    top: -36px;
+    left: 3em;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container .case_study_page div.overview div:before {
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 2rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .container .case_study_page div.overview div:before {
+    width: 80px;
+    height: 80px;
+    top: -42px;
+    left: calc(50% - 40px);
+  }
 }
 
 .container .case_study_page div.overview div:nth-of-type(1) {
   background: #4085D0;
   border-radius: 50px;
-  padding: 3rem 2rem;
+  padding: 4rem 3rem;
 }
 
 .container .case_study_page div.overview div:nth-of-type(1) h3,
@@ -2030,6 +2130,12 @@ div.contact form fieldset label:nth-of-type(3):before {
 .container .case_study_page div.overview div:nth-of-type(1) p {
   font-size: 14pt;
   line-height: 16pt;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container .case_study_page div.overview div:nth-of-type(1) {
+    padding: 3rem 2rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -2085,7 +2191,7 @@ div.contact form fieldset label:nth-of-type(3):before {
 .container .case_study_page div.overview div:nth-of-type(2) {
   background: #D07440;
   border-radius: 50px;
-  padding: 3rem 2rem;
+  padding: 4rem 3rem;
 }
 
 .container .case_study_page div.overview div:nth-of-type(2) h3,
@@ -2099,6 +2205,12 @@ div.contact form fieldset label:nth-of-type(3):before {
 .container .case_study_page div.overview div:nth-of-type(2) p {
   font-size: 14pt;
   line-height: 16pt;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container .case_study_page div.overview div:nth-of-type(2) {
+    padding: 3rem 2rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -2146,7 +2258,7 @@ div.contact form fieldset label:nth-of-type(3):before {
 .container .case_study_page div.overview div:nth-of-type(3) {
   background: #61936F;
   border-radius: 50px;
-  padding: 3rem 2rem;
+  padding: 4rem 3rem;
 }
 
 .container .case_study_page div.overview div:nth-of-type(3) h3,
@@ -2160,6 +2272,12 @@ div.contact form fieldset label:nth-of-type(3):before {
 .container .case_study_page div.overview div:nth-of-type(3) p {
   font-size: 14pt;
   line-height: 16pt;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container .case_study_page div.overview div:nth-of-type(3) {
+    padding: 3rem 2rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -2282,20 +2400,44 @@ div.contact form fieldset label:nth-of-type(3):before {
 }
 
 .container .case_study_page div.stakeholder div.stakeholder_cards div:before {
+  z-index: 20;
+  position: absolute;
   content: '';
   background-repeat: no-repeat;
   background-size: contain;
-  width: 50px;
-  height: 50px;
-  z-index: 20;
-  position: absolute;
-  top: -27px;
+}
+
+@media only screen and (min-width: 1001px) {
+  .container .case_study_page div.stakeholder div.stakeholder_cards div:before {
+    width: 70px;
+    height: 70px;
+    top: -36px;
+    left: 3em;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container .case_study_page div.stakeholder div.stakeholder_cards div:before {
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 2rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .container .case_study_page div.stakeholder div.stakeholder_cards div:before {
+    width: 80px;
+    height: 80px;
+    top: -42px;
+    left: calc(50% - 40px);
+  }
 }
 
 .container .case_study_page div.stakeholder div.stakeholder_cards div:nth-of-type(1) {
   background: #61936F;
   border-radius: 50px;
-  padding: 3rem 2rem;
+  padding: 4rem 3rem;
   margin-right: 2%;
 }
 
@@ -2310,6 +2452,12 @@ div.contact form fieldset label:nth-of-type(3):before {
 .container .case_study_page div.stakeholder div.stakeholder_cards div:nth-of-type(1) p {
   font-size: 14pt;
   line-height: 16pt;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container .case_study_page div.stakeholder div.stakeholder_cards div:nth-of-type(1) {
+    padding: 3rem 2rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -2365,7 +2513,7 @@ div.contact form fieldset label:nth-of-type(3):before {
 .container .case_study_page div.stakeholder div.stakeholder_cards div:nth-of-type(2) {
   background: #D07440;
   border-radius: 50px;
-  padding: 3rem 2rem;
+  padding: 4rem 3rem;
 }
 
 .container .case_study_page div.stakeholder div.stakeholder_cards div:nth-of-type(2) h3,
@@ -2379,6 +2527,12 @@ div.contact form fieldset label:nth-of-type(3):before {
 .container .case_study_page div.stakeholder div.stakeholder_cards div:nth-of-type(2) p {
   font-size: 14pt;
   line-height: 16pt;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container .case_study_page div.stakeholder div.stakeholder_cards div:nth-of-type(2) {
+    padding: 3rem 2rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -2654,7 +2808,7 @@ div.contact form fieldset label:nth-of-type(3):before {
 .container .case_study_page div.testing div.testing_tasks {
   background: #4085D0;
   border-radius: 50px;
-  padding: 3rem 2rem;
+  padding: 4rem 3rem;
   margin-bottom: 2em;
 }
 
@@ -2669,6 +2823,12 @@ div.contact form fieldset label:nth-of-type(3):before {
 .container .case_study_page div.testing div.testing_tasks p {
   font-size: 14pt;
   line-height: 16pt;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container .case_study_page div.testing div.testing_tasks {
+    padding: 3rem 2rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -2731,7 +2891,7 @@ div.contact form fieldset label:nth-of-type(3):before {
 .container .case_study_page div.testing div.testing_takeaways {
   background: #92608C;
   border-radius: 50px;
-  padding: 3rem 2rem;
+  padding: 4rem 3rem;
   margin-bottom: 2em;
 }
 
@@ -2746,6 +2906,12 @@ div.contact form fieldset label:nth-of-type(3):before {
 .container .case_study_page div.testing div.testing_takeaways p {
   font-size: 14pt;
   line-height: 16pt;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container .case_study_page div.testing div.testing_takeaways {
+    padding: 3rem 2rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -2953,9 +3119,9 @@ div.contact form fieldset label:nth-of-type(3):before {
 .container .case_study_page.cs_03 .case_study_head {
   background: #61936F;
   border-radius: 50px;
-  padding: 3rem 2rem;
+  padding: 4rem 3rem;
   padding: 2.5em 3em;
-  margin-top: 13em;
+  margin-top: 25%;
 }
 
 .container .case_study_page.cs_03 .case_study_head h3,
@@ -2969,6 +3135,12 @@ div.contact form fieldset label:nth-of-type(3):before {
 .container .case_study_page.cs_03 .case_study_head p {
   font-size: 14pt;
   line-height: 16pt;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container .case_study_page.cs_03 .case_study_head {
+    padding: 3rem 2rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -3028,6 +3200,10 @@ div.contact form fieldset label:nth-of-type(3):before {
 
 .container .case_study_page.cs_03 .blob_01 {
   grid-area: 1 / 1 / span 2 / span 12;
+  width: 100%;
+  height: 540px;
+  overflow: hidden;
+  margin-bottom: 4em;
 }
 
 .container .case_study_page.cs_03 div.overview {
@@ -3695,18 +3871,13 @@ div.contact form fieldset label:nth-of-type(3):before {
     line-height: 20pt;
   }
   div.container .case_study_page div.overview div {
-    padding: 3em 1em 1em 1em;
     margin-right: 0;
     flex-basis: 100%;
-    margin-top: 3em;
+    margin-top: 6em !important;
   }
   div.container .case_study_page div.overview div:before {
-    width: 50px;
-    height: 50px;
     z-index: 20;
     position: absolute;
-    top: -25px;
-    left: 2rem;
     content: '';
     background-repeat: no-repeat;
     background-size: contain;
