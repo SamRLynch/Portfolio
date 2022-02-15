@@ -3215,7 +3215,12 @@ div.contact {
             &.cs_03,
             &.cs_02 {
                 & div.case_study_head {
+                    margin-top: 54vw;
                     padding: 1.5em 2em;
+                }
+
+                div.overview {
+                    margin-top: 0;
                 }
 
                 & div.research {
@@ -3297,10 +3302,6 @@ div.contact {
             }
 
             &.cs_02 {
-                padding-top: 9em;
-                div.overview {
-                    margin-top: 0;
-                }
                 div.research {
                     div.site_analysis {
                         flex-direction: column;
@@ -3430,15 +3431,18 @@ div.contact {
                         img {}
                     }
                 }
+
                 div.conclusion {
                     margin-top: 2em;
+
                     .cards {
                         margin-top: 0;
+
                         .purple_card {
                             margin-top: 0;
                         }
                     }
-                } 
+                }
 
             }
 

@@ -20,6 +20,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="../js/mobile_nav_menu.js" type="text/javascript"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0G8XMQ2P7H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0G8XMQ2P7H');
+</script>
 </head>
 
 <body>
@@ -76,15 +86,15 @@
                 <div class="phone_01"><img src="../images/Project_1_A.png" alt="Barndog Grooming Mobile View 02"></div>
             </div>
             <div class="overview">
-                <div>
+                <div class="product">
                     <h4>Product</h4>
                     <p>Established in 2017, Barn Dog Grooming is a growing small business located in Barnstead, New Hampshire. Their website (BarnDogGrooming.com) is used to drive customers to their business and provide visitors with contact information. </p>
                 </div>
-                <div>
+                <div class="challenge">
                     <h4>Challenge</h4>
                     <p>The current website is outdated and no longer suits visitors’ needs. The owner is extremely busy running the business and can not provide any new content or assets. The website needs to be redesigned in order to stay relevant in their market.</p>
                 </div>
-                <div>
+                <div class="solution">
                     <h4>Solution</h4>
                     <p>Design, prototype, test, code and launch a fully functional and responsive website. The new site will help direct new customers and grow the business.</p>
                 </div>
@@ -117,17 +127,17 @@
             </div>
             <div class="stakeholder">
                 <h2><span id="03_stakeholder"></span>Stakeholder Interview</h2>
-                <img src="../images/groomer_illustration.png" alt="dog grooming illustration" />
+                <img src="../images/groomer_illustration.png" class="grooming_image" alt="dog grooming illustration" />
                 <p>I met with the stakeholder who is the owner of Barndog Grooming. I conducted an interview to hear their requirements for the site redesign as well as gain insight in to their customers.</p>
                 <div class="stakeholder_cards">
-                    <div>
+                    <div class="customer_insights">
                         <h4>Customer Insights</h4>
                         <ul>
                             <li>Majority of customers live within a 30 minute drive.</li>
                             <li>Business is growing quickly with a mix of new and returning customers.</li>
                         </ul>
                     </div>
-                    <div>
+                    <div class="key_problems">
                         <h4>Key Problems</h4>
                         <ul>
                             <li>Visitors can’t find hours of operation.</li>
@@ -454,9 +464,9 @@ $white: #FFF;
                 <div>
                     <p>After QA testing on a development environment, the new website for BarndogGrooming.com was officially launched on December 29, 2021.</p>
                 </div>
-                <img src="../images/launch_01.png" alt="Desktop" />
-                <img src="../images/launch_02.png" alt="Mobile" />
-                <img src="../images/launch_03.png" alt="Rocket" />
+                <img src="../images/launch_01.png" class="launch_desktop" alt="Desktop" />
+                <img src="../images/launch_02.png" class="launch_mobile" alt="Mobile" />
+                <img src="../images/launch_03.png" class="launch_rocket" alt="Rocket" />
             </div>
             <div class="thankyou">
                 <div>
@@ -472,6 +482,41 @@ $white: #FFF;
     </div>
     </div>
     </div>
+    <script>
+    ScrollReveal().reveal('.product', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.challenge', { distance: '50px', duration: 600, delay: 400, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.solution', { distance: '50px', duration: 600, delay: 400, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.brief', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.roadmap', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.stakeholder', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.grooming_image', { distance: '50px', duration: 600, delay: 400, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.customer_insights', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.key_problems', { distance: '50px', duration: 600, delay: 200, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.research', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.site_analysis', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.competitor_analysis', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.user_persona', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.sitemap', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.design', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.styleguide', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.hifi_designs', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.mobile_img', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.prototypes', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.testing', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.testing_tasks', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.testing_a_b', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.results_img', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.testing_takeaways', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.front_end', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.languages', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.fe_variables', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.fe_grid', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.launch', { distance: '50px', duration: 600, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.launch_desktop', { distance: '50px', duration: 600, delay: 200, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.launch_mobile', { distance: '50px', duration: 600, delay: 200, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+    ScrollReveal().reveal('.launch_rocket', { distance: '50px', duration: 600, delay: 500, easing: 'cubic-bezier(0.5, 0, 0, 1)' });
+
+    </script>
 </body>
 
 </html>

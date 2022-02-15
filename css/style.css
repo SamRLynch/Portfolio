@@ -4469,7 +4469,11 @@ div.contact form fieldset label:nth-of-type(3):before {
     height: 90vw;
   }
   div.container .case_study_page.cs_03 div.case_study_head, div.container .case_study_page.cs_02 div.case_study_head {
+    margin-top: 54vw;
     padding: 1.5em 2em;
+  }
+  div.container .case_study_page.cs_03 div.overview, div.container .case_study_page.cs_02 div.overview {
+    margin-top: 0;
   }
   div.container .case_study_page.cs_03 div.research div.site_analysis > div, div.container .case_study_page.cs_02 div.research div.site_analysis > div {
     width: auto;
@@ -4518,12 +4522,6 @@ div.contact form fieldset label:nth-of-type(3):before {
   div.container .case_study_page.cs_03 div.conclusion .cards div, div.container .case_study_page.cs_02 div.conclusion .cards div {
     max-width: 100%;
     margin-bottom: 1.5em;
-  }
-  div.container .case_study_page.cs_02 {
-    padding-top: 9em;
-  }
-  div.container .case_study_page.cs_02 div.overview {
-    margin-top: 0;
   }
   div.container .case_study_page.cs_02 div.research div.site_analysis {
     flex-direction: column;
